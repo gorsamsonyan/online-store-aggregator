@@ -1,0 +1,85 @@
+:root {
+  /* UNIVERSAL */
+  /* colors */
+  /* --green: #507850; */
+  --green: #1e7e41;
+  --darkGreen: #215b23;
+  --green-2:#2e7d32;
+  --headerColor: #e8e9e7;
+  --darkBrown: #47484b;
+  --lightBrown: #ececed;
+  --grey:#3c3c3c;
+  --grey2:#333;
+  --white:#fff;
+  --lightBrown2:#ececec;
+  --grey-3:#5f5f5f;
+
+  /* titles */
+  --mainTitleSize: ;
+  --subTitle: ;
+  --buttonSmall: ;
+  --buttonMedium: ;
+  --buttonBig: ;
+  --footerFontSize: ;
+  /* font family */
+  --mainFontFamily: ;
+  --titleFontFamily: ;
+  --container: 1170px;
+
+  /* --browserFontSize: ; */
+  /* --bodyFontSize: ; */
+  /* --fontSize-xs: calc(var(--bodyFontSize) * .75); 12px if --bodyFontSize = 16px */
+  /* --fontSize-s: calc(var(--bodyFontSize) * 0.875); 14px if --bodyFontSize = 16px */
+  /* --fontSize-m: calc(var(--bodyFontSize) * 1.125); 18px if --bodyFontSize = 16px */
+  /* --fontSize-l: calc(var(--bodyFontSize) * 1.25); 20px if --bodyFontSize = 16px */
+  /* --fontSize-xl: calc(var(--bodyFontSize) * 1.5); 24px if --bodyFontSize = 16px */
+
+  /* Containers */
+  --bigContainer: 1630px;
+  --mediumContainer: 1310px;
+  --smallContainer: ;
+
+  /* Search Popup height */
+  --searchPopupHeight: 160px;
+
+  /* wkTitle max width */
+  --wkTitleWidth: 500px;
+
+  --wkListHeight: 925px;
+
+  /* TV/Blog */
+  --tvColor: #000;
+}
+/* Css variables for different @media queries */
+
+@media (max-width: 1440px) {
+  :root {
+    --mediumContainer: 1140px;
+  }
+}
+@media (min-width: 1201px) {
+  :root {
+  }
+}
+@media (max-width: 1200px) {
+  :root {
+    --container: 970px;
+    --mediumContainer: 970px;
+  }
+}
+@media (max-width: 991px) {
+  :root {
+    --container: 750px;
+    --mediumContainer: 750px;
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    --container: 100%;
+    --mediumContainer: 750px;
+  }
+}
+@media (max-width: 480px) {
+  :root {
+  }
+}

@@ -1,0 +1,456 @@
+﻿@*@using Weed.Karma.Models.Brand
+@model BrandAndProductsViewModel*@
+
+<link rel="stylesheet" href="/library/slick/slick/slick.css" />
+<!--<link rel="stylesheet" href="library/slick/slick/slick-theme.css"/>-->
+<link rel="stylesheet" href="/css/pages/brands.css" />
+<main class="home-page">
+    @*<div class="store-product-slider main-section">
+            <div class="store-product-slider-item">
+                <div class="header-slider-description">
+
+                    <div class="header-slider-description-img"></div>
+                    <div class="header-slider-title">ORDER PICKUP AND DELIVERY</div>
+                    <div class="header-slider-sub-title">Find medical and recreational marijuana dispensaries.</div>
+
+
+                </div>
+            </div>
+
+        </div>*@
+    <div class="container--medium">
+        <!-- <div class="fx"> -->
+        <div class="wkTitle fx">
+            <h2 class="wkTitle__text ">Best offers of Los Angeles </h2>
+            <span class="wkTitle__restLine"></span>
+        </div>
+
+
+
+    </div>
+    <section class="container--medium category-section">
+
+        <div class="category-header fx fx-between fx-center-v">
+            <div class="category-header-title">Brands</div>
+            <div class="category-header-right-block">
+                <div class="category-count-blocks">
+                    <span class="category-count">5</span>
+                    <span class="category-name">products</span>
+                </div>
+                <a class="view-all-button"> view all</a>
+                <div class="category-slider-button-block fx">
+                    <div class="featured-brands-slider-prev-arrow category-slider-arrow">
+                        <i class="fas fa-angle-left"></i>
+                    </div>
+                    <div class="featured-brands-slider-next-arrow  category-slider-arrow">
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-content">
+
+            <div class="featured-brands-slider" id="brands-area">
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container--medium category-section">
+        <div class="category-header fx fx-between fx-center-v">
+            <div class="category-header-title">Dispensaries</div>
+            <div class="category-header-right-block">
+                <div class="category-count-blocks">
+                    <span class="category-count">5</span>
+                    <span class="category-name">products</span>
+                </div>
+                <a class="view-all-button"> view all</a>
+                <div class="category-slider-button-block fx">
+                    <div class="featured-dispanseries-slider-prev-arrow category-slider-arrow"><i class="fas fa-angle-left"></i></div>
+                    <div class="featured-dispanseries-slider-next-arrow  category-slider-arrow">
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-content">
+
+            <div class="featured-dispanseries-slider">
+                <div class="brands-slider-item-block">
+                    <a href="brand-single-page.html" class="brands-slider-item">
+                        <div class="brands-slider-item-name">
+                            Hydro Empire
+                        </div>
+                        <div class="brands-slider-item-img" style="background-image: url('img/brands/brand-item.png')">
+
+                        </div>
+
+                        <div class="brands-slider-item-rating fx fx-center-v ">
+
+                            <img src="img/store/ratingLeaf-green.png" alt=" brandImage" class="brand-ratingImg">
+                            <span class="brand-ratingIndex">+5</span>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="brands-slider-item-block">
+                    <a href="brand-single-page.html" class="brands-slider-item">
+                        <div class="brands-slider-item-name">
+                            Hydro Empire
+                        </div>
+                        <div class="brands-slider-item-img" style="background-image: url('img/brands/brand-item.png')">
+
+                        </div>
+
+                        <div class="brands-slider-item-rating fx fx-center-v">
+
+                            <img src="img/store/ratingLeaf-green.png" alt=" brandImage" class="brand-ratingImg">
+                            <span class="brand-ratingIndex">+5</span>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="brands-slider-item-block">
+                    <a href="brand-single-page.html" class="brands-slider-item">
+                        <div class="brands-slider-item-name">
+                            Hydro Empire
+                        </div>
+                        <div class="brands-slider-item-img" style="background-image: url('img/brands/brand-item.png')">
+
+                        </div>
+
+                        <div class="brands-slider-item-rating fx fx-center-v">
+
+                            <img src="img/store/ratingLeaf-green.png" alt=" brandImage" class="brand-ratingImg">
+                            <span class="brand-ratingIndex">+5</span>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="brands-slider-item-block">
+                    <a href="brand-single-page.html" class="brands-slider-item">
+                        <div class="brands-slider-item-name">
+                            Hydro Empire
+                        </div>
+                        <div class="brands-slider-item-img" style="background-image: url('img/brands/brand-item.png')">
+
+                        </div>
+
+                        <div class="brands-slider-item-rating fx fx-center-v">
+
+                            <img src="img/store/ratingLeaf-green.png" alt=" brandImage" class="brand-ratingImg">
+                            <span class="brand-ratingIndex">+5</span>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="brands-slider-item-block">
+                    <a href="brand-single-page.html" class="brands-slider-item">
+                        <div class="brands-slider-item-name">
+                            Hydro Empire
+                        </div>
+                        <div class="brands-slider-item-img" style="background-image: url('img/brands/brand-item.png')">
+
+                        </div>
+
+                        <div class="brands-slider-item-rating fx fx-center-v">
+
+                            <img src="img/store/ratingLeaf-green.png" alt=" brandImage" class="brand-ratingImg">
+                            <span class="brand-ratingIndex">+5</span>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="brands-slider-item-block">
+                    <a href="brand-single-page.html" class="brands-slider-item">
+                        <div class="brands-slider-item-name">
+                            Hydro Empire
+                        </div>
+                        <div class="brands-slider-item-img" style="background-image: url('img/brands/brand-item.png')">
+
+                        </div>
+
+                        <div class="brands-slider-item-rating fx fx-center-v">
+
+                            <img src="img/store/ratingLeaf-green.png" alt=" brandImage" class="brand-ratingImg">
+                            <span class="brand-ratingIndex">+5</span>
+
+                        </div>
+                    </a>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container--medium category-section">
+        <div class="category-header fx fx-between fx-center-v">
+            <div class="category-header-title">Deliveries</div>
+            <div class="category-header-right-block">
+                <div class="category-count-blocks">
+                    <span class="category-count">5</span>
+                    <span class="category-name">products</span>
+                </div>
+                <a class="view-all-button"> view all</a>
+                <div class="category-slider-button-block fx">
+                    <div class="featured-deliveries-slider-prev-arrow category-slider-arrow">
+                        <i class="fas fa-angle-left"></i>
+                    </div>
+                    <div class="featured-deliveries-slider-next-arrow  category-slider-arrow">
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-content">
+
+            <div class="featured-deliveries-slider">
+                <div class="brands-slider-item-block">
+                    <a href="brand-single-page.html" class="brands-slider-item">
+                        <div class="brands-slider-item-name">
+                            Hydro Empire
+                        </div>
+                        <div class="brands-slider-item-img" style="background-image: url('img/brands/brand-item.png')">
+
+                        </div>
+
+                        <div class="brands-slider-item-rating fx fx-center-v ">
+
+                            <img src="img/store/ratingLeaf-green.png" alt=" brandImage" class="brand-ratingImg">
+                            <span class="brand-ratingIndex">+5</span>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="brands-slider-item-block">
+                    <a href="brand-single-page.html" class="brands-slider-item">
+                        <div class="brands-slider-item-name">
+                            Hydro Empire
+                        </div>
+                        <div class="brands-slider-item-img" style="background-image: url('img/brands/brand-item.png')">
+
+                        </div>
+
+                        <div class="brands-slider-item-rating fx fx-center-v">
+
+                            <img src="img/store/ratingLeaf-green.png" alt=" brandImage" class="brand-ratingImg">
+                            <span class="brand-ratingIndex">+5</span>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="brands-slider-item-block">
+                    <a href="brand-single-page.html" class="brands-slider-item">
+                        <div class="brands-slider-item-name">
+                            Hydro Empire
+                        </div>
+                        <div class="brands-slider-item-img" style="background-image: url('img/brands/brand-item.png')">
+
+                        </div>
+
+                        <div class="brands-slider-item-rating fx fx-center-v">
+
+                            <img src="img/store/ratingLeaf-green.png" alt=" brandImage" class="brand-ratingImg">
+                            <span class="brand-ratingIndex">+5</span>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="brands-slider-item-block">
+                    <a href="brand-single-page.html" class="brands-slider-item">
+                        <div class="brands-slider-item-name">
+                            Hydro Empire
+                        </div>
+                        <div class="brands-slider-item-img" style="background-image: url('img/brands/brand-item.png')">
+
+                        </div>
+
+                        <div class="brands-slider-item-rating fx fx-center-v">
+
+                            <img src="img/store/ratingLeaf-green.png" alt=" brandImage" class="brand-ratingImg">
+                            <span class="brand-ratingIndex">+5</span>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="brands-slider-item-block">
+                    <a href="brand-single-page.html" class="brands-slider-item">
+                        <div class="brands-slider-item-name">
+                            Hydro Empire
+                        </div>
+                        <div class="brands-slider-item-img" style="background-image: url('img/brands/brand-item.png')">
+
+                        </div>
+
+                        <div class="brands-slider-item-rating fx fx-center-v">
+
+                            <img src="img/store/ratingLeaf-green.png" alt=" brandImage" class="brand-ratingImg">
+                            <span class="brand-ratingIndex">+5</span>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="brands-slider-item-block">
+                    <a href="brand-single-page.html" class="brands-slider-item">
+                        <div class="brands-slider-item-name">
+                            Hydro Empire
+                        </div>
+                        <div class="brands-slider-item-img" style="background-image: url('img/brands/brand-item.png')">
+
+                        </div>
+
+                        <div class="brands-slider-item-rating fx fx-center-v">
+
+                            <img src="img/store/ratingLeaf-green.png" alt=" brandImage" class="brand-ratingImg">
+                            <span class="brand-ratingIndex">+5</span>
+
+                        </div>
+                    </a>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+    @*<div class="hot-stores main-section">
+            <div class="container p-0">
+                <ul class="row hot-stores-row" id="featuredBrands"></ul>
+            </div>
+        </div>
+
+        <div class="hot-stores main-section">
+            <div class="container p-0">
+                <ul class="row hot-stores-row" id="featuredBrands"></ul>
+            </div>
+        </div>
+
+        <div class="hot-stores main-section">
+            <div class="container p-0">
+                <ul class="row hot-stores-row" id="featuredBrands"></ul>
+            </div>
+        </div>*@
+
+    @*<div class="store-information-section main-section">
+            <div class="container" id="bestOfferDispensaries">
+
+
+
+            </div>
+
+        </div>*@
+
+</main>
+<script src="~/library/slick/slick/slick.js"></script>
+<script>
+    $('.featured-brands-slider').slick({
+        prevArrow: $(".featured-brands-slider-prev-arrow"),
+        nextArrow: $(".featured-brands-slider-next-arrow"),
+        dots: false,
+        infinite: false,
+        // variableWidth: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1201,
+                settings: {
+                    // arrows: false,
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    // arrows: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+
+            {
+                breakpoint: 680,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+    $('.featured-dispanseries-slider').slick({
+        prevArrow: $(".featured-dispanseries-slider-prev-arrow"),
+        nextArrow: $(".featured-dispanseries-slider-next-arrow"),
+        dots: false,
+        infinite: false,
+        // variableWidth: true,
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        responsive: [
+            {
+                breakpoint: 1201,
+                settings: {
+                    // arrows: false,
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    // arrows: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 680,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+    $('.featured-deliveries-slider').slick({
+        prevArrow: $(".featured-deliveries-slider-prev-arrow"),
+        nextArrow: $(".featured-deliveries-slider-next-arrow"),
+        dots: false,
+        infinite: false,
+        // variableWidth: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1201,
+                settings: {
+                    // arrows: false,
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    // arrows: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 680,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+</script>

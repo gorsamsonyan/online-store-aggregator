@@ -1,0 +1,107 @@
+﻿@using Weed.Karma.Models.DealModels
+@model DealsViewModel
+@{
+    int active = 0;
+    int rightActive = 0;
+    
+}
+<link rel="stylesheet" href="~/library/bootstrap/bootstrap.min.css" type="text/css">
+
+<link rel="stylesheet" href="/css/pages/single-product.css" />
+<link rel="stylesheet" href="/css/pages/deals.css" />
+<link rel="stylesheet" href="~/css/responsive.css" />
+<main class="wkPage--deal">
+    <div class="container--medium dl-container">
+        <!-- <div class="fx"> -->
+        <div class="wkTitle fx">
+            <h2 class="wkTitle__text deal-page-title">Deals of Los Angeles </h2>
+            <span class="wkTitle__restLine"></span>
+        </div>
+
+
+     
+    </div>
+    <!-- Slider END -->
+
+    <section class="bg--lightBrown"></section>
+
+    <div class="singleProduct__relatedContainer container--medium">
+        <div class="singleProduct__relatedRow fx fx-wrap">
+         
+            <!-- wk items  -->
+            @foreach (var item in Model.Deals)
+            {
+            <div class="ss__product-item deal-product-item" data-product-id="@item.Id" data-store-id="@item.StoreId">
+                <div class="singleProduct__relatedItem">
+                    <div class="ss-store__bgImage"
+                         style="background-image: url('@item.ImagePath');">
+                        <!--<a href="javascript:void(0)" class="ss-store__info">-->
+                        <!--&lt;!&ndash; <i class="fa fa-info ss-store__infoIcon" aria-hidden="true"></i> &ndash;&gt;-->
+                        <!--i-->
+                        <!--</a>-->
+                       
+                      
+                    </div>
+                    <!-- -- -->
+                    <div class="ss-store__details text-center">
+                        <div class="fx fx-between fx-center-v ss-store__selects">
+                            <!-- <h4 class="singleProduct__name">Product Name</h4> -->
+                            <div class="ss-store__selectWrapper fx fx-center">
+                                <div class="fx fx-wrap ss-store__variationsContainer">
+                                    <a href="javascript:void(0)" class="ss-store__variation deal-product-name">
+                                        @item.ProductName
+                                    </a>
+
+                                </div>
+                                <!--<a href="javascrip:void(0)"  class="singleProduct__quantity"></a>-->
+                            </div>
+                        </div>
+                        <div class="fx fx-between fx-center-v singleProduct__bottomRow">
+                            
+                            <a href="javascript:void(0)"
+                               class="ss-store__orderBtn singleProduct__basket singleProduct__order deal-order-button" data-deal-item-price="10">Claim</a>
+                            <!-- <a
+                  href="javascrip:void(0)"
+                  class="singleProduct__quantity"
+                ></a> -->
+                            <!-- <a href="javascript:void(0)" class="singleProduct__basket singleProduct__order">
+                  <img src="/img/single-product/basket.png" alt="Basket Image" class="singleProduct__basketImg">
+                </a> -->
+                        </div>
+                        @*<div class="quantityPopup">
+                            <a href="javascript:void(0)" class="quantityPopup__close">X</a>
+                            <div class="quantityPopup__bottom fx fx-column">
+                                <div class="quantityPopup__summary fx fx-between fx-center-v">
+                                    <span class="quantityPopup__cost quantityPopup__cost--usd"></span>
+                                    <form method="POST">
+                                        <div class="fx fx-center-v">
+                                            <a href="javascript:void(0)"
+                                               class="quantityPopup__incDec quantityPopup__minus">
+                                                <i class="fa fa-minus" aria-hidden="true"></i>
+                                            </a>
+                                            <input type="number" name="" class="quantityPopup__input"
+                                                   min="1"
+                                                   value="1" />
+                                            <a href="javascript:void(0)"
+                                               class="quantityPopup__incDec quantityPopup__plus">
+                                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </form>
+                                    <span class="quantityPopup__costSummary quantityPopup__costSummary--usd"></span>
+                                </div>
+                                <a href="javascript:void(0)" class="quantityPopup__countSubmit dib">OK</a>
+                            </div>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+            }
+            <!-- wk items end -->
+        </div>
+    </div>
+</main>
+
+<script src="/js/deals.js"></script>
+
+

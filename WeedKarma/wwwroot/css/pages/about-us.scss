@@ -1,0 +1,122 @@
+@import "../main-styles";
+
+.about-us-page {
+  font-family: $mainFontFamily;
+  margin-bottom: 50px;
+
+  .left-block {
+    padding: 30px 0 0;
+    background-color: #e6e6e6;
+    //
+    //&-title {
+    //  @include main-title;
+    //  font-weight: bold;
+    //  text-align: center;
+    //  max-width: 500px;
+    //  margin: 0 auto 30px;
+    //
+    //
+    //}
+    &-bg-image {
+      background-image: url("../../img/career.png");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 300px;
+      width: 100%;
+      margin-top: 50px;
+      margin-bottom: 30px;
+      @include mobile {
+        height: 200px;
+      }
+    }
+
+    .join-our-team-button {
+      @include green-button;
+      display: block;
+      @include border-radius(4px);
+      max-width: 180px;
+      margin: 0 auto 20px;
+
+    }
+  }
+  .right-block {
+    padding: 30px 0 0;
+    .about-us-title {
+      @include main-title;
+      text-align: center;
+
+    }
+    .line {
+      border-bottom: 1px solid $color-green;
+      max-width: 80px;
+      margin: 10px auto;
+    }
+    .about-us-description {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+    .about-us-navbar {
+      ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .about-us-navbar-item {
+          width: $size4;
+          max-width: $size4;
+          text-align: center;
+          display: block;
+          padding: 1px;
+
+          //&:first-child{
+          //  border-radius: 20px 0px 0px 0px;
+          //  -moz-border-radius: 20px 0px 0px 0px;
+          //  -webkit-border-radius: 20px 0px 0px 0px;
+          //}
+
+        }
+        .about-us-navbar-item-link {
+          @include green-button;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 50px;
+          padding: 5px;
+
+        }
+        .about-us-link-active {
+          background-color: transparent;
+          border: 1px solid $color-green;
+          color: $color-green;
+        }
+      }
+    }
+    .about-us-description-text {
+      -webkit-box-shadow: inset -1px 2px 48px -2px rgba(130, 133, 133, 1);
+      -moz-box-shadow: inset -1px 2px 48px -2px rgba(130, 133, 133, 1);
+      box-shadow: inset -1px 2px 48px -2px rgba(130, 133, 133, 1);
+      height: 330px;
+      width: 100%;
+      overflow: auto;
+      padding: 10px;
+      ul {
+        padding-left: 25px;
+        padding-right: 10px;
+        list-style:circle  ;
+      }
+      
+      & > div {
+        display: none;
+      }
+      @include tablet {
+        margin-bottom: 20px;
+
+      }
+      .about-us-description-active {
+        display: block;
+      }
+    }
+  }
+}

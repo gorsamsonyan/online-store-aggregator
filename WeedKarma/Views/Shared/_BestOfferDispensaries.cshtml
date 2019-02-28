@@ -1,0 +1,78 @@
+﻿
+
+
+@foreach (var item in Model)
+{
+    <div class="wkProduct">
+        <input type="checkbox"
+               id="wkProduct_@item.Id"
+               class="wkProduct__more"
+               aria-hidden="true" />
+        <div class="wkProduct__content">
+            <div class="wkProduct__front"
+                 style="background-image: url('@item.ImageSrc')">
+                <div class="wkProduct__inner">
+                    <h2>@item.ShopName</h2>
+                    <label for="wkProduct_@item.Id"
+                           class="wkProduct__button"
+                           aria-hidden="true">
+                        Details
+                    </label>
+                </div>
+            </div>
+            <div class="wkProduct__back">
+                <div class="wkProduct__inner">
+                    <div class="wkProduct__info">
+                        <!-- <span>5</span> -->
+                        <div class="wkProduct__icon">
+                            <img src="~/img/product/2.png" alt="">
+                            <p>THS%</p>
+                        </div>
+                    </div>
+                    <div class="wkProduct__info">
+                        <!-- <span>4</span> -->
+                        <div class="wkProduct__icon">
+                            <img src="~/img/product/3.png" alt="">
+                            <p>Type</p>
+                        </div>
+                    </div>
+                    <div class="wkProduct__info">
+                        <!-- <span>3</span> -->
+                        <div class="wkProduct__icon">
+                            <img src="~/img/product/4.png" alt="">
+                            <p>SIZE/GRAM</p>
+                        </div>
+                    </div>
+                    <div class="wkProduct__info">
+                        <!-- <span>1</span> -->
+                        <div class="wkProduct__icon">
+                            <img src="~/img/product/5.png" alt="">
+                            <p>VERIFY</p>
+                        </div>
+                    </div>
+                    <!-- <hr class="wProduct__separator" /> -->
+                    <div class="wkProduct__description">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Vitae, accusamus.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Voluptates earum nostrum ipsam ullam, reiciendis
+                            nam consectetur? Doloribus voluptate architecto
+                            possimus perferendis tenetur nemo amet temporibus,
+                            enim soluta nam, debitis.
+                        </p>
+                    </div>
+                    <div class="wkProduct__price"><img src="~/img/product/1.png" alt="">@item.DeliveryPrice</div>
+                    <label for="wkProduct_@item.Id"
+                           class="wkProduct__button wkProduct__return"
+                           aria-hidden="true">
+                        <i class="fas fa-arrow-left"></i>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+

@@ -1,0 +1,59 @@
+﻿@using Weed.Karma.Models.Brand
+@model BrandAllproductsViewModel
+
+<link rel="stylesheet" href="~/css/pages/brand-single-cover.css" />
+<link rel="stylesheet" href="~/css/pages/brand-single-page.css" />
+<main class="brand-page">
+
+    <div class="container--medium">
+        @*@Model.BrandViewModel.CoverPath*@
+        <div class="brand-item-cover" style="background-image: url('@Model.BrandViewModel.CoverPath')">
+            <div class="brand-item-name">
+                @Model.BrandViewModel.Name
+            </div>
+
+            <div class="brand-item-page-buttons-block fx ">
+                <a href="/Brands/@Model.BrandViewModel.Id" class="brand-item-page-button left-button">info</a>
+                <a href="#" class="brand-item-page-button">Review</a>
+            </div>
+
+            <div class="brand-item-reating-block">
+                <img src="/img/store/ratingLeaf-white.png" alt=" brandImage" class="brand-ratingImg">
+                <span class="brand-ratingIndex">+5</span>
+            </div>
+
+        </div>
+
+
+        <div class="brand-item-products-block">
+            <div class="container">
+                <div class="row">
+
+                    @foreach (var item in Model.SingleBrandProductsViewModels)
+                    {
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <a href="/Brands/Info/@Model.BrandViewModel.Id/@item.Id" class="brand-product-item">
+                                <div class="brand-item-product-name">@item.Name</div>                @*@item.ProductImage*@
+                                <div class="brand-item-product-img" style="background-image: url('@item.ProductImage')"></div>
+                                <div class="brand-item-product-bottom-block fx fx-between fx-center-v">
+                                    <div class="brand-item-product-rating">
+                                        <img src="/img/store/ratingLeaf-green.png" alt=" brandImage" class="brand-ratingImg">
+                                        <span class="brand-ratingIndex">+5</span>
+
+                                    </div>
+                                    <div class="brand-item-product-category">
+                                        @item.BrandCategory.CategoryName
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    }
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>

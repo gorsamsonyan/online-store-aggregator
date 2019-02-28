@@ -1,0 +1,79 @@
+/* font family */
+.header-slider-container {
+  height: 250px; }
+  @media only screen and (max-width: 768px) {
+    .header-slider-container {
+      height: 200px; } }
+  @media only screen and (max-width: 400px) {
+    .header-slider-container {
+      height: 150px; } }
+
+.header-slider {
+  width: 100%;
+  height: 100%;
+  background-image: url(../../img/header-slider/mobile-app-img.png);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto; }
+  @media only screen and (max-width: 991px) {
+    .header-slider {
+      background-image: url(../../img/header-slider/mobile-app-img-mobile.png); } }
+
+.header-slider-description {
+  position: absolute;
+  bottom: 10px;
+  width: 50%; }
+
+.header-slider-description-img {
+  position: absolute;
+  height: 140px;
+  width: 100%;
+  top: -75px;
+  left: -90px;
+  background-image: url(../../img/header-slider/Layer.png);
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat; }
+  @media only screen and (max-width: 991px) {
+    .header-slider-description-img {
+      top: -45px;
+      left: 0; } }
+  @media only screen and (max-width: 768px) {
+    .header-slider-description-img {
+      height: 100px;
+      top: -25px; } }
+  @media only screen and (max-width: 400px) {
+    .header-slider-description-img {
+      height: 70px;
+      top: -15px; } }
+
+.header-slider-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #454545; }
+  @media only screen and (max-width: 768px) {
+    .header-slider-title {
+      font-size: 16px; } }
+
+.header-slider-sub-title {
+  font-size: 16px;
+  color: #727272;
+  margin-bottom: 30px; }
+  @media only screen and (max-width: 768px) {
+    .header-slider-sub-title {
+      font-size: 13px; } }
+  @media only screen and (max-width: 400px) {
+    .header-slider-sub-title {
+      margin-bottom: 5px; } }
+
+@media only screen and (max-width: 768px) {
+  .mobile-app-icons img {
+    height: 25px; } }
+@media only screen and (max-width: 400px) {
+  .mobile-app-icons img {
+    height: 20px; } }
+
+/*# sourceMappingURL=header-slider.css.map */

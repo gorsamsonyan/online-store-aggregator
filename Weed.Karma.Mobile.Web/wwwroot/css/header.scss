@@ -1,0 +1,134 @@
+@import "main-styles";
+@import "region-popUp";
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  background-color: white;
+  @include shadow(7.625px 11.741px 24.03px 2.97px rgba(0, 0, 0, 0.11));
+  .nav-bar {
+    height: 45px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    justify-content: space-between;
+
+  }
+
+  .mobile-menu-icon, .search-icon {
+    color: $mainGreen;
+    //width: 50px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+
+  }
+  .logo {
+    display: block;
+    padding: 10px 0;
+    //width: 50px;
+    margin-top: 5px;
+    width: auto;
+    img {
+      //width: 100%;
+      height: 30px;
+    }
+  }
+
+  .mobile-left-menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 80%;
+    height: 100%;
+    background-color: $mainGreen;
+    transition: 0.3s;
+    @include shadow(0px 28px 39.65px 25.35px rgba(0, 0, 0, 0.23));
+    z-index: 4;
+  }
+
+  .left-menu-open {
+    left: 0;
+    transition: 0.3s;
+  }
+
+  .mobile-left-menu-header {
+    padding: 10px;
+  }
+  .left-menu-close-icon {
+    position: absolute;
+    right: 10px;
+    //top: 10px;
+    color: white;
+    font-size: 20px;
+  }
+
+  .search-form {
+    width: 80%;
+    .left-menu-search {
+      font-size: $big-size;
+      padding: 10px 20px;
+      border: none;
+      outline: none;
+      width: 100%;
+      background-color: $darkGreen;
+      color: white;
+      &::-webkit-input-placeholder {
+        color: #ffff;
+      }
+      &::-moz-placeholder {
+        color: #ffff;
+      }
+      /* Firefox 19+ */
+      &:-moz-placeholder {
+        color: #ffff;
+      }
+      /* Firefox 18- */
+      &:-ms-input-placeholder {
+        color: #ffff;
+      }
+      @include border-radius(20px)
+    }
+  }
+
+  .mobile-left-menu {
+    .menu {
+      margin-bottom: 50px;
+    }
+    ul {
+      padding: 0 20px;
+    }
+    .menu-item {
+      padding: 10px 0;
+    }
+    .menu-item-link {
+      color: white;
+      font-size: 16px;
+
+      img {
+        width: 20px;
+        //height: 20px;
+        margin-right: 10px;
+      }
+    }
+
+    .sign-button-item {
+      display: block;
+      color: white;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: $big-size;
+      background-color: $darkGreen;
+      @include border-radius(10px);
+      max-width: 150px;
+      padding: 10px;
+      text-align: center;
+      margin: 5px auto;
+    }
+    /*.log-out-button {
+      display: block;
+    }*/
+  }
+}

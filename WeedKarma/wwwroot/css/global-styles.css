@@ -1,0 +1,23 @@
+/* font family */
+/*-------------------- global-styles --------------------*/
+.pd-5 {
+  padding: 5px; }
+
+.pl-0 {
+  padding-left: 0 !important; }
+
+.pr-0 {
+  padding-right: 0 !important; }
+
+.p-0 {
+  padding: 0 !important; }
+
+/*# sourceMappingURL=global-styles.css.map */
+@media only screen and (max-width: 768px) {
+  .no-location {
+    flex-direction: column; } }
+@media only screen and (max-width: 768px) {
+  .no-location .no-location-img img {
+    margin-right: 0 !important; } }
+
+/*# sourceMappingURL=global-styles.css.map */

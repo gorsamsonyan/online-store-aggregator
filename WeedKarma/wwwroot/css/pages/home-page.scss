@@ -1,0 +1,78 @@
+@import "../main-styles";
+.offersSection{
+  .change-city-icon-img{
+    height: 20px;
+    margin-right: 5px;
+    margin-left: 10px;
+  }
+  .change-region{
+    display: none;
+    @include mobile{
+      display: inline-block;
+    }
+  }
+}
+#changeRegionMobilePopup{
+  display: none;
+  overflow: auto;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 22;
+  background-color: white;
+
+}
+.changeRegionMobile-header{
+  height: 50px;
+  background-color: $color-green;
+  .back-button{
+    color: white;
+    padding: 5px 10px;
+    border: 1px solid white;
+    margin-left:10px;
+  }
+  form{
+    width: 100%;
+  }
+  .input-text{
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  .header-search-locate-button{
+
+      //display: inline-block;
+      //font-size: 0px;
+      cursor: pointer;
+      box-shadow: none;
+      //height: 2.125rem;
+    height: 100%;
+      width: 3rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      color: rgb(255, 255, 255);
+      margin: 0px;
+      border-radius: 0px 0.1875rem 0.1875rem 0px;
+    border: none;
+      background: rgb(0, 205, 190);
+      //border-style: solid;
+      //border-color: rgb(0, 205, 190);
+      //border-image: initial;
+      //border-width: 0.0625rem 0.0625rem 0.0625rem 0px;
+      outline: none;
+      //transition: transform 0.3s ease-out 0s, background 0.5s ease 0s;
+
+  }
+}
+
+.changeRegionMobile-body{
+  .city-list{
+    padding: 5px 10px;
+  }
+  .city-list-item{
+    padding: 5px 0;
+    border-bottom: 1px solid;
+  }
+}

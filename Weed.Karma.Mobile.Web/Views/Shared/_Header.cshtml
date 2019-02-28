@@ -1,0 +1,306 @@
+﻿
+@using Microsoft.AspNetCore.Http.Extensions
+@{
+    string baseUrl = Context.Request.Scheme + "://" + Context.Request.Host.Value;
+
+}
+<!-- Cart -->
+<div id="thankYouPopup">
+    <div class="thank-you-popup-body">
+        <div class="thank-you-text">
+            Thank You <br />
+            Your order processing...
+        </div>
+    </div>
+</div>
+<div id="popup" class="">
+    <div class="cart-block open">
+
+        
+        <div class="header-cart">
+            <div class="basket-pocket">
+                <img src="/img/single-product/pocket.png" alt="" class="basketPopup__img">
+            </div>
+            <h2 id="basketTitle">Basket</h2>
+            <h2 id="allInfoTitle"> Confirm Order </h2>
+            <span id="clear_cart" rel="31728">clear basket</span>
+            <span id="backToBasket" rel="31728">Back to basket</span>
+            <a href="#" class="checkout_close"> <i class="fas fa-times"></i></a>
+
+        </div>
+
+
+        <form action="/Cart" method="post" class="user_basket">
+            <input type="hidden" name="CartData" id="CartData" value="" />
+            <input type="hidden" name="CartTotalPrice" id="CartTotalPrice" value="" />
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-12 products-order">
+                        <ul class="user_basket__list"></ul>
+
+                    </div>
+                    <div class="col-lg-7 col-md-12 order-all-info">
+                        <div class="row  fx-center-h ">
+                            <div class="col-lg-8 person-info-row">
+                                <label class=" order-all-info-label fx ">
+                                    <span class="label-text">Address</span>
+                                    <input required type="text" class="input-text" name="Address">
+                                </label>
+                            </div>
+                            <div class="col-lg-8 person-info-row">
+                                <div class="row ">
+                                    <div class="col-lg-6">
+                                        <label class=" order-all-info-label fx ">
+                                            <span class="label-text">Home/Office</span>
+                                            <input required type="text" class="input-text" name="Home">
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label class=" order-all-info-label fx ">
+                                            <span class="label-text">floor</span>
+                                            <input required type="text" class="input-text" name="Floor">
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-8 person-info-row">
+                                <label class=" order-all-info-label fx ">
+                                    <span class="label-text">Phone number</span>
+                                    <span class="phone-bumber-block"> +37494 465 44</span>
+                                </label>
+                            </div>
+                            <div class="col-lg-8 person-info-row">
+                                <label class="order-all-info-label fx ">
+                                    <span class="label-text">comment</span>
+                                    <textarea required type="text" class="input-text" name="Comment"></textarea>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-12">
+                        <div class="order_info">
+                            <div class="row price-order">
+                                <div class="col-lg-6">
+                                    <span class="order-info_span">Order price </span>
+                                </div>
+                                <div class="col-lg-6">
+                                    <b class="order-info_cost">
+                                        <em class="basket_sum">0</em>
+                                        <span class="ptrouble">$</span>
+                                    </b>
+                                </div>
+                            </div>
+                            <div class="row price-delivery">
+                                <div class="col-lg-6">
+                                    <span class="order-info_span">Cost of delivery </span>
+                                </div>
+                                <div class="col-lg-6">
+                                    <span class="order-info_cost" data-cost="0">free</span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="row">
+
+                                <div class="col-lg-6">
+                                    <div class="order-info_full-cost"><strong>Total</strong></div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="basket_total" id="BasketTotalPrice" data-baskettotalprice="">0<span class="ptrouble">$</span></div>
+
+                                </div>
+                            </div>
+                            <div class="tel-number-input">
+                                <input class="tell-number" type="text" name="PhoneNumber"
+                                       id="PhoneNumber" required placeholder="(___)___ ____">
+                            </div>
+                            <div class="order-info__button-order">
+                                <div class="basket-auth_agreement">
+                                    pressing the button "checkout", you accept the conditions
+                                    <a href="#" class="basket-auth__agreement-link" target="_blank">user agreement</a>
+                                </div>
+
+                                <div class="to-order-button">
+                                    To Order
+                                </div>
+                                <div class="send-button">
+                                    <input type="submit" value="Order " id="toOrderSubmit">
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div id="choseRegionPopUp">
+
+
+    <div class="choseRegionPopUp-close">
+        <i class="far fa-times-circle"></i>
+    </div>
+    <div class="choseRegion-header-block">
+
+        <div class="chose-country-block">
+            <div class="country-flag">
+                <img src="~/img/flag/usa-flag.png" alt="">
+            </div>
+            <div class="country">USA</div>
+            <i class="fas fa-angle-down"></i>
+        </div>
+
+
+    </div>
+    <div class="choseRegion-body">
+
+        <form method="POST" id="ChoseRegionForm">
+            <h5></h5>
+            <div class="form-item">
+                <div class="select-arrow"><i class="fas fa-angle-down"></i></div>
+                <label for="selectState"></label>
+                <select name="" id="selectState" required="">
+                    <option hidden disabled selected>State</option>
+
+
+
+                </select>
+            </div>
+            <div class="form-item">
+                <div class="select-arrow"><i class="fas fa-angle-down"></i></div>
+                <label for="selectCity"></label>
+                <select name="" id="selectCity" required="">
+                    <option hidden disabled selected>City</option>
+                </select>
+            </div>
+
+            <div class="your-age-answer">
+                <!--<h2 class="slide__content__text-title">Weed Karma</h2>-->
+                <p class="sub-title">Are you 21+ or a valid medical marijuana patient?</p>
+            </div>
+            <div class="your-age-question">
+                <label>
+                    <input type="radio" name="your-age" value="NO" />
+                    <span class="your-age your-age-less">NO</span>
+                </label>
+                <label>
+                    <input type="radio" name="your-age" value="YES" checked onclick="YesClick()" />
+                    <span class=" your-age your-age-more">YES</span>
+                </label>
+            </div>
+            <div class="i-agree-block">
+
+
+                <div class="i-agree-block">
+
+                    <label for="iAgree" class="i-agree-label">
+                        <input id="iAgree" type="checkbox" checked name="" required>
+                        <span class="i-agree-submit-button"></span>
+                        <span class="i-agree-text">
+                            Remember me for 30 days.
+                            I confirm that this is not a shared device.
+                        </span>
+                    </label>
+
+                </div>
+            </div>
+
+
+        </form>
+        <div class="accessing-block">
+            <p>
+                By accessing this site, you accept the
+                <a href="terms-of-use.html">
+                    Terms of
+                    Use
+                </a>
+                and <a href="privacy-policy.html">Privacy Policy</a>.
+            </p>
+        </div>
+    </div>
+</div>
+<div id="choseRegionPopUP-button">
+    <img src="~/img/flag/usa-flag.png" alt="">
+</div>
+
+<header>
+
+    <div class="nav-bar display-flex align-items-center ">
+        <div class="mobile-menu-icon"><i class="fas fa-bars"></i></div>
+        <a href="/" class="logo"> <img src="/img/logo.svg" alt="logo" name="logo"> </a>
+        <div class="search-icon"><i class="fas fa-search"></i></div>
+
+    </div>
+
+    <div class="mobile-left-menu ">
+        <div class="mobile-left-menu-header display-flex align-items-center">
+            <form action="#" class="search-form">
+                <label for="leftMenuSearch"></label>
+                <input type="search" placeholder="Search" id="leftMenuSearch" class="left-menu-search">
+            </form>
+            <div class="left-menu-close-icon"><i class="fas fa-times"></i></div>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li class="menu-item" id="LeftMenuItem1">
+                    
+                </li>
+                <li class="menu-item" id="LeftMenuItem2">
+                  
+                </li>
+                <li class="menu-item" id="LeftMenuItem3">
+                   
+                </li>
+                <!--<li class="menu-item"><a class="menu-item-link display-flex align-items-center"> <img-->
+                <!--src="/img/menu-item-icon/blog-tv.png" alt=""> Blog | TV</a></li>-->
+            </ul>
+        </div>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="sign-buttons">
+                <div class="log-out-button sign-button-item"> @User.Identity.Name</div>
+                <a href="registration-page.html" class="sign-in-button sign-button-item">PROFILE</a>
+                <div class="log-out-button sign-button-item"> LOG OUT</div>
+            </div>
+        }
+        else
+        {
+            <div class="sign-buttons">
+                <a href="/account/login" class="login-button sign-button-item ">LOGIN</a>
+                <a href="registration-page.html" class="sign-in-button sign-button-item">SIGN IN</a>
+                <div class="log-out-button sign-button-item"> LOG OUT</div>
+            </div>
+        }
+    </div>
+</header>
+<script>
+    function YesClick() {
+
+        if ($("#selectCity").val() != null && $("#selectState").val() != null) {
+            var selectCityVal = $("#selectCity").val();
+            var selectCityName = $("#selectCity option:selected").data("city-name");
+            var selectCityId = $("#selectCity option:selected").data("city-id");
+            localStorage.setItem("RegionAbbreviation", selectCityVal);
+            localStorage.setItem("RegionName", selectCityName);
+            localStorage.setItem("RegionId", selectCityId);
+            $("#choseRegionPopUp").hide();
+            $("#bestOffer").html(localStorage.getItem("RegionName"));
+            GetBestOffers();
+            initRouting();
+            initLeftMenuRouting();
+            GetStoresByCityId(localStorage.getItem("RegionAbbreviation"), '@baseUrl');
+            GetBrandsByCityId(localStorage.getItem("RegionAbbreviation"), '@baseUrl');
+
+        } else {
+            $("#bestOffer").html(localStorage.getItem("RegionName"));
+
+
+        }
+    }
+</script>

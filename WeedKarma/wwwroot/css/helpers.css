@@ -1,0 +1,10 @@
+.section--lightBrown {
+  /* height: 600px; */
+  background-color: var(--headerColor);
+}
+.bg--white {
+  background-color: #fff;
+}
+.bg--lightBrown {
+  background-color: var(--lightBrown);
+}

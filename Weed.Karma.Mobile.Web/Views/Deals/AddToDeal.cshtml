@@ -1,0 +1,179 @@
+﻿@using Weed.Karma.Models.DealModels
+@model AddToDealViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/businessDashboard/styles/main-respons.css">
+    <!--<link rel="stylesheet" href="~/businessDashboard/styles/global-styles.css">-->
+    <link rel="stylesheet" href="~/businessDashboard/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="~/businessDashboard/styles/global-styles.css">
+
+    <!--<link rel="stylesheet" href="~/businessDashboard/styles/form-styles.css">-->
+    <link rel="stylesheet" href="~/businessDashboard/styles/pages/store-page.css">
+    <link rel="stylesheet" href="~/businessDashboard/styles/pages/store-product-add.css">
+</head>
+<body>
+    <div class="page-wrapper chiller-theme toggled">
+        <!--header block-->
+        @await Html.PartialAsync("_AdminHeader")
+        <!--header block End-->
+        <!--sidebar-wrapper-->
+
+        @await Html.PartialAsync("_StoreAdminLeftMenu")
+        <main class="page-content margin-top">
+            <div class="container-fluid store-body">
+
+                <h1 class="section-title">
+                    Add To Deal - @Model.ProductName
+                </h1>
+                <div class="body-section">
+                    <form method="post" id="addProductForm">
+                        <input type="hidden" name="ProductCategoryId" value="@Model.ProductCategoryId" />
+                        <input type="hidden" name="StoreProductId" value="@Model.Id" />
+                        <input type="hidden" name="StoreId" value="@Model.StoreId" />
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-3 col-md-3 col-sm-12">
+
+                                    <div class="row">
+
+
+                                        <div class="col-lg-12 col-sm-12">
+                                            <div class="form-item">
+                                                <label for="productName" class="form-item-label">
+                                                    Product Name*<span class="information-popup-button">
+                                                        <i class="fas fa-info-circle"></i>
+
+                                                        <span class="information-popup"></span>
+                                                    </span>
+                                                </label>
+                                                <b>
+                                                    @Model.ProductName
+                                                </b>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-12 d-flex justify-content-between flex-column">
+
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12">
+
+                                            <div class="form-item">
+                                                <label for="productDescription" class="form-item-label">
+                                                    Description*
+                                                    <span class="information-popup-button">
+                                                        <i class="fas fa-info-circle"></i>
+
+                                                        <span class="information-popup"></span>
+                                                    </span>
+                                                </label>
+                                                <b>
+                                                    @Model.Description
+                                                </b>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-12">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12">
+
+                                            <div class="form-item text-center">
+
+                                                <div class="product-size-g">
+                                                    <div class="product-sizes-block-title">
+
+                                                        <label for="" class="form-item-label">
+                                                            Size / Price
+
+                                                        </label>
+                                                    </div>
+                                                    <div class="product-sizes-block checking-block d-flex flex-column">
+                                                        <label>
+                                                            <select required class="product-size-price input-text" name="UnitId">
+                                                                <option value="" hidden disabled selected>Size</option>
+
+
+                                                                @foreach (var item in Model.ProductUnits)
+                                                                {
+
+                                                                    <option value="@item.Id">@item.Size</option>
+                                                                }
+
+                                                            </select>
+                                                            <input class="product-size-price input-number input-text" type="text" name="CurrentPrice" min="0" value="">
+                                                        </label>
+
+                                                    </div>
+                                                </div>
+                                                <div class="product-size-each">
+                                                    <div class="product-sizes-block-title">
+                                                        <label for="" class="form-item-label">
+                                                            Each price
+
+
+                                                        </label>
+
+                                                    </div>
+                                                    <label>
+
+                                                        <input placeholder="each price $" class="product-size-price input-number"
+                                                               type="number" min="0">
+                                                    </label>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-sm-12 no-label justify-content-center">
+
+                                <input type="submit" class="input-submit" id="" value="To Deal">
+
+                            </div>
+                        </div>
+
+
+                    </form>
+
+                </div>
+            </div>
+
+        </main>
+        <!--page-content"-->
+
+
+    </div>
+
+
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="~/businessDashboard/scripts/bootstrap.min.js"></script>
+<script src="~/businessDashboard/scripts/store-page.js"></script>
+<script src="~/businessDashboard/scripts/store-product-add.js"></script>

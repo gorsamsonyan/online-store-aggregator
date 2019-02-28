@@ -1,0 +1,99 @@
+//@mixin form_atribute {
+@import "main-styles";
+
+.no-label {
+  display: flex;
+  align-items: flex-end;
+  min-height: 74px;
+}
+
+.form-item {
+  font-family: $mainFontFamily;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.form-item-label {
+  cursor: pointer;
+  font-size: 13px;
+  color: #444444;
+  line-height: 1.482;
+  margin-left: 10px;
+  padding: auto;
+}
+
+input[type="text"] {
+  font-size: 13px;
+  padding: 10px 10px;
+  border: 1px solid #868686;
+  outline: none;
+  width: 100%;
+
+}
+
+input[type="password"] {
+  font-size: 13px;
+  padding: 10px 10px;
+  border: 1px solid #868686;
+  outline: none;
+  width: 100%;
+}
+
+input[type="email"] {
+  font-size: 13px;
+  padding: 10px 10px;
+  border: 1px solid #868686;
+  outline: none;
+  width: 100%;
+
+}
+
+input[type="submit"] {
+  @include green-button;
+  @include border-radius(4px);
+  text-transform: uppercase;
+  max-width: 165px;
+  width: 165px;
+  font-weight: normal;
+
+}
+
+select, option {
+  @include green-button;
+
+}
+
+select {
+  width: 100%;
+  background-color: $color-green;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+}
+
+option {
+  background-color: #afafaf;
+  padding: 10px 10px;
+  line-height: 50px;
+  color: $color-green;
+}
+
+.rail-select {
+  position: relative;
+
+  .select-side {
+    position: absolute;
+    right: 10px;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+}
+
+
+

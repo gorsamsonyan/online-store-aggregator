@@ -1,0 +1,76 @@
+@import "../main-styles";
+@import "../form-styles";
+
+.checked-button {
+  display: block;
+  @include green-button;
+  padding: 5px 10px;
+  min-width: 60px;
+  background-color: transparent;
+  border: 1px solid $color-green;
+  color: $color-green;
+}
+
+.checking-block {
+  input {
+    display: none;
+    &:active + .checked-button {
+      background-color: #0c401e;
+      color: white;
+    }
+
+    &:checked + .checked-button {
+      background-color: #0c401e;
+      color: white;
+    }
+  }
+}
+
+.order-app-button {
+  //width: 80px;
+}
+
+.notification-button {
+  //width: 80px;
+}
+
+.business-integration-block{
+  flex-direction: row;
+}
+.business-integration{
+  display: flex;
+  label{
+    display: flex;
+    margin-right:5px;
+    align-items: center;
+  }
+}
+
+.business-integration-button {
+  border: 1px solid $color-green;
+  height: 15px;
+  width: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  margin:0 5px ;
+}
+
+.business-integration-checkd{
+  display: none;
+}
+.business-integration {
+  input {
+    display: none;
+    &:active + .business-integration-button .business-integration-checkd {
+      display: block;
+      //color: white;
+    }
+
+    &:checked + .business-integration-button .business-integration-checkd {
+      display: block;
+      //color: white;
+    }
+  }
+}

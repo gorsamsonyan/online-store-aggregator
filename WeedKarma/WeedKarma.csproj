@@ -1,0 +1,111 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <UserSecretsId>aspnet-WeedKarma-F6A0E7E7-D3D1-4CB8-8385-457B34A0DB2F</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\**" />
+    <Compile Remove="Migrations\**" />
+    <Compile Remove="ScaffoldedModels\**" />
+    <Compile Remove="Views\Signin\**" />
+    <Content Remove="Areas\**" />
+    <Content Remove="Migrations\**" />
+    <Content Remove="ScaffoldedModels\**" />
+    <Content Remove="Views\Signin\**" />
+    <EmbeddedResource Remove="Areas\**" />
+    <EmbeddedResource Remove="Migrations\**" />
+    <EmbeddedResource Remove="ScaffoldedModels\**" />
+    <EmbeddedResource Remove="Views\Signin\**" />
+    <None Remove="Areas\**" />
+    <None Remove="Migrations\**" />
+    <None Remove="ScaffoldedModels\**" />
+    <None Remove="Views\Signin\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\SigninController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\robots.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\AboutUs\Index.cshtml" />
+    <None Include="Views\Business\Create.cshtml" />
+    <None Include="Views\Business\Index.cshtml" />
+    <None Include="Views\Carers\Index.cshtml" />
+    <None Include="Views\ContactUs\Index.cshtml" />
+    <None Include="Views\Deals\Index.cshtml" />
+    <None Include="Views\Dispensaries\Index.cshtml" />
+    <None Include="Views\Doctors\Index.cshtml" />
+    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Product\Index.cshtml" />
+    <None Include="Views\Shared\Error.cshtml" />
+    <None Include="Views\Shared\_CookieConsentPartial.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\Shared\_LoginPartial.cshtml" />
+    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <None Include="Views\Sitemap\Index.cshtml" />
+    <None Include="Views\_ViewImports.cshtml" />
+    <None Include="Views\_ViewStart.cshtml" />
+    <None Include="wwwroot\styles\form-styles.css.map" />
+    <None Include="wwwroot\styles\form-styles.scss" />
+    <None Include="wwwroot\styles\global-styles.css.map" />
+    <None Include="wwwroot\styles\global-styles.scss" />
+    <None Include="wwwroot\styles\main-respons.css.map" />
+    <None Include="wwwroot\styles\main-respons.scss" />
+    <None Include="wwwroot\styles\main-styles.scss" />
+    <None Include="wwwroot\styles\pages\contact-information.css.map" />
+    <None Include="wwwroot\styles\pages\contact-information.scss" />
+    <None Include="wwwroot\styles\pages\general-setting.css.map" />
+    <None Include="wwwroot\styles\pages\general-setting.scss" />
+    <None Include="wwwroot\styles\pages\login-page.css.map" />
+    <None Include="wwwroot\styles\pages\login-page.scss" />
+    <None Include="wwwroot\styles\pages\menu-page.css.map" />
+    <None Include="wwwroot\styles\pages\menu-page.scss" />
+    <None Include="wwwroot\styles\pages\orders.css.map" />
+    <None Include="wwwroot\styles\pages\orders.scss" />
+    <None Include="wwwroot\styles\pages\store-info.css.map" />
+    <None Include="wwwroot\styles\pages\store-info.scss" />
+    <None Include="wwwroot\styles\pages\store-page.css.map" />
+    <None Include="wwwroot\styles\pages\store-page.scss" />
+    <None Include="wwwroot\styles\pages\store-product-add.css.map" />
+    <None Include="wwwroot\styles\pages\store-product-add.scss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="BundlerMinifier.Core" Version="2.8.391" />
+    <PackageReference Include="Microsoft.ApplicationInsights" Version="2.9.1" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.6.1" />
+    <PackageReference Include="Microsoft.AspNet.SignalR" Version="2.4.0" />
+    <PackageReference Include="Microsoft.AspNet.SignalR.Client" Version="2.4.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="NToastNotify" Version="5.0.9" />
+    <PackageReference Include="System.Reactive.Linq" Version="4.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Weed.Karma.BLL.Interfaces\Weed.Karma.BLL.Interfaces.csproj" />
+    <ProjectReference Include="..\Weed.karma.BLL.Mapper\Weed.karma.BLL.Mapper.csproj" />
+    <ProjectReference Include="..\Weed.Karma.BLL\Weed.Karma.BLL.csproj" />
+    <ProjectReference Include="..\Weed.Karma.DAL\Weed.Karma.DAL.csproj" />
+    <ProjectReference Include="..\Weed.Karma.Entities\Weed.Karma.Entities.csproj" />
+    <ProjectReference Include="..\Weed.Karma.Models\Weed.Karma.Models.csproj" />
+  </ItemGroup>
+
+</Project>

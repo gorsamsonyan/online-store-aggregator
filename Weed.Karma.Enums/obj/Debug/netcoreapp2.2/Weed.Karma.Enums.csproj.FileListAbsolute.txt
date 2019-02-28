@@ -1,0 +1,9 @@
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.Enums\bin\Debug\netcoreapp2.2\Weed.Karma.Enums.deps.json
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.Enums\bin\Debug\netcoreapp2.2\Weed.Karma.Enums.dll
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.Enums\bin\Debug\netcoreapp2.2\Weed.Karma.Enums.pdb
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.Enums\obj\Debug\netcoreapp2.2\Weed.Karma.Enums.csproj.CoreCompileInputs.cache
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.Enums\obj\Debug\netcoreapp2.2\Weed.Karma.Enums.AssemblyInfoInputs.cache
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.Enums\obj\Debug\netcoreapp2.2\Weed.Karma.Enums.AssemblyInfo.cs
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.Enums\obj\Debug\netcoreapp2.2\Weed.Karma.Enums.dll
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.Enums\obj\Debug\netcoreapp2.2\Weed.Karma.Enums.pdb
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.Enums\obj\Debug\netcoreapp2.2\Weed.Karma.Enums.csprojAssemblyReference.cache

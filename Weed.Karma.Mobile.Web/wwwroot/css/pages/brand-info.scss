@@ -1,0 +1,71 @@
+@import "../main-styles";
+.store-info-section{
+  background-color: white;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  @include box-shadow(0px 0px 13px -5px rgba(0, 0, 0, 0.5));
+  @include border-radius(6px);
+}
+.store-info-title{
+  padding:20px 0 10px  15px;
+  color: $color-green;
+}
+.store-info-container{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.store-info-row{
+  padding: 10px 0;
+  font-size: 14px;
+}
+.store-info-left-block{
+
+  img{
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+  }
+}
+.store-info-right-block-text{
+  a{
+    color: $color-green;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+.store-about{
+  max-width: 600px;
+  margin-bottom: 15px;
+}
+.store-about-title{
+  font-size: 16px;
+  color: $color-green;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.store-about-description{
+  font-size: 15px;
+}
+
+.store-map{
+  margin-bottom: 20px;
+}
+
+.store-social-icons-block{
+  text-align: center ;
+}
+.social-icons-block-title{
+  font-size: 16px;
+  color: $color-green;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.social-icons-block{
+  img{
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+  }
+}

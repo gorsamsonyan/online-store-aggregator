@@ -1,0 +1,203 @@
+﻿@using Weed.Karma.Models.StoreModels;
+@using Weed.Karma.Enums
+@model FullStoreInfoViewModel
+@{
+    string[] weekends = Model.Weekends.Split(',');
+    int[] convertedItems = Array.ConvertAll<string, int>(weekends, int.Parse);
+
+}
+<link rel="stylesheet" href="/css/pages/store-info.css" />
+<main class="wkPage--store">
+    <div class="basketPopup fx fx-between">
+        <div class="basketPopup__left fx fx-center-v">
+            <div class="basketPopup__imgBox">
+                <img src="/img/single-product/pocket.png" alt="" class="basketPopup__img">
+            </div>
+            <div class="basketPopup__info">
+                <h4 class="basketPopup__price">Your order is</h4>
+                <p class="basketPopup__priceWarning">Order must be at least 50$</p>
+            </div>
+        </div>
+        <div class="basketPopup__right fx fx-center-v fx-between">
+            <h3 class="basketPopup__rightTitle">Order Pickup</h3>
+            <a href="javascript:void(0)" class="basketPopup__goToCart open-cart" id="openCart">
+                <i class="fa fa-chevron-circle-right basketPopup__goToCartIcon" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+    <!-- WK Structure Start -->
+    <div class="wkStructure wkShop__container singleProduct__pageContainer container--medium">
+
+        <!-- ----------------------- -->
+        <!-- WK Structure Section Start -->
+        <section class="wkStructure__section wkStores__container">
+            <!-- Single Shop -->
+            <div class="fx ss-store">
+                <div class="ss-store__left ss-store__imgContainer">
+                    <img src="@Model.LogoPath"
+                         class="ss-store__img"
+                         alt="Shop Thumbnail" />
+                </div>
+                <div class="fx fx-between fx-column ss-store__right">
+                    <div class="ss-store__header fx fx-between">
+                        <div class="fx ss-store__headerLeft">
+                            <h2 class="ss-store__name">@Model.ShopName</h2>
+                            <div class="ss-store__rating">
+                                <img src="/img/store/ratingLeaf-grey.png" alt="" class="ss-store__ratingIcon">
+                                <sup class="ss-store__ratingValue">1</sup>
+                            </div>
+                        </div>
+                        <div class="ss-store__headerRigt">
+                            <a href="/Store/Products/@Model.UrlByName" class="ss-store__headerLink ss-store__headerLink--info">
+                                <i class="fas fa-bars"></i>
+                                menu
+                            </a>
+                            @*<a href="store-feedback.html" class="ss-store__headerLink ss-store__headerLink--like">
+                                <img src="/img/icons/like.png" alt="">
+                                Feedback
+                            </a>*@
+                        </div>
+                    </div>
+                    <ul class="wkShop__infoList fx fx-between fx-wrap">
+                        <li class="ss__infoItem">
+                            <div class="ss__infoItemRow fx fx-center-v">
+                                <img src="/img/store/1.png"
+                                     alt="Working Hours"
+                                     class="ss__infoImg wkShop__infoImg--left" />
+                                <span>Working Hours</span>
+                            </div>
+                            <span class="block text-center ss__infoValue">
+                                @Model.WorkingHoursFrom - @Model.WorkingHoursTo</sup>
+                            </span>
+                        </li>
+                        <li class="ss__infoItem">
+                            <div class="ss__infoItemRow fx fx-center-v">
+                                <img src="/img/store/2.png"
+                                     alt="Delivery Time"
+                                     class="ss__infoImg" />
+                                <span>Delivery Time</span>
+                            </div>
+                            <span class="block text-center ss__infoValue">@Model.DeliveryTime.DeliveryTimeFrom - @Model.DeliveryTime.DeliveryTimeTo</span>
+                        </li>
+                        <li class="ss__infoItem">
+                            <div class="ss__infoItemRow fx fx-center-v">
+                                <img src="/img/store/3.png"
+                                     alt="Min Order"
+                                     class="ss__infoImg" />
+                                <span>Min Order Ammount</span>
+                            </div>
+                            <span class="block text-center ss__infoValue">@Model.DeliveryTime.MinOrderDelivery</span>
+                        </li>
+                        <li class="ss__infoItem">
+                            <div class="ss__infoItemRow fx fx-center-v">
+                                <img src="/img/store/4.png"
+                                     alt="Delivery Price"
+                                     class="ss__infoImg" />
+                                <span>Delivery Price</span>
+                            </div>
+                            <span class="block text-center ss__infoValue">@Model.DeliveryTime.DeliveryPrice</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Single Shop End -->
+            <div class="store-info-section">
+                <div class="container--meduim">
+                    <h1 class="store-info-title">
+                        Store Information
+                    </h1>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7 col-md-12 col-sm-12">
+                            <div class="store-info-container ">
+                                <div class="row store-info-row">
+                                    <div class="col-lg-6 col-sm-6 store-info-left-block fx fx-center-v  ">
+                                        <img src="/img/store/info/tags.png" alt="tags">
+                                        <div class="store-info-left-block-text">
+                                            Tags
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6 store-info-right-block">
+                                        <div class="store-info-right-block-text">
+                                            <a href="#">Cannabis</a>,
+                                            <a href="#">Marijuana</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row store-info-row">
+                                    <div class="col-lg-6 col-sm-6 store-info-left-block fx fx-center-v ">
+                                        <img src="/img/store/info/working-days.png" alt="tags">
+                                        <div class="store-info-left-block-text">
+                                            Working days
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6 store-info-right-block">
+                                        <div class="store-info-right-block-text">
+                                            @for (int i = 0; i < convertedItems.Length; i++)
+                                            {
+                                                string day = GetDaysOfWeek.GetDayOfWeek(convertedItems[i]);
+                                                @day
+                                            }
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row store-info-row">
+                                    <div class="col-lg-6 col-sm-6 store-info-left-block fx fx-center-v ">
+                                        <img src="/img/store/info/order-time.png" alt="tags">
+                                        <div class="store-info-left-block-text">
+                                            Time to accept orders
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6 store-info-right-block">
+                                        <div class="store-info-right-block-text">
+                                            from @Model.WorkingHoursFrom to @Model.WorkingHoursTo
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-menium">
+                                <div class="store-about">
+                                    <div class="store-about-title">
+                                        About @Model.ShopName
+                                    </div>
+                                    <div class="store-about-description">
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-12 col-sm-12">
+                            <div class="store-map">
+
+                                <iframe width="100%" height="300"
+                                        src="https://maps.google.com/maps?width=100%&amp;height=300&amp;hl=en&amp;q=1%20Grafton%20Street%2C%20Dublin%2C%20Ireland+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
+                                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                                    <a href="https://www.maps.ie/map-my-route/">Create a route on google maps</a>
+                                </iframe>
+
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="store-social-icons-block">
+                    <div class="social-icons-block-title">
+                        Do You Like Weed Store ?
+                    </div>
+                    <div class="social-icons-block fx fx-center-h ">
+                        <a href="#"> <img src="/img/store/social/instagram.png" alt=""></a>
+                        <a href="#"> <img src="/img/store/social/facebook.png" alt=""></a>
+                        <a href="#"> <img src="/img/store/social/twitter.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- WK Structure Section End -->
+    </div>
+    <!-- WK Structure End -->
+</main>

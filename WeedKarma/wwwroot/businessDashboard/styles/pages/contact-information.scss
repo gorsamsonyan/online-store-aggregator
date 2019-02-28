@@ -1,0 +1,83 @@
+@import "../main-styles";
+@import "../form-styles";
+
+.contact-information-title {
+  @include second-title;
+  text-align: center;
+  font-size: 24px;
+  color: blue;
+  padding: 20px;
+}
+
+.add-contact-button{
+  @include green-button;
+  max-width: 200px;
+  margin-bottom: 30px;
+  @include border-radius(0 10px 10px 0);
+
+  .icon-plus{
+    border-radius: 50%;
+    border: 1px solid white;
+
+    margin-right: 5px;
+    display: inline-block;
+    width: 15px;
+    line-height: 15px;
+  }
+}
+
+#contactInformation{
+  display: none;
+  margin-bottom: 20px;
+}
+.contacts-block{
+  padding: 0 50px;
+  ul{
+    padding: 0;
+  }
+  @include mobile{
+
+    padding: 0 15px;
+  }
+}
+
+.contact-item{
+  @include mobile{
+    justify-content: center;
+  }
+}
+.contact-item-position,.contact-item-last-name, .contact-item-name{
+
+
+
+  text-align: left;
+  padding: 10px 15px;
+border-right: 1px solid $color-green;
+}
+.contact-item-position{
+  @include border-radius(7px 0 0 7px);
+}
+.contact-item-col{
+  color: $color-green;
+  padding: 10px;
+  min-width: 45px;
+  background-color: #bdbdbd;
+}
+.contact-item-icon{
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-item-edit{
+  background-color: $green;
+  color: white;
+}
+.contact-item-delete{
+  @include border-radius(0 7px 7px 0);
+  background-color: red;
+  color: white;
+}
+.contact-information {
+
+
+}

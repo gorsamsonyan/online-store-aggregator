@@ -1,0 +1,198 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "Weed Karma" + @ViewData["Message"];
+    string baseUrl = Context.Request.Scheme + "://" + Context.Request.Host.Value;
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/slick.css">
+    <link rel="stylesheet" href="/css/global-styles.css">
+
+    <link rel="stylesheet" href="/css/main-respons.css">
+    <link rel="stylesheet" href="/css/select2.min.css" />
+    <link rel="stylesheet" href="/css/pages/mobile-preview.css">
+
+    <title>@ViewData["Title"]</title>
+
+</head>
+<body onload="Onload()">
+    <div class="preview-slider-container">
+        <a href="#" class="skip-button">SKIP <i class="fas fa-arrow-right"></i></a>
+        <div class="preview-slider">
+
+
+            <div class="preview-slider-item">
+                <div class="slide__content">
+                    <div class="slide__content-img">
+                        <div class="img-block">
+                            <div class=" slide__img slide__img-phone">
+                                <img src="img/preview/phone.png" alt="">
+                            </div>
+                            <div class=" slide__img slide__img-weed">
+                                <img src="img/preview/weed.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide__content__text">
+
+                        <h2 class="slide__content__text-title">Weed Karma</h2>
+                        <p class="slide__content__text-sub-title">The best  convenient weed ordering application</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="preview-slider-item">
+
+
+                <div class="slide__content">
+                    <div class="slide__content-img">
+                        <div class="img-block">
+                            <div class=" slide__img slide__img-store1">
+                                <img src="img/preview/store1.png" alt="">
+                            </div>
+                            <div class=" slide__img slide__img-store2">
+                                <img src="img/preview/store2.png" alt="">
+                            </div>
+                            <div class=" slide__img slide__img-store3">
+                                <img src="img/preview/store3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide__content__text">
+
+                        <h2 class="slide__content__text-title">Big Choice</h2>
+                        <p class="slide__content__text-sub-title">Мore than 1000 stores in your pocke</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="preview-slider-item">
+
+                <div class="slide__content">
+                    <div class="slide__content-img">
+                        <div class="img-block">
+                            <div class=" slide__img slide__img-review-phone">
+                                <img src="img/preview/reviewPhone.png" alt="">
+                            </div>
+                            <div class=" slide__img slide__img-review">
+                                <img src="img/preview/review.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide__content__text">
+
+                        <h2 class="slide__content__text-title">Weed Karma</h2>
+                        <p class="slide__content__text-sub-title">Your order is successfully placed,  courier is already coming to you!</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="preview-slider-item">
+
+                <div class="slide__content">
+                    <div class="slide__content-img">
+                        <div class="img-block">
+                            <div class=" slide__img slide__img-current-cart">
+                                <img src="img/preview/currentCart.png" alt="">
+                            </div>
+                            <div class=" slide__img slide__img-current-thanks">
+                                <img src="img/preview/currentThenks.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide__content__text">
+
+                        <h2 class="slide__content__text-title">Weed Karma</h2>
+                        <p class="slide__content__text-sub-title">We deliver, you enjoy ...</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="preview-slider-item">
+
+                <div class="slide__content last-slide">
+                    <form id="previewForm" action="#">
+
+
+                        @*<div class="slide__content__text your-age-answer">
+                            <h2 class="slide__content__text-title">Weed Karma</h2>
+                            <p class="slide__content__text-sub-title">Select Your City?</p>
+                        </div>*@
+                        <div class="form-item">
+                            <select name="" class="input-select" id="selectState" required>
+                                <option hidden disabled selected>State</option>
+                            </select>
+                        </div>
+                        <div class="form-item">
+                            <select name="" class="input-select" id="selectCity" required>
+                                <option hidden disabled selected>City</option>
+                            </select>
+                        </div>
+
+                        <div class="slide__content__text your-age-answer">
+                            <!--<h2 class="slide__content__text-title">Weed Karma</h2>-->
+                            <p class="slide__content__text-sub-title">Are you 21 years old?</p>
+                        </div>
+                        <div class="your-age-quesion">
+                            <label>
+                                <input type="radio" name="ageBig21" value="YES" required checked />
+                                <span class=" your-age your-age-more">YES</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="ageBig21" value="NO" required />
+                                <span class="your-age your-age-less">NO</span>
+                            </label>
+                        </div>
+
+                        <div class="i-agree-block">
+
+                            <div class="slide__content__text i-agree-text">
+
+                                <h2 class="slide__content__text-title">Weed Karma</h2>
+                                <p class="slide__content__text-sub-title">We deliver, you enjoy ...</p>
+
+                            </div>
+
+                            <div class="i-agree-button">
+                                <div class="submit-button">
+                                    <i class="fas fa-check checking"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script src="/js/preview.js"></script>
+    <script src="~/js/back.js"></script>
+    <script>
+    function Onload() {
+        getState(1, '@baseUrl');
+
+    }
+    </script>
+</body>
+</html>

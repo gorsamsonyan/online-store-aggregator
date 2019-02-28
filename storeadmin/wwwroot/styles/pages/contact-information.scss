@@ -1,0 +1,43 @@
+@import "../main-styles";
+@import "../form-styles";
+
+.contact-information-title {
+  @include second-title;
+  text-align: center;
+  font-size: 24px;
+  color: blue;
+  padding: 20px;
+}
+
+.add-contact{
+  @include green-button;
+  max-width: 200px;
+  margin-bottom: 30px;
+}
+
+#contactInformation{
+  display: none;
+  margin-bottom: 20px;
+}
+.contacts-block{
+  ul{
+    padding: 0;
+  }
+}
+.contact-item-col{
+  border: 1px solid $color-green;
+  padding: 10px;
+}
+.contact-item-icon{
+  font-size: 20px;
+  cursor: pointer;
+}
+.contact-item-delete{
+  &:hover {
+    color: red;
+  }
+}
+.contact-information {
+
+
+}

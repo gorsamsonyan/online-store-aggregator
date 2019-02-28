@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Weed.Karma.BLL.Interfaces\Weed.Karma.BLL.Interfaces.csproj" />
+    <ProjectReference Include="..\Weed.Karma.Core\Weed.Karma.Core.csproj" />
+    <ProjectReference Include="..\Weed.Karma.DAL\Weed.Karma.DAL.csproj" />
+    <ProjectReference Include="..\Weed.Karma.Entities\Weed.Karma.Entities.csproj" />
+    <ProjectReference Include="..\Weed.Karma.Models\Weed.Karma.Models.csproj" />
+  </ItemGroup>
+
+</Project>

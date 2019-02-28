@@ -1,0 +1,260 @@
+﻿@using Weed.Karma.Models.CartItems
+@using Weed.Karma.Enums
+@model IEnumerable<CartItemsViewModelForStore>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="/businessDashboard/styles/main-respons.css">
+    <!--<link rel="stylesheet" href="styles/global-styles.css">-->
+    <link rel="stylesheet" href="/businessDashboard/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/businessDashboard/styles/global-styles.css">
+
+    <!--<link rel="stylesheet" href="styles/form-styles.css">-->
+    <link rel="stylesheet" href="/businessDashboard/styles/pages/store-page.css">
+    <link rel="stylesheet" href="/businessDashboard/styles/pages/orders.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+</head>
+<body>
+    <div class="page-wrapper chiller-theme toggled">
+        <!--header block-->
+        <div class="header-block">
+
+
+            <div class="navbar-header d-flex justify-content-between align-items-center">
+
+                <a id="show-sidebar" class="btn-lg left-menu-open-icon p-0 " href="#">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <a class="header-logo">
+                    <img src="/img/logo.svg" width="50px" alt="">
+                    <div class="logo-text">Weed Karma</div>
+                </a>
+                <div class="header-search">
+                    <div>
+                        <div class="input-group">
+                            <input type="text" class="form-control search-menu" placeholder="Search...">
+                            <div class="header-search-icon">
+
+                                <i class="fa fa-search" aria-hidden="true"></i>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-date-block">
+                    <div class="date-title">Date</div>
+                    <div class="date"></div>
+
+                </div>
+
+                <div class="header-user-name"> User Name</div>
+                <div class="header-right-block">
+                    <a href="#">
+                        <img class="header-right-block-icon" src="/img/header-icons/notification.png" alt="">
+                        <span class="badge badge-pill notification-count ">3</span>
+                    </a>
+                    <a href="#">
+                        <img class="header-right-block-icon" src="/img/header-icons/mail.png" alt="">
+                        <span class="badge badge-pill mail-count">7</span>
+                    </a>
+
+                    <a href="#">
+                        <img class="header-right-block-icon" src="/img/header-icons/logout.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--header block End-->
+
+        @await Html.PartialAsync("_AdminHeader")
+
+        <!--sidebar-wrapper-->
+        @await Html.PartialAsync("_StoreAdminLeftMenu")
+
+
+        <main class="page-content margin-top">
+            <div class="container-fluid store-body">
+
+                <h1 class="section-title" id="msg">
+                    Orders
+                </h1>
+                <div class="body-section">
+
+
+                    <div class="container">
+                        <ul class="row order-menu">
+                            <li class="order-menu-item"><a class="order-menu-item-link dark-brown-button">Non Confirm</a></li>
+                            <li class="order-menu-item">
+                                <a class="order-menu-item-link light-green-button">
+                                    New order (<span class="new-order-count">3</span>)
+                                </a>
+                            </li>
+                            <li class="order-menu-item">
+                                <a class="order-menu-item-link green-button">
+                                    Are Waiting (<span class="are-waiting-count">3</span>)
+                                </a>
+                            </li>
+                            <li class="order-menu-item">
+                                <a class="order-menu-item-link light-green-button">
+                                    On Way (<span class="order-on-way-count">3</span>)
+                                </a>
+                            </li>
+                            <li class="order-menu-item">
+                                <a class="order-menu-item-link red-button">
+                                    Closed (<span class="order-closed-count">3</span>)
+                                </a>
+                            </li>
+                            <li class="order-menu-item">
+                                <a class="order-menu-item-link dark-red-button">
+                                    Canceled (<span class="order-canceled-count">3</span>)
+                                </a>
+                            </li>
+                            <li class="order-menu-item">
+                                <form action="">
+
+                                    <input id="datepicker" type="text" value="04/11/2019">
+
+                                </form>
+                            </li>
+                            <li class="order-menu-item"><a class="order-menu-item-link dark-brown-button">period  </a></li>
+                        </ul>
+                        <div class=" row order-table-block">
+                            <ul class="p-0 order-table" id="CartItems">
+                                <li class="order-table-header d-flex align-items-center">
+                                    <a class="order-number" href="#">N </a>
+                                    <a class="order-status" href="#">Status </a>
+                                    <a class="order-time" href="#">Time </a>
+                                    <a class="order-address" href="#">address </a>
+                                    <a class="order-currier" href="#">currier </a>
+                                    <a class="order-client" href="#">client </a>
+                                    <a class="order-comment" href="#">comment </a>
+                                    <a class="order-list" href="#">order list </a>
+                                    <a class="order-amount" href="#">amount </a>
+                                    <a class="order-amount" href="#">Quantity </a>
+                                    <a class="order-amount" href="#">amount </a>
+                                </li>
+                            </ul>
+                            <div class="order-signal-block">
+
+                                <div class="title">Signal</div>
+                                <div class="signal-button">PickUp</div>
+                                <div class="signal-button">Delivery</div>
+                                <div class="signal-button">B22 OFFer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </main>
+        <!--page-content"-->
+
+
+    </div>
+
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $(function () {
+        $("#datepicker").datepicker({
+        });
+    });
+</script>
+<script src="~/businessDashboard/scripts/bootstrap.min.js"></script>
+<script src="~/businessDashboard/scripts/store-page.js"></script>
+<script src="~/businessDashboard/scripts/orders.js"></script>
+<script src="~/businessDashboard/scripts/signalr.min.js"></script>
+<script>
+
+   
+</script>
+<script>
+    // SignalR bootstrap
+    var a = 0;
+    var updaterConnection;
+    openConnection();
+    
+    function openConnection() {
+        $("#msg").html("Preparing...");
+        updaterConnection = new signalR.HubConnection("/orderHub");
+        updaterConnection
+            .start()
+            .then(() => {
+             
+                updaterConnection.invoke("Order", 2);
+              
+            })
+            .catch(() => {
+                alert("Error while establishing connection");
+            });
+    };
+
+</script>
+
+<script>
+    updaterConnection.on("UpdateCart",
+        (model) => {
+            $("#CartItems").empty();
+            model.forEach(function (i) {
+
+                $("#CartItems").append('<li class="order-table-item d-flex align-items-center" >' +
+                    ' <a class="order-number" href="#"> ' +
+                    '<span> ' + i.id + '</span> ' +
+                    '</a> ' +
+                    '<a class="order-status" href="#"> ' +
+                    '<span>' + i.orderStatus + '</span> ' +
+                    '</a>' +
+                    '<a class="order-time" href="#"> ' +
+                    '<span>' + i.orderTime + '</span> ' +
+                    '</a>' +
+                    ' <a class="order-address" href="#"> ' +
+                    '<span> la, 485 </span>' +
+                    ' </a> ' +
+                    '<a class="order-currier" href="#"> ' +
+                    '<span> aram </span> ' +
+                    '</a>' +
+                    ' <a class="order-client" href="#">' +
+                    ' <span> ashot </span>' +
+                    ' </a> ' +
+                    '<div class="order-comment" href="#">' +
+                    ' <form action=""> ' +
+                    '<label>' +
+                    ' <textarea type="text" class="comment-input"></textarea> ' +
+                    '</label> ' +
+                    '</form>' +
+                    ' </div>' +
+                    '<a class="order-list" href="#"> ' +
+                    '<span> ' + i.storeProduct.productName + '  </span>' +
+                    ' </a> ' +
+                    '<a class="order-amount" href="#">' +
+                    ' <span> ' + i.totalPrice + ' </span>' +
+                    ' </a> ' +
+                    '<a class="order-amount" href="#"> ' +
+                    '<span> ' + i.quantity + ' </span> ' +
+                    '</a> ' +
+                    '<a class="order-amount" href="/Store/ViewOrder/'+i.id+'">' +
+                    ' <span> View </span>' +
+                    ' </a></li>');
+
+            });
+
+        });
+</script>

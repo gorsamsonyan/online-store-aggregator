@@ -1,0 +1,507 @@
+﻿
+@{
+    Layout = null;
+    string baseUrl = Context.Request.Scheme + "://" + Context.Request.Host.Value;
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/businessDashboard/styles/main-respons.css">
+    <!--<link rel="stylesheet" href="styles/global-styles.css">-->
+    <link rel="stylesheet" href="~/businessDashboard/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="~/businessDashboard/styles/select2.min.css">
+
+    <!--<link rel="stylesheet" href="styles/form-styles.css">-->
+    <link rel="stylesheet" href="~/businessDashboard/styles/pages/store-page.css">
+    <link rel="stylesheet" href="~/businessDashboard/styles/global-styles.css">
+    <link rel="stylesheet" href="~/businessDashboard/styles/pages/store-info.css">
+    <link rel="stylesheet" href="~/businessDashboard/fonts/fonts.css">
+</head>
+<body onload="getState(1, '@baseUrl')">
+    <div class="page-wrapper chiller-theme toggled">
+
+
+        <!--header block-->
+    @await Html.PartialAsync("_AdminHeader")
+        <!--header block End-->
+
+        
+
+        <!--sidebar-wrapper-->
+
+    @await Html.PartialAsync("_StoreAdminLeftMenu")
+
+
+        <main class="page-content margin-top">
+
+            <div class="container-fluid store-body">
+
+                <h1 class="section-title">
+                    Store Information
+                </h1>
+
+                <div class="body-section">
+                <form method="post" id="storeInformation">
+                <input type="hidden" name="LogoPath" id="LogoPath" value="" />
+                <div class="container">
+
+                <div class="row store-information justify-content-center">
+
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="form-item">
+                                <label for="shopName" class="form-item-label">Shop name*</label>
+                                <input type="text" class="input-text" name="ShopName" id="shopName"
+                                       placeholder="show in website"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="form-item">
+                                <label for="shop-legal-name" class="form-item-label">
+                                    Shop legal
+                                    name*
+                                </label>
+                                <input type="text" class="input-text" id="shop-legal-name"
+                                       placeholder="Name LLC"
+                                       required name="ShopLegalName">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-sm-12">
+
+                            <div class="form-item">
+                                <label for="productDescription" class="form-item-label">
+                                    Description*
+                                   
+                                </label>
+                                <textarea type="text" class="input-textarea" id="storeDescription"
+                                          required name="Description"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-sm-12 no-label select-state">
+                            <div class="form-item">
+                                <div class="select-arrow"><i class="fas fa-angle-down"></i></div>
+                                <label for="selectState"></label>
+                                <select name="State" id="selectState">
+                                    <option hidden disabled selected>State</option>
+
+
+                                </select>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-sm-12  select-city">
+                            <div class="form-item">
+
+                                <div class="select-arrow"><i class="fas fa-angle-down"></i></div>
+                                <label for="selectState"></label>
+                                <select name="RegionId" id="selectCity">
+                                    <option hidden disabled selected> Choose City</option>
+
+
+                                </select>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-sm-12 address">
+                            <div class="form-item">
+                                <label for="physicalAdress" class="form-item-label">
+                                    Physical
+                                    Adress*
+                                </label>
+                                <input type="text" class="input-text" id="physicalAdress" name="PhysicalAddress" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-sm-12 address">
+                            <div class="form-item">
+                                <label for="legalAdress" class="form-item-label">Legal Adress*</label>
+                                <input type="text" class="input-text" id="legalAdress" name="LegalAddress" required>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-sm-6">
+                            <div class="form-item">
+                                <label for="specifyWebsite" class="form-item-label">
+                                    Specify
+                                    Website
+                                </label>
+                                <input type="text" class="input-text" name="WebSite" id="specifyWebsite">
+                            </div>
+                        </div>
+
+
+                        @*<div class="col-lg-6 col-sm-12 no-label">
+            <div class="form-item img-download-block">
+                <!--<label class="form-item-label">Insert Store image*</label>-->
+                <label class="file-container">
+                    <span class="insert-image ">Upload Store Image</span>
+                    <div class="dowonloded-text">
+                        <span class="file-is-done"> file iz done</span>
+                        <span class="icon">ok</span>
+                    </div>
+                    <input type="file" class="input-file" name="ImageSrc" id="file-download-store" disabled>
+                </label>
+            </div>
+        </div>*@
+
+                        @*<div class="col-lg-12 col-sm-12">
+            <div class="form-item">
+                <label class="form-item-label">Choose Payment Method*</label>
+                <div class="row credit-card-block align-items-center">
+                    <div class="col-lg-3 text-center">
+                        <input id="visa" type="checkbox" class="input-checkbox"
+                               name="PaymentMethod"
+                               value="visa" />
+                        <label class=" credit-card-img " for="visa">
+                            <img src="~/img/payment-metod/visa.png" alt="visa">
+                        </label>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                        <input id="mastercard" type="checkbox" class="input-checkbox"
+                               name="PaymentMethod"
+                               value="mastercard" />
+                        <label class=" credit-card-img " for="mastercard">
+                            <img src="~/img/payment-metod/master.png"
+                                 alt="mastercard">
+                        </label>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                        <input id="americanExpress" type="checkbox" class="input-checkbox"
+                               name="PaymentMethod"
+                               value="americanExpress" />
+                        <label class=" credit-card-img " for="americanExpress">
+                            <img src="~/img/payment-metod/american.png"
+                                 alt="americanExpress">
+                        </label>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                        <input id="cash" type="checkbox" name="PaymentMethod"
+                               class="input-checkbox"
+                               value="cash" />
+                        <label class=" credit-card-img " for="cash">
+                            <img src="~/img/payment-metod/cash.png" alt="cash">
+                        </label>
+                    </div>
+                </div>
+                <div class="cc-selector">
+
+                </div>
+            </div>
+        </div>*@
+
+                        <div class="col-lg-6 col-sm-6">
+                            <div class="form-item">
+                                <label for="taxnumber" class="form-item-label">Tax number*</label>
+                                <input type="text" class="input-text" id="taxnumber" name="TaxNumber" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6">
+                            <div class="form-item">
+                                <label for="contactnumber" class="form-item-label">
+                                    Contact
+                                    number*
+                                </label>
+                                <input type="text" class="input-text" name="ContactNumber" id="contactnumber" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6">
+                            <div class="form-item">
+                                <label for="licensenumber" class="form-item-label">
+                                    License
+                                    number*
+                                </label>
+                                <input type="text" class="input-text" name="LicenseNumber" id="licensenumber" required>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-lg-6 col-sm-12 no-label">
+                            <div class="form-item img-download-block">
+                                <!--<label class="form-item-label">Insert logo*</label>-->
+                                <label class="file-container">
+                                    <span class="insert-image">Upload Logo</span>
+                                    <div class="dowonloded-text">
+                                        <span class="file-is-done"> file iz done</span>
+                                        <span class="icon">ok</span>
+                                    </div>
+                                    <input type="file" class="input-file" id="file-download" name="LogoImg" required>
+                                </label>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-sm-12">
+                <div class="row justify-content-center">
+                <div class="col-lg-12 col-sm-12">
+                    <div class="form-item">
+
+                        <label for="workingHours" class="form-item-label label-center">
+                            Working
+                            Hours*
+                        </label>
+                        <div class="working-hourse-block">
+                            <div class="from  ">
+                                FROM
+                                <div class="rail-select">
+                                    <div class="select-arrow">
+                                        <i class="fas fa-angle-down"></i>
+                                    </div>
+                                    <select id="workingHours" name="WorkingHoursFrom" class="input-select" required>
+                                        <option value="" hidden disabled selected>
+                                            08:00
+                                        </option>
+                                        <option>08:30</option>
+                                        <option>09:00</option>
+                                        <option>09:30</option>
+                                        <option>10:00</option>
+                                        <option>10:30</option>
+                                        <option>11:00</option>
+                                        <option>11:30</option>
+
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="to   ">
+                                TO
+                                <div class="rail-select">
+                                    <div class="select-arrow">
+                                        <i class="fas fa-angle-down"></i>
+                                    </div>
+                                    <select class="input-select" required name="WorkingHoursTo">
+                                        <option value="" hidden disabled selected>
+                                            20:00
+                                        </option>
+                                        <option>20:30</option>
+                                        <option>21:00</option>
+                                        <option>21:30</option>
+                                        <option>22:00</option>
+                                        <option>22:30</option>
+                                        <option>23:00</option>
+                                        <option>23:30</option>
+                                        <option>24:00</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-sm-12 weekend-block ">
+                    <div class="form-item">
+                        <label class="form-item-label label-center">Working days *</label>
+                        <!--<div a>-->
+                        <ul class="checkbox-block text-center">
+                            <li>
+                                <input type="checkbox" class="input-checkbox" name="Weekends"
+                                       value="1">Mo
+                                <!--<span class="checked-button"></span>-->
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-checkbox" name="Weekends"
+                                       value="2">Tu
+                                <!--<span class="checked-button"></span>-->
+
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-checkbox" name="Weekends"
+                                       value="3">We
+                                <!--<span class="checked-button"></span>-->
+
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-checkbox" name="Weekends"
+                                       value="4">Th
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-checkbox" name="Weekends"
+                                       value="5">Fr
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-checkbox" name="Weekends"
+                                       value="6">Sa
+                            </li>
+                            <li>
+                                <input type="checkbox" class="input-checkbox" name="Weekends"
+                                       value="7">Su
+                            </li>
+
+                        </ul>
+                        <!--</div>-->
+                    </div>
+                </div>
+
+                <div class="col-lg-12 col-sm-12 justify-content-center">
+                    <div class="form-item ">
+                        <label class="form-item-label label-center">Delivery service</label>
+                        <div class="delivery-block">
+                            <label class="delivery-service">
+                                <input type="radio" class="input-radio" name="delivery-service"
+                                       
+                                       value="yes"/>
+                                <span class="delivery-service-button"></span>
+                                <span class="">Yes</span>
+                            </label>
+
+                            <label class="delivery-service">
+                                <input type="radio" class="input-radio" name="delivery-service"
+                                       checked   value="no"/>
+                                <span class="delivery-service-button"></span>
+                                <span class="">No</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-12 col-sm-12 delivery-all-block ">
+                    <div class="row">
+
+
+                        <div class="col-lg-12 col-sm-12">
+                            <div class="form-item">
+
+                                <label for="deliveryTime" class="form-item-label label-center">
+                                    Delivery
+                                    Time*
+                                </label>
+                                <div class="working-hourse-block">
+                                    <div class="from  ">
+                                        FROM
+                                        <div class="rail-select">
+                                            <div class="select-arrow">
+                                                <i class="fas fa-angle-down"></i>
+                                            </div>
+                                            <select id="deliveryTime" name="DeliveryTimeFrom" class="input-select" >
+                                                <option value="" hidden disabled selected>
+                                                    08:00
+                                                </option>
+                                                <option>08:30</option>
+                                                <option>09:00</option>
+                                                <option>09:30</option>
+                                                <option>10:00</option>
+                                                <option>10:30</option>
+                                                <option>11:00</option>
+                                                <option>11:30</option>
+
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="to   ">
+                                        TO
+                                        <div class="rail-select">
+                                            <div class="select-arrow">
+                                                <i class="fas fa-angle-down"></i>
+                                            </div>
+                                            <select class="input-select" name="DeliveryTimeTo" >
+                                                <option value="" hidden disabled selected>
+                                                    20:00
+                                                </option>
+                                                <option>20:30</option>
+                                                <option>21:00</option>
+                                                <option>21:30</option>
+                                                <option>22:00</option>
+                                                <option>22:30</option>
+                                                <option>23:00</option>
+                                                <option>23:30</option>
+                                                <option>24:00</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-sm-12 no-label">
+                            <div class="form-item d-flex flex-row align-items-center justify-content-center">
+                                <label class="d-flex align-items-center">
+                                    <span class="delivery-all-block-text">MIN ORDER DELIVERY</span>
+                                    <input class="input-text delivery-all-block-input " name="MinOrderDelivery" type="text">
+                                </label>
+                                <div class="delivery-all-block-price">USD</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-sm-12 no-label">
+                            <div class="form-item d-flex flex-row align-items-center justify-content-center">
+                                <label class="d-flex align-items-center">
+                                    <span class="delivery-all-block-text">DELIVERY PRICE</span>
+                                    <input class="input-text delivery-all-block-input " name="DeliveryPrice" type="text">
+                                </label>
+                                <div class="delivery-all-block-price">USD</div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-sm-12  no-label delivery-region-block">
+                            <div class="form-item">
+
+                                <div class="select-arrow"><i class="fas fa-angle-down"></i></div>
+                                <label for="selectRegion">Choose Region*</label>
+                                <select name="DeliveryRegionId" id="selectRegion" multiple>
+                                    <option hidden disabled> Choose Regions</option>
+
+                                </select>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="col-lg-12 col-sm-12 no-label">
+                    <div class="form-item">
+
+                        <input type="submit" class="input-submit" value="Save">
+                    </div>
+                </div>
+
+
+                </div>
+                </div>
+
+
+                </div>
+                </div>
+
+                </form>
+                </div>
+                <!-- Store info End-->
+            </div>
+        </main>
+        <!--page-content"-->
+
+
+    </div>
+
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="~/businessDashboard/scripts/bootstrap.min.js"></script>
+<script src="~/businessDashboard/scripts/store-page.js"></script>
+<script src="~/businessDashboard/scripts/select2.full.min.js"></script>
+<script src="~/businessDashboard/scripts/store-info.js"></script>
+<script src="~/businessDashboard/scripts/back.js"></script>
+<script src="/businessDashboard/scripts/add-store.js"></script>

@@ -1,0 +1,72 @@
+/* font family */
+.store-info-page-container {
+  padding: 5px 30px; }
+
+.store-info-page-info-left-block, .store-info-page-info-right-block {
+  padding: 0 !important; }
+
+.store-info-page-info-row {
+  padding: 5px 0; }
+
+.store-info-page-info-left-block img {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px; }
+
+.store-info-page-info-left-block-text {
+  font-size: 12px;
+  color: #818285;
+  text-transform: capitalize; }
+
+.store-info-page-info-right-block {
+  text-align: right; }
+
+.store-info-page-info-right-block-text {
+  color: black;
+  font-size: 12px;
+  font-weight: 400; }
+  .store-info-page-info-right-block-text a {
+    color: black; }
+
+.store-about {
+  margin-top: 15px; }
+
+.store-about-title {
+  color: #215f24;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold; }
+
+.store-about-description {
+  font-size: 13px;
+  color: #818285; }
+
+.store-map {
+  width: 100%;
+  margin-top: 20px; }
+  .store-map iframe {
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px; }
+
+.store-socila-icons-block {
+  margin-top: 15px;
+  border-top: 1px solid #ececed; }
+
+.social-icons-block-title {
+  color: #215f24;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  margin: 10px 0; }
+
+.social-icons-icons-block {
+  justify-content: center; }
+  .social-icons-icons-block a {
+    margin: 0 15px; }
+  .social-icons-icons-block img {
+    height: 30px;
+    width: 30px; }
+
+/*# sourceMappingURL=store-info.css.map */

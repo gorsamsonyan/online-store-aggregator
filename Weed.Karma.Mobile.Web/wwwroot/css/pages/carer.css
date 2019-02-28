@@ -1,0 +1,87 @@
+/* font family */
+.open_positions-title {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 32px;
+  font-weight: 600;
+  font-family: "Open Sans", "PT Sans", sans-serif; }
+  .open_positions-title span {
+    color: #215f24; }
+.open_positions-menu {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #ececed;
+  width: 100%;
+  margin-bottom: 30px; }
+  .open_positions-menu ul {
+    display: inline-flex; }
+  .open_positions-menu li {
+    margin: 0 10px; }
+  .open_positions-menu a {
+    display: block;
+    color: #215f24;
+    font-size: 14px;
+    padding: 10px 0;
+    font-weight: 600; }
+  .open_positions-menu-item-active {
+    border-bottom: 1px solid #215f24;
+    transition: 0.3s; }
+.open_positions-work-block {
+  justify-content: center;
+  margin-bottom: 70px;
+  display: none; }
+.open_positions-work-item {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 9.7px 6px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 4px 9.7px 6px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0px 4px 9.7px 6px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px; }
+  .open_positions-work-item-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    height: 40px; }
+  .open_positions-work-item-description {
+    font-size: 11px;
+    margin-bottom: 15px;
+    height: 175px;
+    overflow: hidden; }
+  .open_positions-work-item-learn-more {
+    font-size: 13px;
+    font-weight: bold;
+    display: block;
+    cursor: pointer; }
+.open_positions-our-work {
+  align-items: flex-end;
+  margin-bottom: 50px; }
+  .open_positions-our-work-img {
+    background-image: url("../../img/career.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 260px; }
+  .open_positions-our-work-text {
+    margin-bottom: 30px; }
+  .open_positions-our-work-title {
+    font-family: "Open Sans", "PT Sans", sans-serif;
+    font-size: 22px;
+    color: #215f24;
+    font-weight: bold; }
+    .open_positions-our-work-title .green-bottom-line {
+      display: block;
+      border-bottom: 2px solid #215f24;
+      width: 80px;
+      margin: 15px 0; }
+  .open_positions-our-work-description {
+    font-size: 14px;
+    color: #87878a; }
+
+.open_positions-work-block-active {
+  display: flex; }
+
+/*# sourceMappingURL=carer.css.map */

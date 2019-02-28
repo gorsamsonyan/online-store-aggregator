@@ -1,0 +1,185 @@
+@import "../main-styles";
+
+.gray-button {
+  color: $darkBrown
+}
+
+.green-button{
+  background-color: $green
+}
+.light-green-button {
+  background-color: green;
+}
+
+.dark-green-button {
+  background-color: $color-green
+}
+
+.red-button
+{
+  background-color: #ac0000;
+}
+.dark-red-button
+{
+  background-color: #7b0000;
+}
+.dark-brown-button{
+  background-color: $darkBrown;
+}
+.order-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+.order-menu-item {
+  padding: 0 5px;
+  margin-bottom: 10px;
+}
+
+.order-menu-item-link {
+  text-align: center;
+border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  color: white;
+  &:hover {
+    color: white;
+
+  }
+}
+#datepicker{
+  width: 90px;
+  text-align: center;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  padding: 5px;
+  background-color: cadetblue;
+  color: white;
+
+}
+
+.order-table-block{
+  overflow-x: auto;
+}
+.order-table {
+  display: flex;
+  flex-direction: column;
+
+  .order-table-header a {
+    background-color: green;
+    color: white;
+    padding: 2px 5px;
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+  }
+  .order-table-item {
+    span {
+      background-color: #868686;
+      width: 100%;
+      border-radius: 4px;
+      display: block;
+      padding: 5px 0;
+    }
+    a {
+      color: $color-green;
+      display: inline-block;
+      text-align: center;
+      padding: 0 5px;
+
+    }
+  }
+  .order-number {
+    width: 30px;
+  }
+  .order-status {
+    width: 90px;
+  }
+  .order-time {
+    width: 60px;
+  }
+  .order-address {
+    width: 90px;
+  }
+  .order-currier {
+    width: 70px;
+  }
+  .order-client {
+    width: 70px;
+  }
+  .order-comment {
+    display: inline-block;
+    width: 90px;
+    text-align: center;
+    padding: 5px;
+  }
+  .order-list {
+    width: 100px;
+  }
+  .order-amount {
+    width: 100px;
+  }
+  table {
+    //width: 100%;
+    border-collapse: separate;
+    border-spacing: 5px;
+  }
+  .table-header {
+    background-color: green;
+  }
+  th {
+    background-color: green;
+    min-height: 40px;
+    height: 40px;
+    color: white;
+    text-align: center;
+  }
+  td {
+    text-align: center;
+    padding: 5px 10px;
+    background-color: $darkBrown;
+    @include border-radius(4px)
+  }
+  .comment-input {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 0 10px;
+
+  }
+  form, label, .comment-input {
+    height: 25px;
+    min-height: 25px;
+  }
+  label {
+    margin: 0;
+  }
+
+}
+.order-signal-block {
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  text-transform: uppercase;
+  text-align: -webkit-center;
+  margin: 35px 0 0 50px;
+  width: 150px;
+  padding: 20px 0;
+  .title {
+    margin-bottom: 10px;
+  }
+  .signal-button {
+    padding: 5px;
+    background-color: rgb(113, 209, 118);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    max-width: 100px;
+  }
+}
+

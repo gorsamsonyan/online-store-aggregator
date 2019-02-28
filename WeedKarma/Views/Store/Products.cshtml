@@ -1,0 +1,252 @@
+﻿@using Weed.Karma.Models.StoreModels
+@model StoreProductsViewModel
+
+<link rel="stylesheet" href="~/css/pages/single-product.css" />
+
+<main class="wkPage--store">
+    @*<div class="basketPopup fx fx-between">
+        <div class="basketPopup__left fx fx-center-v">
+            <div class="basketPopup__imgBox">
+                <img src="/img/single-product/pocket.png" alt="" class="basketPopup__img">
+            </div>
+            <div class="basketPopup__info">
+                <h4 class="basketPopup__price">Your order is</h4>
+                <p class="basketPopup__priceWarning">Order must be at least 50$</p>
+            </div>
+        </div>
+        <div class="basketPopup__right fx fx-center-v fx-between">
+            <h3 class="basketPopup__rightTitle">Order Pickup</h3>
+            <a href="javascript:void(0)" class="basketPopup__goToCart open-cart" id="openCart">
+                <i class="fa fa-chevron-circle-right basketPopup__goToCartIcon" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>*@
+    <!-- WK Structure Start -->
+    <div class="wkStructure wkShop__container singleProduct__pageContainer container--medium">
+        <!-- WK Structure Aside Start -->
+        <aside class="wkStructure__aside singleProduct__aside">
+            <form method="POST" class="singleProduct__form">
+                <div class="inputField singleProduct__inputField">
+                    <input type="text"
+                           id="singleProduct__input"
+                           placeholder="Product search" />
+                    <label for="singleProduct__input">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </label>
+                </div>
+            </form>
+
+            <!-- wk menu -->
+            <ul class="ss__menu">
+                <li class="ss__menuItem ss__menuItem  ">
+                    <a href="/Store/Products/@Model.Store.UrlByName"
+                       class="singlePage__suggestion singlePage__menuItem singlePage__suggestionLink"> All Categories</a>
+                </li>
+                @foreach (var category in Model.ProductCategory)
+                {
+                    <li class="ss__menuItem ss__menuItem  ">
+                        <a href="/Store/Products/@Model.Store.UrlByName/@category.UrlByName"
+                           class="singlePage__suggestion singlePage__menuItem singlePage__suggestionLink">@category.Name</a>
+                    </li>
+                }
+            </ul>
+            <!-- wk menu end -->
+        </aside>
+        <!-- WK Structure Aside End -->
+        <!-- ----------------------- -->
+        <!-- WK Structure Section Start -->
+        <section class="wkStructure__section wkStores__container">
+            <!-- Single Shop -->
+            <div class="fx ss-store">
+                <div class="ss-store__left ss-store__imgContainer">
+                    <img src="@Model.Store.LogoPath"
+                         class="ss-store__img"
+                         alt="Shop Thumbnail" />
+                </div>
+                <div class="fx fx-between fx-column ss-store__right">
+                    <div class="ss-store__header fx fx-between">
+                        <div class="fx ss-store__headerLeft">
+                            <h2 class="ss-store__name">@Model.Store.ShopName</h2>
+                            <div class="ss-store__rating">
+                                <img src="/img/store/ratingLeaf-grey.png" alt="" class="ss-store__ratingIcon">
+                                <sup class="ss-store__ratingValue">1</sup>
+                            </div>
+                        </div>
+                        <div class="ss-store__headerRigt">
+                            <a href="/Store/Info/@Model.Store.UrlByName" class="ss-store__headerLink ss-store__headerLink--info">
+                                <img src="/img/icons/information.png" alt="">
+                                Info
+                            </a>
+                            @*<a href="store-feedback.html" class="ss-store__headerLink ss-store__headerLink--like">
+                                <img src="/img/icons/like.png" alt="">
+                                Feedback
+                            </a>*@
+                        </div>
+                    </div>
+                    <ul class="wkShop__infoList store-products fx fx-between fx-wrap">
+                        <li class="ss__infoItem">
+                            <div class="ss__infoItemRow fx fx-center-v">
+                                <img src="/img/store/1.png"
+                                     alt="Working Hours"
+                                     class="ss__infoImg wkShop__infoImg--left" />
+                                <span>Working Hours</span>
+                            </div>
+                            <span class="block text-center ss__infoValue">
+                                @Model.Store.WorkingHoursFrom - @Model.Store.WorkingHoursTo
+                            </span>
+                        </li>
+                        <li class="ss__infoItem">
+                            <div class="ss__infoItemRow fx fx-center-v">
+                                <img src="/img/store/2.png"
+                                     alt="Delivery Time"
+                                     class="ss__infoImg" />
+                                <span>Delivery Time</span>
+                            </div>
+                            <span class="block text-center ss__infoValue">@Model.DeliveryTime.DeliveryTimeFrom - @Model.DeliveryTime.DeliveryTimeTo</span>
+                        </li>
+                        <li class="ss__infoItem">
+                            <div class="ss__infoItemRow fx fx-center-v">
+                                <img src="/img/store/3.png"
+                                     alt="Min Order"
+                                     class="ss__infoImg" />
+                                <span>Min Order Ammount</span>
+                            </div>
+                            <span class="block text-center ss__infoValue">@Model.DeliveryTime.MinOrderDelivery USD</span>
+                        </li>
+                        <li class="ss__infoItem">
+                            <div class="ss__infoItemRow fx fx-center-v">
+                                <img src="/img/store/4.png"
+                                     alt="Delivery Price"
+                                     class="ss__infoImg" />
+                                <span>Delivery Price</span>
+                            </div>
+                            <span class="block text-center ss__infoValue">@Model.DeliveryTime.DeliveryPrice USD</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ss-store__navBox ss__menu-mobile fx fx-between fx-center-v">
+                <ul class="ss__menu fx fx-center-h">
+                    @foreach (var category in Model.ProductCategory)
+                    {
+                        <li class="ss__menuItem ss__menuItem ">
+                            <a href="javascript:void(0)"
+                               class="singlePage__suggestion singlePage__menuItem singlePage__suggestionLink">@category.Name</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+            <div class="singleProduct__relatedContainer">
+                <div class="singleProduct__relatedRow fx fx-wrap">
+                    <!-- Add to cart popup -->
+                    <div class="text-center fx fx-center-h addedToCart">
+                        <!-- <span class="addedToCart__text fx fx-center-v"><img src="/img/icons/added.png" alt="">Added to cart </span>
+                        <span class="addedToCart__tiangle"></span> -->
+                        <img src="/img/added.png" alt="Added To Cart Image" class="addedToCart__image">
+                    </div>
+                    <!-- Add to cart popup -->
+                    <!-- wk items -->
+                    @foreach (var product in Model.Products)
+                    {
+                        <div class="ss__product-item" data-store-id="@product.StoreId" data-product-id="@product.Id">
+                            <div class="singleProduct__relatedItem">
+                                <div class="ss-store__bgImage"
+                                     style="background-image: url('@product.ImagePath');">
+                                    @*<a href="javascript:void(0)" class="ss-store__info">*@
+                                        @*<!-- <i class="fa fa-info ss-store__infoIcon" aria-hidden="true"></i> -->*@
+                                        @*i
+                                    </a>*@
+                                    <div class="ss-store__ratingRibbon ss-ribbons--left ss-ribbons--orange">
+                                        <span class="ss-store__ratingRibbonValue">4.8</span>
+                                        <i class="fa fa-star ss-store__ratingRibbonIcon" aria-hidden="true"></i>
+                                    </div>
+                                    <h3 class="ss-store__category ss-ribbons--both ss-ribbons--grey">
+                                        @product.ProductName
+                                    </h3>
+                                </div>
+                                <!-- -- -->
+                                <div class="ss-store__details text-center">
+                                    <div class="fx fx-between fx-center-v ss-store__selects">
+                                        <!-- <h4 class="singleProduct__name">Product Name</h4> -->
+                                        <div class="ss-store__selectWrapper fx fx-center">
+                                            <div class="fx fx-wrap ss-store__variationsContainer">
+                                                @foreach (var price in product.StoreProductUnits)
+                                                {
+                                                    if (price.CurrentPrice <= product.StoreProductUnits.Select(s => s.CurrentPrice).Min())
+                                                    {
+                                                        <a href="javascript:void(0)"
+                                                           class="ss-store__variation ss-store__variation--selected"
+                                                           data-price="@price.CurrentPrice">
+                                                            @price.Size
+                                                        </a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a href="javascript:void(0)"
+                                                           class="ss-store__variation ss-store__variation"
+                                                           data-price="@price.CurrentPrice">
+                                                            @price.Size
+                                                        </a>
+                                                    }
+
+                                                }
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="fx fx-between fx-center-v singleProduct__bottomRow">
+                                        <span class="singleProduct__cost singleProduct__cost--usd">@product.StoreProductUnits.Select(s => s.CurrentPrice).Min()</span>
+                                        <a href="javascript:void(0)"
+                                           class="ss-store__orderBtn singleProduct__basket singleProduct__order">Order</a>
+                                        <!-- <a
+                                          href="javascrip:void(0)"
+                                          class="singleProduct__quantity"
+                                        ></a> -->
+                                        <!-- <a href="javascript:void(0)" class="singleProduct__basket singleProduct__order">
+                                          <img src="/img/single-product/basket.png" alt="Basket Image" class="singleProduct__basketImg">
+                                        </a> -->
+                                    </div>
+                                    <div class="quantityPopup">
+                                        <a href="javascript:void(0)" class="quantityPopup__close">X</a>
+                                        <div class="quantityPopup__bottom fx fx-column">
+                                            <div class="quantityPopup__summary fx fx-between fx-center-v">
+                                                <span class="quantityPopup__cost quantityPopup__cost--usd"></span>
+                                                <form method="POST">
+                                                    <div class="fx fx-center-v">
+                                                        <a href="javascript:void(0)"
+                                                           class="quantityPopup__incDec quantityPopup__minus">
+                                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                                        </a>
+                                                        <input type="number" name="" class="quantityPopup__input"
+                                                               min="1"
+                                                               value="1" />
+                                                        <a href="javascript:void(0)"
+                                                           class="quantityPopup__incDec quantityPopup__plus">
+                                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                                        </a>
+                                                    </div>
+                                                </form>
+                                                <span class="quantityPopup__costSummary quantityPopup__costSummary--usd"></span>
+                                            </div>
+                                            <a href="javascript:void(0)" class="quantityPopup__countSubmit dib">OK</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+
+
+                    <!-- wk items end -->
+                </div>
+            </div>
+        </section>
+        <!-- WK Structure Section End -->
+    </div>
+    <!-- WK Structure End -->
+</main>
+
+<script src="~/js/menu.js"></script>
+<script src="~/js/store-products.js"></script>

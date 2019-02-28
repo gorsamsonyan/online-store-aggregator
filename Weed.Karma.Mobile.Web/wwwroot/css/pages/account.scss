@@ -1,0 +1,397 @@
+@import "../main-styles";
+@import "../form-styles";
+
+.account-profile {
+  background-color: $lightBrown;
+
+  .for_buttons {
+    padding: 5px 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include mobile{
+      position: relative;
+      text-align: center;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .bttn {
+      color: $color-green;
+      font-size: 16px;
+      text-decoration: none;
+      border: 1px solid #ededed;
+      border-radius: 5px;
+      height: 40px;
+      line-height: 40px;
+      display: inline-block;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-left: 10px;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #F3F3F3));
+      background-image: -o-linear-gradient(bottom, #fff 0%, #F3F3F3 100%);
+      background-image: -moz-linear-gradient(bottom, #fff 0%, #F3F3F3 100%);
+      background-image: -webkit-linear-gradient(bottom, #fff 0%, #F3F3F3 100%);
+      background-image: -ms-linear-gradient(bottom, #fff 0%, #F3F3F3 100%);
+      background-image: linear-gradient(to bottom, #fff 0%, #F3F3F3 100%);
+      -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .5);
+      -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .5);
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .5);
+      &:hover {
+        color: #ff5100;
+        text-decoration: underline;
+      }
+      @include mobile{
+
+
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+      @include mobileL{
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  #content {
+    @include box-shadow(0 1px 3px 0 rgba(3, 4, 4, .21));
+    background-color: white;
+    padding: 10px 0;
+  }
+}
+
+.card_profile, .card_address, .card_plastic {
+  position: relative;
+  padding: 0 30px;
+  background-color: white;
+}
+
+.card_profile {
+  border-bottom: 1px solid #c5c6c6;
+}
+
+.content-item-header {
+  position: relative;
+
+}
+
+.content-item-header-title {
+  font-size: 16px;
+  display: block;
+  margin: 0;
+  padding: 0 5px;
+  line-height: 55px;
+  height: 55px;
+  border-bottom: 1px solid #e4e6e8;
+  background-repeat: no-repeat;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  i {
+    margin-right: 10px;
+  }
+}
+
+.profile_info {
+  //text-align: center;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 0;
+}
+
+.profile_info-item {
+  padding: 10px 0;
+  font-size: 14px;
+  max-width: 300px;
+  margin: 0 auto;
+  @include mobile{
+    //justify-content: center;
+  }
+}
+
+.profile_info-item-left-block {
+  color: #666;
+  width: 150px;
+  text-align: right;
+  margin-right: 20px;
+  @include mobileL{
+width: 130px;
+  }
+}
+
+.profile_info-item-right-block {
+  color: #000;
+}
+
+.card_address {
+  border-bottom: 1px solid #c5c6c6;
+}
+
+.user-form__wrap {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #e4e6e8;
+}
+
+.user-form__wrap .user-addr__input {
+  border: 1px solid $darkBrown;
+  max-width: 440px;
+  width: 100%;
+  height: 42px !important;
+  padding-right: 62px;
+  padding-left: 13px;
+  background: #fff;
+  margin: 0 16px 0 0;
+  font-size: 16px;
+  letter-spacing: 0;
+  position: relative;
+  //z-index: 1;
+  @include border-radius(4px);
+  @include mobile{
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.user-addr__submit {
+  @include border-radius(4px) ;
+  cursor: pointer;
+  outline: none;
+  padding: 10px 40px;
+  letter-spacing: 1px;
+  font-size: 17px;
+  text-transform: uppercase;
+  vertical-align: top;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  background: $color-green;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: none;
+  line-height: 1.4;
+  &:hover {
+    background: #063315;
+    -webkit-transition: background 150ms linear;
+    -moz-transition: background 150ms linear;
+    -o-transition: background 150ms linear;
+    -ms-transition: background 150ms linear;
+    transition: background 150ms linear;
+  }
+}
+
+.addresses {
+  .uaddresses-str {
+    color: #848484;
+    font-size: 16px;
+    padding-top: 23px;
+    padding-bottom: 15px;
+  }
+  .address-edit {
+    text-align: right;
+    margin-right: 10px;
+    float: right;
+    a {
+      line-height: 19px;
+      vertical-align: top;
+      color: gray;
+      font-size: 13px;
+      text-decoration: none;
+    }
+  }
+}
+
+.card_plastic {
+  border-bottom: 1px solid #c5c6c6;
+
+  background-color: #e8e8e9;
+
+  .usd1tip {
+    padding: 10px;
+    border-bottom: 1px solid #d9dadc;
+    background-color: #f7f7f7;
+    height: 67px;
+    line-height: 47px;
+    //padding-left: 50px;
+    font-size: 15px;
+    @include mobile{
+      font-size: 13px;
+    }
+    @include mobileL{
+      font-size: 10px;
+    }
+    .ptusd {
+      color: $color-green;
+    }
+    .usd1hide {
+      color: red;
+      text-decoration: none;
+      float: right;
+      font-size: 25px;
+      margin-right: 5px;
+    }
+  }
+}
+
+//-------------------------change Password-------------
+@include form_atribute;
+.change-password-page {
+
+  padding: 20px 0;
+  margin-bottom: 20px;
+  background: $lightBrown;
+  //font-family: 'OsnovaProNormal', Helvetica, Arial, sans-serif;
+  //font-size: 15px;
+}
+
+.change-password-page-section {
+  background-color: white;
+}
+
+.change-password-page__header {
+  display: block;
+  padding: 15px 30px;
+  font-size: 18px;
+
+  font-weight: normal;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.change-password-form {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px 0;
+.form-item{
+  @include mobileM{
+    padding: 0 10px;
+  }
+}
+  .form-item-label {
+    color: #000000;
+  }
+  .input-text {
+    @include border-radius(4px);
+    //opacity: 0.5;
+    background-color: #ffffff;
+    //background-color: rgba(0,0,0,.5);
+    &:focus {
+      transition: 3s;
+      border: 1px solid $color-green;
+      -webkit-box-shadow: inset 0 0 0 1px $color-green;
+      -moz-box-shadow: inset 0 0 0 1px $color-green;
+      box-shadow: inset 0 0 0 1px $color-green;
+
+    }
+  }
+  .input-submit {
+    width: 100%;
+    max-width: 100%;
+    background-color: $color-green;
+    color: white;
+  }
+
+}
+
+//-------------------------change Password  End-------------
+
+//-------------------------edit prfofile-------------
+.edit-profile-page {
+  padding: 20px 0;
+  margin-bottom: 20px;
+  background: $lightBrown;
+  //font-family: 'OsnovaProNormal', Helvetica, Arial, sans-serif;
+  //font-size: 15px;
+}
+
+.edit-profile__header {
+  font-size: 18px;
+  @include mobile {
+    text-align: center;
+  }
+}
+
+.edit-profile-section {
+  padding: 20px 50px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.edit-profile-form {
+  max-width: 450px;
+  @include mobile {
+    margin: 0 auto;
+  }
+
+  .input-text {
+    @include border-radius(4px);
+    max-width: 200px;
+    background-color: #ffffff;
+    padding: 5px 10px;
+    @include mobile {
+      max-width: 100%;
+    }
+
+  }
+}
+
+.edit-profile-form__label {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  position: relative;
+  @include mobile {
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+}
+.edit-profile-form__check{
+  margin-left: 150px;
+  @include mobile{
+    margin-left: auto;
+  }
+}
+.label-for-input {
+  @include mobile {
+    flex-direction: column;
+  }
+}
+.edit-profile-form__submit{
+  margin-left: 150px;
+  @include mobile{
+    margin-left: auto;
+  }
+  .input-submit{
+    @include mobile{
+      margin: 0 auto;
+    }
+  }
+}
+.edit-profile-form__caption {
+  display: inline-block;
+  font-size: 13px;
+  width: 150px;
+  min-width: 150px;
+  vertical-align: middle;
+  @include mobile {
+    padding-left: 15px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.edit-profile-form__left {
+  margin-right: 10px;
+}
+
+.edit-profile-form__title {
+  font-size: 13px;
+  font-weight: normal;
+}
+
+//-------------------------edit profile  End-------------

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+
+
+
+    <link rel="stylesheet" href="~/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="~/styles/main-respons.css">
+    <link rel="stylesheet" href="~/styles/global-styles.css">
+    <link rel="stylesheet" href="~/styles/form-styles.css">
+    <link rel="stylesheet" href="~/styles/pages/login-page.css">
+    <link rel="stylesheet" href="~/styles/pages/contact-information.css">
+    <link rel="stylesheet" href="~/styles/pages/general-setting.css">
+    <link rel="stylesheet" href="~/styles/pages/menu-page.css">
+    <link rel="stylesheet" href="~/styles/pages/store-product-add.css">
+    <link rel="stylesheet" href="~/styles/pages/store-page.css">
+    <link rel="stylesheet" href="~/styles/pages/store-info.css">
+</head>
+<body>
+    <div>
+        @RenderBody()
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                crossorigin="anonymous"></script>
+        <script src="~/scripts/bootstrap.min.js"></script>
+
+        <script src="~/scripts/contact-info.js"></script>
+        <script src="~/scripts/general-setting.js"></script>
+        <script src="~/scripts/menu-page.js"></script>
+        <script src="~/scripts/store-product-add.js"></script>
+        <script src="~/scripts/store-page.js"></script>
+        <script src="~/scripts/store-info.js"></script>
+        @RenderSection("Scripts");
+    </div>
+</body>
+</html>

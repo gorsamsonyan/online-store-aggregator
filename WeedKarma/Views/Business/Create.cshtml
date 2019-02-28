@@ -1,0 +1,73 @@
+﻿
+
+<main>
+
+    <div id="registration-page">
+        <h1 class="registration-page-title">
+            Register Your Business
+        </h1>
+
+        <div class="registration-form">
+            <form action="#" method="post">
+                <div class="container">
+                    <div class="row contact-information">
+                        <div class="col-lg-6 col-md-12">
+                            <h2 class="contact-information-title">
+                                Your Contact Information
+                            </h2>
+                            <div class="contact-information-sub-title">
+                                *Required Fields
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-12">
+                                    <div class="form-item">
+                                        <label for="firstNmae" class="form-item-label">First name*</label>
+                                        <input class="input-text" id="firstNmae" />
+                                        <span  class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <div class="form-item">
+                                        <label for="lastName" class="form-item-label">Last name*</label>
+                                        <input  class="input-text" id="lastName" />
+                                        <span  class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <div class="form-item">
+                                        <label for="phoneNumber" class="form-item-label">Phone Numbe*</label>
+                                        <input  class="input-text" id="phoneNumber" />
+                                        <span  class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <div class="form-item">
+                                        <label class="form-item-label"></label>
+                                        <input   id="email" class="input-text"/>
+                                        <span class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12 no-label">
+                                    <div class="form-item">
+                                        <input type="submit" class="input-submit" value="Create" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="contact-information-image">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</main>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

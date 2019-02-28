@@ -1,0 +1,239 @@
+/* font family */
+.no-label {
+  display: flex;
+  align-items: flex-end;
+  min-height: 74px; }
+
+.form-item {
+  font-family: "Open Sans", "PT Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 100%; }
+
+.form-item-label {
+  cursor: pointer;
+  font-size: 16px;
+  color: #444444;
+  line-height: 1.482;
+  margin-left: 10px; }
+
+.input-text {
+  font-size: 13px;
+  padding: 10px 10px;
+  border: 1px solid #868686;
+  outline: none;
+  width: 100%; }
+
+.input-submit {
+  background-color: #0f3311;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid #0f3311;
+  padding: 10px 5px;
+  outline: none;
+  transition: 0.3s;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  text-transform: uppercase;
+  max-width: 165px;
+  width: 165px; }
+
+.input-select, .input-option {
+  background-color: #0f3311;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid #0f3311;
+  padding: 10px 5px;
+  outline: none;
+  transition: 0.3s; }
+
+.input-select {
+  width: 100%;
+  background-color: #0f3311;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+.input-option {
+  background-color: #afafaf;
+  padding: 10px 10px;
+  line-height: 50px;
+  color: #0f3311; }
+
+.rail-select {
+  position: relative; }
+  .rail-select .select-side {
+    position: absolute;
+    right: 10px;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; }
+
+@media only screen and (max-width: 768px) {
+  #business-registration-page .section-right-block {
+    order: -1; } }
+#business-registration-page section {
+  padding: 40px 0; }
+  #business-registration-page section .section-img {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat; }
+  #business-registration-page section .section-title {
+    color: #0f3311;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px; }
+    @media only screen and (max-width: 768px) {
+      #business-registration-page section .section-title {
+        text-align: center; } }
+  #business-registration-page section .section-description {
+    max-width: 300px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.3; }
+    @media only screen and (max-width: 768px) {
+      #business-registration-page section .section-description {
+        margin: 0  auto 20px; } }
+#business-registration-page .title {
+  font-weight: normal;
+  text-align: center;
+  font-size: 20px; }
+#business-registration-page .business-registration-header {
+  background-color: #0f3311;
+  padding: 40px 0; }
+#business-registration-page .business-registration-form .form-item-label {
+  color: white; }
+#business-registration-page .business-registration-form .input-text {
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  background-color: #ececed; }
+#business-registration-page .business-registration-form .input-submit {
+  background-color: #ececed;
+  color: #0f3311; }
+#business-registration-page .business-registration-header-right-block {
+  color: white; }
+  @media only screen and (max-width: 768px) {
+    #business-registration-page .business-registration-header-right-block {
+      order: -1;
+      margin-bottom: 20px; } }
+  #business-registration-page .business-registration-header-right-block h1 {
+    font-size: 20px;
+    margin-bottom: 20px; }
+  #business-registration-page .business-registration-header-right-block h4 {
+    margin-bottom: 10px; }
+  #business-registration-page .business-registration-header-right-block p {
+    font-size: 13px;
+    line-height: 1.3;
+    margin-bottom: 10px; }
+#business-registration-page .automates-process-block {
+  text-align: center; }
+  #business-registration-page .automates-process-block .title {
+    font-weight: normal;
+    max-width: 350px;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 40px; }
+    #business-registration-page .automates-process-block .title .bold-text {
+      font-weight: bold; }
+  #business-registration-page .automates-process-block .automates-process-item {
+    margin-bottom: 40px; }
+  #business-registration-page .automates-process-block .automates-process-item-img {
+    width: 100%;
+    height: 110px;
+    margin-bottom: 20px; }
+    #business-registration-page .automates-process-block .automates-process-item-img img {
+      height: 100%; }
+  #business-registration-page .automates-process-block .automates-process-item-title {
+    font-weight: 600;
+    margin-bottom: 5px; }
+  #business-registration-page .automates-process-block .automates-process-item-description {
+    max-width: 200px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.3; }
+#business-registration-page .ready-sales-channel-block {
+  background-color: #ececed; }
+  #business-registration-page .ready-sales-channel-block .ready-sales-channel-img {
+    height: 320px;
+    background-image: url("../../img/registration-business-images/ready-sales-channel.png");
+    width: 100%; }
+    @media only screen and (max-width: 768px) {
+      #business-registration-page .ready-sales-channel-block .ready-sales-channel-img {
+        height: 160px; } }
+#business-registration-page .without-promotion-costs-block .without-promotion-costs-block-img {
+  height: 250px;
+  background-image: url("../../img/registration-business-images/without-promotion-costs-img.png");
+  background-size: 500px;
+  width: 100%; }
+#business-registration-page .order-accept-block {
+  background-color: #ececed; }
+  #business-registration-page .order-accept-block .order-accept-block-img {
+    height: 350px;
+    background-image: url("../../img/registration-business-images/order-accept.png");
+    background-size: contain;
+    width: 100%; }
+    @media only screen and (max-width: 768px) {
+      #business-registration-page .order-accept-block .order-accept-block-img {
+        height: 160px; } }
+#business-registration-page .partners-block .partners-block-title {
+  color: #818285; }
+  #business-registration-page .partners-block .partners-block-title .bold-green-text {
+    color: #0f3311; }
+#business-registration-page .partners-block .partners-item:not(:last-child) {
+  margin-bottom: 40px; }
+@media only screen and (max-width: 768px) {
+  #business-registration-page .partners-block .partners-item {
+    flex-direction: column; } }
+#business-registration-page .partners-block .partners-item-img {
+  margin-right: 40px; }
+  @media only screen and (max-width: 768px) {
+    #business-registration-page .partners-block .partners-item-img {
+      margin-bottom: 10px; } }
+  #business-registration-page .partners-block .partners-item-img img {
+    width: 200px;
+    height: 200px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
+#business-registration-page .partners-block .partners-item-content {
+  flex-direction: column; }
+#business-registration-page .partners-block .partners-item-description {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 20px; }
+  @media only screen and (max-width: 768px) {
+    #business-registration-page .partners-block .partners-item-description {
+      margin-bottom: 0; } }
+@media only screen and (max-width: 768px) {
+  #business-registration-page .partners-block .partners-item-user {
+    order: -1;
+    margin-bottom: 20px; } }
+#business-registration-page .partners-block .partners-item-name {
+  text-transform: uppercase;
+  font-weight: bold; }
+#business-registration-page .partners-block .partners-item-store-name {
+  color: #818285; }
+#business-registration-page .map-block .map-block-img {
+  background-image: url("../../img/registration-business-images/map.png");
+  width: 100%;
+  height: 350px;
+  background-size: cover; }
+  @media only screen and (max-width: 768px) {
+    #business-registration-page .map-block .map-block-img {
+      height: 130px; } }
+#business-registration-page .show {
+  display: flex !important; }
+#business-registration-page .hide {
+  display: none; }
+
+/*# sourceMappingURL=registration-busines.css.map */

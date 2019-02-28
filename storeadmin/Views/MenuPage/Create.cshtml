@@ -1,0 +1,101 @@
+﻿@model storeadmin.ScaffoldModels.Menu
+@{
+    ViewData["Title"] = "Create Menu";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<main class="page-content">
+
+    <div class="container-fluid store-body">
+        <!-- contact information Start-->
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <h2 class="section-title">
+                    Store Menu
+                </h2>
+
+            </div>
+        </div>
+
+        <div class="add-menu-button">
+            Add menu +
+        </div>
+
+        <form action="" method="post" id="addMenuForm">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="container">
+                <div class="row add-menu-form justify-content-center">
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="row">
+
+                            <div class="col-lg-12 col-sm-12 no-label select-state">
+                                <div class="form-item">
+                                   
+                                    <select id="StateID" asp-for="ParentId" asp-items="ViewBag.StoreItems" class="form-control" required>
+                                        <option value="">-- Select Shop --</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-item">
+                                    <label asp-for="Name" class="control-label"></label>
+                                    <input asp-for="Name" class="form-control" />
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12 no-label">
+                                <div class="form-item">
+                                    <input type="submit" value="Create" class="btn btn-default" />
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </form>
+        <div class="add-menu-block">
+            <ul>
+                @foreach (var item in (ViewBag.Menus as IEnumerable<storeadmin.ScaffoldModels.Menu>))
+                {
+                    <li class="row add-menu-item">
+                        <div class=" col-lg-2 col-sm-10 add-menu-item-col  add-menu-item-name">@item.Name</div>
+                        <div class=" add-menu-item-col  add-menu-item-icon add-menu-item-delete"><i class="far fa-trash-alt"></i></div>
+                    </li>
+                }
+
+            </ul>
+        </div>
+    </div>
+
+</main>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                
+            </div>
+
+            <div class="form-group">
+               
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

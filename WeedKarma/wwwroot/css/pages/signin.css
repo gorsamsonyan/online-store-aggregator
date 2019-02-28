@@ -1,0 +1,173 @@
+.signIn__container {
+  margin-top: 50px;
+  padding:20px;
+}
+.signIn__right,
+.signIn__left {
+  width: 50%;
+}
+.signinMain-container{
+  /*background-image: url(../../img/shape.png);
+  background-repeat: no-repeat;
+  background-size:50%;
+  background-position: left -15% bottom -15%;*/
+}
+.signIn__right{
+  /*background-image: url(../../img/weed.png);
+  background-repeat: no-repeat;
+  background-size:50%;
+  background-position: 100% 100%;*/
+  object-fit: cover;
+  padding:0;
+  border-radius: 20px;
+  justify-centent:center;
+  /*display: grid;*/
+  position:relative;
+}
+
+.signIn__form {
+  text-align:center;
+  position:relative;
+}
+.signIn-right-wrapper{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.signIn__form::after{
+  position: absolute;
+  content: '';
+  background-color: #d0d0d0;
+  width: 1px;
+  height: 90%;
+  top: 0;
+  right: 0;
+}
+.signIn__subtitle {
+  font-size: 20px;
+  font-weight: 400;
+}
+.signIn__inputField {
+  margin: 12px 0;
+}
+.signIn__input {
+  width: 50%;
+  padding: 10px 5px;
+}
+.signIn__title{
+  text-align:center;
+  font-size: 28px;
+}
+.signIn__title_dark{
+  padding-bottom:20px;
+}
+.signIn__subtitle{
+  text-align: center;
+  font-size:14px;
+}
+.signIn__login {
+  color: var(--white);
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 1px solid var(--green-2);
+  background: var(--green);
+  padding: 10px 15px;
+  transition: 0.3s;
+  width:50%;
+}
+
+.signIn_list{
+  padding:20px 0;
+  font-size:16px;
+}
+.signIn__forgotPassword {
+  color: var(--grey2);
+  font-size: 14px;
+  line-height: 44px;
+  padding-right: 40px;
+}
+.signIn__listItem {
+  padding: 5px;
+  position:relative;
+}
+.signIn__create {
+  background-color: var(--grey-3);
+  display: inline-block;
+  margin-top: 5px;
+  padding: 5px;
+  width:50%;
+  text-align: center;
+  color: var(--white);
+}
+
+.signIn-title_green{
+  color:var(--green-2);
+  position:relative;
+}
+.signIn-title_green:after{
+  position: absolute;
+  content: "";
+  background-color: var(--green-2);
+  top: 107%;
+  left: 25%;
+  height: 2px;
+  width: 50%;
+}
+.signIn__title_dark{
+  color:var(--green-2);
+  position:relative;
+}
+.signIn__title_dark:after{
+  position: absolute;
+  content: "";
+  background-color: var(--green-2);
+  top: 80%;
+  left: 25%;
+  height: 2px;
+  width: 50%;
+}
+.signIn_span{
+  text-align:center;
+  padding: 10px 5px 10px 5px;
+  position:relative;
+}
+.signIn_span::after{
+  position:absolute;
+  content:"";
+  background:#5f5f5f;
+  height:2px;
+  width:21%;
+  bottom:43%;
+  right: 25%;
+}
+.signIn_span::before{
+  position:absolute;
+  content:"";
+  background:#5f5f5f;
+  height:2px;
+  width:21%;
+  bottom: 43%;
+  left: 25%;
+}
+.signIn_socialbtn{
+  width:20px;
+}
+.signIn__social{
+  text-align: center;
+  width:50%;
+  padding:10px;
+  color:var(--white);
+  margin:10px auto;
+  cursor:pointer;
+}
+.google{
+  background: #3282ee;
+}
+.facebook{
+  background: #265798;
+}
+.regForm__input{
+  padding:10px 5px;
+  width:50%;
+  margin: 4px 0;
+}

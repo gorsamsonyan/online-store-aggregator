@@ -1,0 +1,218 @@
+﻿
+@{
+    Layout = null;
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Wiki Karma &mdash; Wiki Blog</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/pages/bootstrap.css">
+    <link rel="stylesheet" href="~/css/pages/animate.css">
+    <link rel="stylesheet" href="~/css/pages/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/font/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/font/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/font/flaticon/font/flaticon.css">
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="~/css/pages/style.css">
+    <style>
+        .require {
+            color: #666;
+        }
+
+        label small {
+            color: #999;
+            font-weight: normal;
+        }
+
+        .file-field.medium .file-path-wrapper {
+            height: 3rem;
+        }
+
+            .file-field.medium .file-path-wrapper .file-path {
+                height: 2.8rem;
+            }
+
+        .file-field.big-2 .file-path-wrapper {
+            height: 3.7rem;
+        }
+
+            .file-field.big-2 .file-path-wrapper .file-path {
+                height: 3.5rem;
+            }
+
+
+        .material-switch > input[type="checkbox"] {
+            display: none;
+        }
+
+        .material-switch > label {
+            cursor: pointer;
+            height: 0px;
+            position: relative;
+            width: 40px;
+        }
+
+            .material-switch > label::before {
+                background: rgb(0, 0, 0);
+                box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+                border-radius: 8px;
+                content: '';
+                height: 16px;
+                margin-top: -8px;
+                position: absolute;
+                opacity: 0.3;
+                transition: all 0.4s ease-in-out;
+                width: 40px;
+            }
+
+            .material-switch > label::after {
+                background: rgb(255, 255, 255);
+                border-radius: 16px;
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+                content: '';
+                height: 24px;
+                left: -4px;
+                margin-top: -8px;
+                position: absolute;
+                top: -4px;
+                transition: all 0.3s ease-in-out;
+                width: 24px;
+            }
+
+        .material-switch > input[type="checkbox"]:checked + label::before {
+            background: inherit;
+            opacity: 0.5;
+        }
+
+        .material-switch > input[type="checkbox"]:checked + label::after {
+            background: green;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header role="banner">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-9 social">
+                        <a href="/WikiKarma"><span class="fa fa-arrow-left"></span> Wiki Karma</a>
+                        <a href="#"><span class="fa fa-twitter"></span></a>
+                        <a href="#"><span class="fa fa-facebook"></span></a>
+                        <a href="#"><span class="fa fa-instagram"></span></a>
+                        <a href="#"><span class="fa fa-youtube-play"></span></a>
+                        <a href="#"><span class="fa fa-vimeo"></span></a>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            if (User.IsInRole("Moderator"))
+                            {
+                                <a href=""><span>Add post +</span></a>
+                            }
+                        }
+                    </div>
+
+                    <div class="col-3 search-top">
+                        <!-- <a href="#"><span class="fa fa-search"></span></a> -->
+                        <form action="#" class="search-top-form">
+                            <span class="icon fa fa-search"></span>
+                            <input type="text" id="s" placeholder="Type keyword to search...">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- END header -->
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-md-8 col-md-offset-2">
+
+                <div class="d-flex align-items-center justify-content-between mb-3 mt-2" >
+                    <h1>Create post</h1>
+
+                    <div class="material-switch pull-right d-flex align-items-center">
+                        <span class=" d-block mr-2"> top post</span>
+                        
+                        <input id="someSwitchOptionDefault"   type="checkbox" />
+                        <label for="someSwitchOptionDefault" class="label-default"></label>
+                    </div>
+                </div>
+               
+                <form method="POST">
+                    <input name="IsBestPost" id="postBest" type="hidden" value="">
+                    <div class="form-group">
+                        <label for="title">Title <span class="require">*</span></label>
+                        <input type="text" class="form-control" name="Title" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea rows="5" class="form-control" name="Description"></textarea>
+                    </div>
+
+
+                    <div class="form-group w-100">
+                        <input hidden type="text" id="postMainImage" value="" name="MainImgSrc" />
+                        <div class="file-field">
+                            <div class="btn btn-rounded purple-gradient btn-sm float-left">
+                                <span>Choose file</span>
+                                <input id="postImg" type="file">
+                            </div>
+                            @*<div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="Upload your file">
+                </div>*@
+                        </div>
+
+                    </div>
+
+
+                    <button class="btn btn-primary">
+                        Create
+                    </button>
+                    <button type="reset" class="btn btn-default">
+                        Cancel
+                    </button>
+
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214" /></svg></div>
+    <script src="~/js/jquery-3.2.1.min.js"></script>
+    <script src="~/js/jquery-migrate-3.0.0.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/jquery.waypoints.min.js"></script>
+    <script src="~/js/jquery.stellar.min.js"></script>
+    <script src="~/js/main.js"></script>
+    <script>
+        document.querySelector("#postImg").addEventListener("change", function () {
+            if (this.files[0]) {
+                let fr = new FileReader();
+                console.log(this.files[0].mozFullPath);
+                fr.addEventListener("load", function () {
+                    //document.querySelector(".downloaded-product-image").style.backgroundImage = "url(" + fr.result + ")";
+                    //document.querySelector(".downloaded-product-image").style.height = "90px";
+                    document.getElementById("postMainImage").value = fr.result;
+                }, false);
+                fr.readAsDataURL(this.files[0]);
+            }
+
+        });
+        $('#postBest').val($('#someSwitchOptionDefault').is(':checked'));
+        $('#someSwitchOptionDefault').change(function () {
+            $('#postBest').val($('#someSwitchOptionDefault').is(':checked'));
+            console.log($('#postBest').val())
+        });
+    </script>
+</body>
+</html>

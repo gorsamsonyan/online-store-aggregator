@@ -1,0 +1,169 @@
+@import "../main-styles";
+
+.store-page-main-header{
+  padding-top: 45px;
+}
+.brown-block {
+  width: 100%;
+  height: 10px;
+  background-color: $lightBrown;
+}
+.store-header {
+  background: url("../../img/store/store-header-bg.png");
+  background-size: contain;
+  height: 70px;
+  width: 100%;
+  .store-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+
+  }
+  .store-title {
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+  }
+  .button-back {
+    position: absolute;
+    color: #0f3311;
+    background-color: #ececed;
+    border-radius: 50%;
+    left: 10px;
+    top: 10px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    font-size: 15px;
+    i {
+      line-height: 30px;
+    }
+  }
+}
+
+.store-info {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.store-info-row {
+  margin-bottom: 10px;
+}
+
+.store-filter-item-right-block {
+  .icon-block {
+    min-width: 40px;
+    height: 20px;
+  }
+  .icon {
+    height: 20px;
+  }
+  .text {
+
+    font-size: 10px;
+  }
+}
+
+.store-filter-item-left-block {
+  color: $color-green;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.store-info-top-buttons {
+  position: absolute;
+  top: -17px;
+  right: 30px;
+}
+
+.store-info-top-buttons-item {
+  display: inline-block;
+  background-color: white;
+  padding: 4px;
+  border-radius: 50%;
+  border: 2px solid $darkBrown;
+  position: relative;
+  margin: 0 3px;
+}
+
+.store-share {
+  border-color: #209e27;
+}
+
+.store-rating-icon {
+  width: 20px;
+  height: 20px;
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.store-rating-text {
+  position: absolute;
+  font-size: 12px;
+  top: -10px;
+  right: -7px;
+  letter-spacing: -1px;
+  color: white;
+  font-weight: bold;
+
+}
+
+.store-share-icon {
+  width: 20px;
+  height: 20px;
+  img {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+//--------strore-nav-bar----------
+.store-navbar {
+  ul {
+    justify-content: space-between;
+  }
+  .active {
+    //-webkit-transform: scaleY(1.1);
+    transform: scaleX(1.08) scaleY(1.3);
+
+    background-color: $color-green;
+    @include border-radius(30px);
+
+    &:first-child {
+      @include border-radius(0px 30px 30px 0px);
+    }
+
+    &:last-child {
+      @include border-radius(30px 0px 0px 30px);
+    }
+  }
+}
+
+.store-navbar-item {
+  width: 50%;
+  //width: 33.333333%;
+  display: inline;
+  text-align: center;
+  border: 1px solid white;
+  background-color: $mainGreen;
+
+}
+
+.store-navbar-item-link {
+  padding: 5px 0;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  color: white;
+  font-size: 11px;
+
+}
+
+//--------strore-nav-bar end----------

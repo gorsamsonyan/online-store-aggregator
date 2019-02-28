@@ -1,0 +1,172 @@
+﻿
+@{
+    Layout = null;
+    string baseUrl = Context.Request.Scheme + "://" + Context.Request.Host.Value;
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WeedKarma - Brand</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/businessDashboard/styles/main-respons.css">
+    <!--<link rel="stylesheet" href="styles/global-styles.css">-->
+    <link rel="stylesheet" href="~/businessDashboard/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="~/businessDashboard/styles/select2.min.css">
+
+    <!--<link rel="stylesheet" href="styles/form-styles.css">-->
+    <link rel="stylesheet" href="~/businessDashboard/styles/pages/store-page.css">
+    <link rel="stylesheet" href="~/businessDashboard/styles/global-styles.css">
+    <link rel="stylesheet" href="~/businessDashboard/styles/pages/store-info.css">
+    <link rel="stylesheet" href="~/businessDashboard/fonts/fonts.css">
+</head>
+<body onload="getState(1, '@baseUrl')">
+    <div class="page-wrapper chiller-theme toggled">
+
+
+        <!--header block-->
+    @await Html.PartialAsync("_AdminHeader")
+        <!--header block End-->
+
+        
+
+        <!--sidebar-wrapper-->
+
+    @await Html.PartialAsync("_BrandAdminLeftMenu")
+
+
+        <main class="page-content margin-top">
+
+            <div class="container-fluid store-body">
+
+                <h1 class="section-title">
+                    Brand Information
+                </h1>
+
+                <div class="body-section">
+                    <form method="post" id="storeInformation">
+                        <input type="hidden" name="LogoPath" id="LogoPath" />
+                        <input type="hidden" name="CoverPath" id="CoverPath" />
+                        <div class="container">
+
+                            <div class="row store-information justify-content-center">
+
+
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-12 col-sm-12">
+                                            <div class="form-item">
+                                                <label for="shopName" class="form-item-label">Brand name*</label>
+                                                <input type="text" class="input-text" name="Name" id="shopName"
+                                                       placeholder="show in website"
+                                                       required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-sm-12">
+                                            <div class="form-item">
+                                                @*<label for="shop-legal-name" class="form-item-label">
+                                                    Shop legal
+                                                    name*
+                                                </label>*@
+                                                @*<input type="text" class="input-text" id="shop-legal-name"
+                                                       placeholder="Name LLC"
+                                                       required name="ShopLegalName">*@
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12 col-sm-12">
+
+                                            <div class="form-item">
+                                                <label for="productDescription" class="form-item-label">
+                                                    Description*
+                                                    
+                                                </label>
+                                                <textarea type="text" class="input-textarea" id="productDescription"
+                                                          required name="Description"></textarea>
+                                            </div>                              
+                                        </div>
+                                        <div class="col-lg-12 col-sm-12 no-label select-state">
+                                            <div class="form-item">
+                                                <div class="select-arrow"><i class="fas fa-angle-down"></i></div>
+                                                <label for="selectState"></label>
+                                                <select name="State" id="selectState">
+                                                    <option hidden disabled selected>State</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12 col-sm-12  select-city">
+                                            <div class="form-item">
+
+                                                <div class="select-arrow"><i class="fas fa-angle-down"></i></div>
+                                                <label for="selectState"></label>
+                                                <select name="RegionId" id="selectCity">
+                                                    <option hidden disabled selected> Choose City</option>
+                                                </select>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-sm-12 no-label">
+                                            <div class="form-item img-download-block">
+                                                <!--<label class="form-item-label">Insert logo*</label>-->
+                                                <label class="file-container">
+                                                    <span class="insert-image">Upload Logo</span>
+                                                    <div class="dowonloded-text">
+                                                        <span class="file-is-done"> file is done</span>
+                                                        <span class="icon">ok</span>
+                                                    </div>
+                                                    <input type="file" class="input-file" id="LogoId" name="Logo" required>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-sm-12 no-label">
+                                            <div class="form-item img-download-block">
+                                                <!--<label class="form-item-label">Insert Store image*</label>-->
+                                                <label class="file-container">
+                                                    <span class="insert-image ">Upload Cover Image</span>
+                                                    <div class="dowonloded-text">
+                                                        <span class="file-is-done"> Uploaded</span>
+
+                                                    </div>
+                                                    <input type="file" class="input-file2" name="Cover" id="CoverId" required>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12 col-sm-12 no-label">
+                                            <div class="form-item">
+
+                                                <input type="submit" class="input-submit" value="Save">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <!-- Store info End-->
+            </div>
+        </main>
+        <!--page-content"-->
+
+
+    </div>
+
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="~/businessDashboard/scripts/bootstrap.min.js"></script>
+<script src="~/businessDashboard/scripts/store-page.js"></script>
+<script src="~/businessDashboard/scripts/select2.full.min.js"></script>
+<script src="~/businessDashboard/scripts/store-info.js"></script>
+<script src="~/businessDashboard/scripts/back.js"></script>
+<script src="~/businessDashboard/scripts/add-brand.js"></script>

@@ -1,0 +1,115 @@
+﻿
+<header>
+    <div class="store-header display-flex flex-center">
+        <a href="/Dispensaries" class="button-back"><i class="fas fa-chevron-left"></i></a>
+        <div class="store-img">
+            <img src="@Model.Store.LogoPath" alt="">
+        </div>
+        <h1 class="store-title">@Model.Store.ShopName</h1>
+    </div>
+    <div class="store-info">
+        <div class="store-info-top-buttons">
+            <div class="store-rating store-info-top-buttons-item">
+                <div class="store-rating-text">+ <span class="rating-eval">5</span></div>
+                <div class="store-rating-icon store-info-icon">
+                    <img src="/img/store/reating-icon.png" alt="">
+                </div>
+                <div class="store-rating-text"></div>
+            </div>
+            <div class="store-share store-info-top-buttons-item">
+                <div class="store-share-icon store-info-icon">
+                    <img src="/img/store/share-icon.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <div class="row align-items-center store-info-row ">
+                        <div class="col-lg-6">
+                            <div class="store-filter-item-right-block display-flex align-items-center">
+                                <div class="icon-block">
+                                    <img src="/img/store/clock-icon.png" class="icon" />
+                                </div>
+
+                                <div class="text">Working Hours</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="store-filter-item-left-block">
+                                @Model.Store.WorkingHoursFrom - @Model.Store.WorkingHoursTo
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center store-info-row">
+                        <div class="col-lg-6">
+                            <div class="store-filter-item-right-block display-flex align-items-center">
+                                <div class="icon-block">
+                                    <img src="/img/store/delivery.png" class="icon" />
+                                </div>
+
+                                <div class="text">Delivery Time</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="store-filter-item-left-block">
+                                30-60 min
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="row align-items-center store-info-row ">
+                        <div class="col-lg-8">
+                            <div class="store-filter-item-right-block display-flex align-items-center">
+                                <div class="icon-block">
+                                    <img src="/img/store/delivery_price.png" class="icon" />
+                                </div>
+
+                                <div class="text">Delivery Price</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="store-filter-item-left-block">
+                                @Model.DeliveryTime.DeliveryPrice USD
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center store-info-row">
+                        <div class="col-lg-8">
+                            <div class="store-filter-item-right-block display-flex align-items-center">
+                                <div class="icon-block">
+                                    <img src="/img/store/min_order_amount.png" class="icon" />
+                                </div>
+
+                                <div class="text">Min Order Ammount</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="store-filter-item-left-block">
+                                @Model.DeliveryTime.MinOrderDelivery USD
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="store-navbar">
+        <ul class="display-flex ">
+            <li class="store-navbar-item active  ">
+                <a href="/store-page.html" class="store-navbar-item-link "> menu</a>
+            </li>
+            <li class="store-navbar-item ">
+                <a href="/Store/Info/@Model.Store.Id" class="store-navbar-item-link "> info</a>
+            </li>
+            <li class="store-navbar-item">
+                <a href="/store-feedback.html" class="store-navbar-item-link ">feedback</a>
+            </li>
+        </ul>
+    </div>
+</header>

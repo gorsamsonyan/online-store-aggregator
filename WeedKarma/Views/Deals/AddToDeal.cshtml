@@ -1,0 +1,97 @@
+﻿@using Weed.Karma.Models.DealModels
+@model AddToDealViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/businessDashboard/styles/main-respons.css">
+    <!--<link rel="stylesheet" href="~/businessDashboard/styles/global-styles.css">-->
+    <link rel="stylesheet" href="~/businessDashboard/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="~/businessDashboard/styles/global-styles.css">
+
+    <!--<link rel="stylesheet" href="~/businessDashboard/styles/form-styles.css">-->
+    <link rel="stylesheet" href="~/businessDashboard/styles/pages/store-page.css">
+    <link rel="stylesheet" href="~/businessDashboard/styles/pages/store-product-add.css">
+</head>
+<body>
+    <div class="page-wrapper chiller-theme toggled">
+        <!--header block-->
+        @await Html.PartialAsync("_AdminHeader")
+        <!--header block End-->
+        <!--sidebar-wrapper-->
+
+        @await Html.PartialAsync("_StoreAdminLeftMenu")
+        <main class="page-content margin-top">
+            <div class="container-fluid store-body">
+
+                <h1 class="section-title">
+                    Add To Deal - @Model.ProductName
+                </h1>
+                <div class="body-section">
+                    <form method="post" id="addProductForm">
+                        <input type="hidden" name="ProductCategoryId" value="@Model.ProductCategoryId" />
+                        <input type="hidden" name="StoreProductId" value="@Model.Id" />
+                        <input type="hidden" name="StoreId" value="@Model.StoreId" />
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-3 col-md-3 col-sm-12">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12">
+                                            <div class="form-item">
+                                                <label for="productName" class="form-item-label">
+                                                    Product Name*<span class="information-popup-button">
+                                                        <i class="fas fa-info-circle"></i>
+
+                                                        <span class="information-popup"></span>
+                                                    </span>
+                                                </label>
+                                                <input type="text" class="input-text" id="productName" required="" name="ProductName">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-12">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-sm-12">
+                                            <div class="form-item">
+                                                <label for="productName" class="form-item-label">
+                                                    Product Price*<span class="information-popup-button">
+                                                        <i class="fas fa-info-circle"></i>
+
+                                                        <span class="information-popup"></span>
+                                                    </span>
+                                                </label>
+                                                <input type="text" class="input-text" id="productName" required="" name="CurrentPrice">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-sm-12 no-label justify-content-center">
+                                <input type="submit" class="input-submit" id="" value="To Deal">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+       <!--page-content"-->
+    </div>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="~/businessDashboard/scripts/bootstrap.min.js"></script>
+<script src="~/businessDashboard/scripts/store-page.js"></script>
+<script src="~/businessDashboard/scripts/store-product-add.js"></script>

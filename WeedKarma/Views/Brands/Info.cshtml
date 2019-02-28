@@ -1,0 +1,106 @@
+﻿@using  Weed.Karma.Models.Brand
+@model BrandProductInfoViewModel
+<link rel="stylesheet" href="/css/pages/brand-single-cover.css" />
+<link rel="stylesheet" href="/css/pages/brand-product-page.css" />
+
+<main class="brand-product-page" style="margin-top: 0px;">
+
+    <div class="container--medium">
+
+        <div class="brand-item-cover brand-product-cover" style="background-image: url('@Model.Brand.CoverPath')">
+            <div class="brand-info-block fx fx-center-v fx-between">
+                <div class="brand-item-name-block fx fx-center-v">
+
+                    <div class="brand-logo">
+                        <img src="@Model.Brand.LogoPath" alt="">
+                    </div>
+                    <a href="/Brands/Products/@Model.Brand.UrlByName" class="brand-name">
+                        @Model.Brand.Name
+                    </a>
+
+                </div>
+
+
+                <div class="brand-reating-block">
+                    <img src="~/img/store/ratingLeaf-white.png" alt=" brandImage" class="brand-ratingImg">
+                    <span class="brand-ratingIndex">+5</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="brand-product-section">
+            <div class="container">
+                <div class="row">
+                    <div class="brand-product-img-block col-lg-4 col-sm-12 ">
+                        <div class="brand-product-img" style="background-image: url('@Model.BrandProduct.ProductImage')">
+
+                        </div>
+                    </div>
+                    <div class=" brand-product-top-block col-lg-8 col-sm-12 ">
+                        <div class=" fx fx-center-v fx-between">
+                            <div class="brand-product-name">
+                                @Model.BrandProduct.Name
+                            </div>
+                            <div class="brand-product-rating-block">
+                                <img src="~/img/store/ratingLeaf-green.png" alt=" brandImage" class="brand-ratingImg">
+                                <span class="brand-ratingIndex">+5</span>
+                            </div>
+                        </div>
+                        <div class="brand-product-description">
+                            <p>
+                                @Model.BrandProduct.Description
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="product-in-stores">
+            <div class="product-in-stores-title-block">
+                Find Near Me
+            </div>
+
+            <div class="product-in-stores-block">
+                <ul>
+                    @foreach (var item in Model.Stores)
+                    {
+                        <li class="product-in-stores-item">
+                            <a href="/Store/Products/@item.UrlByName" class="product-in-stores-item-link fx fx-center-v fx-between">
+                                <span class="left-block fx fx-center-v">
+                                    <img src="~/img/brands/wkpin.png" alt="">
+                                    <span class="stores-name">
+                                        @item.ShopName - @item.RegionId
+                                    </span>
+                                </span>
+                                <span class="right-block fx fx-center-v">
+                                    <ul class="product-size-price-block fx">
+                                        @foreach (var element in Model.Units)
+                                        {
+                                            if (item.StoreProductId == element.StoreProductId)
+                                            {
+                                                <li class="product-size-price-block-item">
+                                                    <div class="product-size">@element.Size</div>
+                                                    <div class="product-price">@element.CurrentPrice</div>
+
+                                                </li>
+                                            }
+
+                                        }
+                                    </ul>
+                                </span>
+                            </a>
+                        </li>
+                    }
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</main>

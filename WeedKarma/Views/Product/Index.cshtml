@@ -1,0 +1,477 @@
+﻿@*@model WeedKarma.Models.ViewModelDemo*@
+        < div class="singleStorePage">
+<!-- Cart -->
+<div id="popup" class="open">
+
+    <div class="cart-block open">
+
+        <div class="header-cart">
+            <div class="basket-pocket">
+                <img src="~/img/single-product/pocket.png" alt="" class="basketPopup__img">
+            </div>
+            <h2>Basket</h2>
+            <span id="clear_cart" rel="31728">clear basket</span>
+            <a href="#" class="checkout_close"> <i class="fas fa-times"></i></a>
+        </div>
+
+        <form action="#" method="post" class="user_basket">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-12">
+                        <ul class="user_basket__list">
+                            <li>
+                                <a href="#" class="close">
+                                    <i class="fas fa-times"></i>
+                                </a>
+                                <div class="product_info">
+                                    CANNABIS 1g
+                                </div>
+                                <div class="value">
+                                    <a href="#" class="less"><i class="fas fa-minus"></i></a>
+                                    <input class="shop-q" type="number" value="1" maxlength="2" min="0" name="">
+                                    <a href="#" class="more"> <i class="fas fa-plus"></i></a>
+                                </div>
+                                <div class="price">
+                                    <div class="price-one" data-price-one="200">
+                                        200 <span class="ptrouble">$</span>
+                                    </div>
+                                    <div class="price-all">200 <span class="ptrouble">$</span></div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" class="close">
+                                    <i class="fas fa-times"></i>
+                                </a>
+                                <div class="product_info">
+                                    CANNABIS 200g
+                                </div>
+                                <div class="value">
+                                    <a href="#" class="less"><i class="fas fa-minus"></i></a>
+                                    <input class="shop-q" type="number" value="1" maxlength="2" min="0" name="">
+                                    <a href="#" class="more"> <i class="fas fa-plus"></i></a>
+                                </div>
+                                <div class="price">
+                                    <div class="price-one" data-price-one="210">
+                                        210 <span class="ptrouble">$</span>
+                                    </div>
+                                    <div class="price-all">210 <span class="ptrouble">$</span></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5 col-md-12">
+                        <div class="order_info">
+                            <div class="row price-order">
+                                <div class="col-lg-6">
+                                    <span class="order-info_span">Order price </span>
+                                </div>
+                                <div class="col-lg-6">
+                                    <b class="order-info_cost">
+                                        <em class="basket_sum">410</em>
+                                        <span class="ptrouble">$</span>
+                                    </b>
+                                </div>
+                            </div>
+                            <div class="row price-delivery">
+                                <div class="col-lg-6">
+                                    <span class="order-info_span">Cost of delivery </span>
+                                </div>
+                                <div class="col-lg-6">
+                                    <span class="order-info_cost" data-cost="0">free</span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="row">
+
+                                <div class="col-lg-6">
+                                    <div class="order-info_full-cost"><strong>Total</strong></div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="basket_total">410<span class="ptrouble">$</span></div>
+                                    <!--<p class="balls"><span class="order-info__balls">Вы заработаете</span>-->
+                                    <!--<span class="order-info__balls__span"><em>260</em> баллов</span></p>-->
+                                </div>
+                            </div>
+
+                            <div class="tel-number-input">
+                                <input class="tell-number" type="text" placeholder="(___)___ ____">
+                            </div>
+
+                            <div class="order-info__button-order">
+
+                                <div class="basket-auth_agreement">
+                                    pressing the button "checkout", you accept the conditions
+                                    <a href="#" class="basket-auth__agreement-link" target="_blank">user agreement</a>
+                                </div>
+
+                                <div class="send-button">
+                                    <input type="submit" value="to order ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<main class="wkPage--store">
+    <div class="basketPopup fx fx-between">
+        <div class="basketPopup__left fx fx-center-v">
+            <div class="basketPopup__imgBox">
+                <img src="~/img/single-product/pocket.png" alt="" class="basketPopup__img">
+            </div>
+            <div class="basketPopup__info">
+                <h4 class="basketPopup__price">Your order is</h4>
+                <p class="basketPopup__priceWarning">Order must be at least 50$</p>
+            </div>
+        </div>
+        <div class="basketPopup__right fx fx-center-v fx-between">
+            <h3 class="basketPopup__rightTitle">Order Pickup</h3>
+            <a href="javascript:void(0)" class="basketPopup__goToCart open-cart" id="openCart">
+                <i class="fa fa-chevron-circle-right basketPopup__goToCartIcon" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+    <!-- WK Structure Start -->
+    <div class="wkStructure wkShop__container singleProduct__pageContainer container--medium">
+        <!-- WK Structure Aside Start -->
+        <aside class="wkStructure__aside singleProduct__aside">
+            <form method="POST" class="singleProduct__form">
+                <div class="inputField singleProduct__inputField">
+                    <input type="text"
+                           id="singleProduct__input"
+                           placeholder="Product search" />
+                    <label for="singleProduct__input">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </label>
+                </div>
+            </form>
+            <!-- ------------ -->
+            <!--
+              <ul class="singlePage__suggestionsList singlePage__menu wk__menu">
+                <li class="singlePage__suggestion singlePage__menuItem wk__menuItem">
+                  <a href="javascript:void(0)" class="singlePage__suggestionLink"
+                    >Indica</a>
+                  <div class="wk__subMenuWrapper">
+                    <ul class="singlePage__submenu wk__subMenu">
+                      <li class="singlePage__suggestion singlePage__submenuItem">
+                        <a href="javascript:void(0)" class="singlePage__suggestionLink">Indica 1</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="singlePage__suggestion singlePage__menuItem wk__menuItem">
+                  <a href="javascript:void(0)" class="singlePage__suggestionLink"
+                    >Sativa</a>
+                  <div class="wk__subMenuWrapper">
+                    <ul class="singlePage__submenu wk__subMenu">
+                      <li class="singlePage__suggestion singlePage__submenuItem">
+                        <a href="javascript:void(0)" class="singlePage__suggestionLink">Sativa 1</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="singlePage__suggestion singlePage__menuItem wk__menuItem">
+                  <a href="javascript:void(0)" class="singlePage__suggestionLink"
+                    >Hybrid</a>
+                  <div class="wk__subMenuWrapper">
+                    <ul class="singlePage__submenu wk__subMenu">
+                      <li class="singlePage__suggestion singlePage__submenuItem">
+                        <a href="javascript:void(0)" class="singlePage__suggestionLink">Hybrid 1</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="singlePage__suggestion singlePage__menuItem wk__menuItem">
+                  <a href="javascript:void(0)" class="singlePage__suggestionLink"
+                    >Wax</a>
+                  <div class="wk__subMenuWrapper">
+                    <ul class="singlePage__submenu wk__subMenu">
+                      <li class="singlePage__suggestion singlePage__submenuItem">
+                        <a href="javascript:void(0)" class="singlePage__suggestionLink">Wax 1</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="singlePage__suggestion singlePage__menuItem wk__menuItem">
+                  <a href="javascript:void(0)" class="singlePage__suggestionLink"
+                    >Concentrate</a>
+                  <div class="wk__subMenuWrapper">
+                    <ul class="singlePage__submenu wk__subMenu">
+                      <li class="singlePage__suggestion singlePage__submenuItem">
+                        <a href="javascript:void(0)" class="singlePage__suggestionLink">Concentrate 1</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="singlePage__suggestion singlePage__menuItem wk__menuItem">
+                  <a href="javascript:void(0)" class="singlePage__suggestionLink"
+                    >Drink</a>
+                  <div class="wk__subMenuWrapper">
+                    <ul class="singlePage__submenu wk__subMenu">
+                      <li class="singlePage__suggestion singlePage__submenuItem">
+                        <a href="javascript:void(0)" class="singlePage__suggestionLink">Drink 1</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="singlePage__suggestion singlePage__menuItem wk__menuItem">
+                  <a href="javascript:void(0)" class="singlePage__suggestionLink"
+                    >Tropical</a>
+                  <div class="wk__subMenuWrapper">
+                    <ul class="singlePage__submenu wk__subMenu">
+                      <li class="singlePage__suggestion singlePage__submenuItem">
+                        <a href="javascript:void(0)" class="singlePage__suggestionLink">Tropical 1</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            -->
+            <!-- wk menu -->
+
+            <ul class="ss__menu" id="menu">
+                @foreach (var item in Model._menuControls)
+                {
+                    <li class="ss__menuItem">
+                        <a href="/Store/@item.Parent.ShopName/menu/@item.Name" class="singlePage__suggestion singlePage__menuItem singlePage__suggestionLink">@item.Name</a>
+                    </li>
+                }
+            </ul>
+            <!-- wk menu end -->
+        </aside>
+        <!-- WK Structure Aside End -->
+        <!-- ----------------------- -->
+        <!-- WK Structure Section Start -->
+        <section class="wkStructure__section wkStores__container">
+            <!-- Single Shop -->
+
+            <div class="fx ss-store">
+                <div class="ss-store__left ss-store__imgContainer">
+                    <img src="~/img/store-images/images.png"
+                         class="ss-store__img"
+                         alt="Shop Thumbnail" />
+                </div>
+                <div class="fx fx-between fx-column ss-store__right">
+                    <div class="ss-store__header fx fx-between">
+                        <div class="fx ss-store__headerLeft">
+                            <h2 class="ss-store__name">shop name</h2>
+                            <div class="ss-store__rating">
+                                <img src="~/img/store/ratingLeaf-grey.png" alt="" class="ss-store__ratingIcon">
+                                <sup class="ss-store__ratingValue">1</sup>
+                            </div>
+                        </div>
+                        <div class="ss-store__headerRigt">
+                            <a href="javascript:void(0)" class="ss-store__headerLink ss-store__headerLink--info">
+                                <img src="~/img/icons/information.png" alt="">
+                                Info
+                            </a>
+                            <a href="javascript:void(0)" class="ss-store__headerLink ss-store__headerLink--like">
+                                <img src="~/img/icons/like.png" alt="">
+                                Feedback
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="wkShop__infoList fx fx-between fx-wrap">
+                        <li class="ss__infoItem">
+                            <div class="ss__infoItemRow fx fx-center-v">
+                                <img src="~/img/store/1.png"
+                                     alt="Working Hours"
+                                     class="ss__infoImg wkShop__infoImg--left" />
+                                <span>Working Hours</span>
+                            </div>
+                            <span class="block text-center ss__infoValue">
+                                10<sup>22</sup> - 23<sup>00</sup>
+                            </span>
+                        </li>
+                        <li class="ss__infoItem">
+                            <div class="ss__infoItemRow fx fx-center-v">
+                                <img src="~/img/store/2.png"
+                                     alt="Delivery Time"
+                                     class="ss__infoImg" />
+                                <span>Delivery Time</span>
+                            </div>
+                            <span class="block text-center ss__infoValue">30-60 MIN</span>
+                        </li>
+                        <li class="ss__infoItem">
+                            <div class="ss__infoItemRow fx fx-center-v">
+                                <img src="~/img/store/3.png"
+                                     alt="Min Order"
+                                     class="ss__infoImg" />
+                                <span>Min Order Ammount</span>
+                            </div>
+                            <span class="block text-center ss__infoValue">20 USD</span>
+                        </li>
+                        <li class="ss__infoItem">
+                            <div class="ss__infoItemRow fx fx-center-v">
+                                <img src="~/img/store/4.png"
+                                     alt="Delivery Price"
+                                     class="ss__infoImg" />
+                                <span>Delivery Price</span>
+                            </div>
+                            <span class="block text-center ss__infoValue">50 USD</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div class="wkStore__bottom fx">
+                  <div
+                    class="wkProduct__rating wkShop__ratings wkStore__bottomLeft fx fx-center-h">
+                    <img
+                      src="~/img/leaf_green.png"
+                      class="wkShop__ratingImg"
+                      alt="" />
+                    <img
+                      src="~/img/leaf_green.png"
+                      class="wkShop__ratingImg"
+                      alt="" />
+                    <img
+                      src="~/img/leaf_green.png"
+                      class="wkShop__ratingImg"
+                      alt="" />
+                    <img
+                      src="~/img/leaf_grey.png"
+                      class="wkShop__ratingImg"
+                      alt="" />
+                    <img
+                      src="~/img/leaf_grey.png"
+                      class="wkShop__ratingImg"
+                      alt="" />
+                  </div>
+                  <a
+                    href="javascript:void(0)"
+                    class="wkStore__bottomRight fx fx-center-v">
+                    <p class="wkStore__distanceText">
+                      Calculates the distance from the store
+                    </p>
+                    <img
+                      src="~/img/store/distance.png"
+                      alt="Distance"
+                      class="wkStore__distanceImg" />
+                  </a>
+                </div> -->
+            </div>
+            <!-- Single Shop End -->
+            <div class="ss-store__navBox fx fx-between fx-center-v">
+                <!-- <div class="singleProduct__breadcrumbs">
+                  <a href="javascript:void(0)">Erevik</a>
+                  <a href="javascript:void(0)">Kanach</a>
+                </div> -->
+                <h3 class="ss-store__navBoxLeft">Products</h3>
+
+                <div class="ss-store__navBoxRight fx fx-center-v">
+                    <a href="stores.html" class="ss-store__viewAll">View All</a>
+                    <div class="ss-store__navs fx fx-between fx-center-v">
+                        <a href="javascript:void(0)" class="singleProduct__prev">
+                            <i class="fa fa-chevron-left singleProduct__navIcon"
+                               aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="singleProduct__next">
+                            <i class="fa fa-chevron-right singleProduct__navIcon"
+                               aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="singleProduct__relatedContainer">
+                <div class="singleProduct__relatedRow fx fx-wrap">
+                    <!-- Add to cart popup -->
+                    <div class="text-center fx fx-center-h addedToCart">
+                        <!-- <span class="addedToCart__text fx fx-center-v"><img src="~/img/icons/added.png" alt="">Added to cart </span>
+                        <span class="addedToCart__tiangle"></span> -->
+                        <img src="~/img/added.png" alt="Added To Cart Image" class="addedToCart__image">
+                    </div>
+                    <!-- Add to cart popup -->
+                    <!-- wk items -->
+                    @foreach (var item in Model._productControls)
+                    {
+                        <div class="singleProduct__relatedItem"
+                             data-price="@item.ProductPrice"
+                             data-sizes="[{1: '150'}, {2: '250'}, {3: '350'}]">
+                            <div class="ss-store__bgImage"
+                                 style="background-image: url(data:image/png;base64,@item.Images.FirstOrDefault().Base64);">
+                                <a href="javascript:void(0)" class="ss-store__info">
+                                    <!-- <i class="fa fa-info ss-store__infoIcon" aria-hidden="true"></i> -->
+                                    i
+                                </a>
+                                <div class="ss-store__ratingRibbon ss-ribbons--left ss-ribbons--orange">
+                                    <span class="ss-store__ratingRibbonValue">4.8</span>
+                                    <i class="fa fa-star ss-store__ratingRibbonIcon" aria-hidden="true"></i>
+                                </div>
+                                <h3 class="ss-store__category ss-ribbons--both ss-ribbons--grey">
+                                    @item.ProductName
+                                </h3>
+                            </div>
+                            <!-- -- -->
+                            <div class="ss-store__details text-center">
+                                <div class="fx fx-between fx-center-v ss-store__selects">
+                                    <!-- <h4 class="singleProduct__name">Product Name</h4> -->
+                                    <div class="ss-store__selectWrapper fx fx-between fx-center-v">
+                                        <div>
+                                            <label for="selectSize">Size</label>
+                                            <select name="" id="selectSize">
+                                                <!--
+                                                  <option value="size" disabled selected>Size</option>
+                                                -->
+                                                <option value="1">1g</option>
+                                                <option value="2">2g</option>
+                                                <option value="3">3g</option>
+                                            </select>
+                                        </div>
+                                        <a href="javascrip:void(0)"
+                                           class="singleProduct__quantity"></a>
+                                    </div>
+                                </div>
+                                <div class="fx fx-between fx-center-v singleProduct__bottomRow">
+                                    <span class="singleProduct__cost singleProduct__cost--usd"></span>
+                                    <a href="javascript:void(0)" class="ss-store__orderBtn singleProduct__basket singleProduct__order">Order</a>
+                                    <!-- <a
+                                      href="javascrip:void(0)"
+                                      class="singleProduct__quantity"
+                                    ></a> -->
+                                    <!-- <a href="javascript:void(0)" class="singleProduct__basket singleProduct__order">
+                                      <img src="~/img/single-product/basket.png" alt="Basket Image" class="singleProduct__basketImg">
+                                    </a> -->
+                                </div>
+                                <div class="quantityPopup">
+                                    <a href="javascript:void(0)" class="quantityPopup__close">X</a>
+                                    <div class="quantityPopup__bottom fx fx-column">
+                                        <div class="quantityPopup__summary fx fx-between fx-center-v">
+                                            <span class="quantityPopup__cost quantityPopup__cost--usd"></span>
+                                            <form method="POST">
+                                                <div class="fx fx-center-v">
+                                                    <a href="javascript:void(0)"
+                                                       class="quantityPopup__incDec quantityPopup__minus">
+                                                        <i class="fa fa-minus" aria-hidden="true"></i>
+                                                    </a>
+                                                    <input type="number"
+                                                           name=""
+                                                           id="quantityPopup__input"
+                                                           min="0"
+                                                           value="1" />
+                                                    <a href="javascript:void(0)"
+                                                       class="quantityPopup__incDec quantityPopup__plus">
+                                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                                    </a>
+                                                </div>
+                                            </form>
+                                            <span class="quantityPopup__costSummary quantityPopup__costSummary--usd"></span>
+                                        </div>
+                                        <a href="javascript:void(0)"
+                                           class="quantityPopup__countSubmit dib">OK</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                    <!-- wk items end -->
+                </div>
+            </div>
+        </section>
+        <!-- WK Structure Section End -->
+    </div>
+    <!-- WK Structure End -->
+</main>

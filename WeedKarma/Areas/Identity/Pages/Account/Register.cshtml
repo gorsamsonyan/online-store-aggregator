@@ -1,0 +1,104 @@
+﻿@page
+@model RegisterModel
+
+
+<main>
+
+    <div id="registration-page">
+        <h1 class="registration-page-title">
+            Register Your Business
+        </h1>
+
+        <div class="registration-form"> 
+            <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                <div class="container">
+                    <div class="row contact-information">
+                        <div class="col-lg-6 col-md-12">
+                            <h2 class="contact-information-title">
+                                Your Contact Information
+                            </h2>
+                            <div class="contact-information-sub-title">
+                                *Required Fields
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-12">
+                                    <div class="form-item">
+                                        <label asp-for="Input.FirstName" class="form-item-label"></label>
+                                        <input asp-for="Input.FirstName" id="email" class="input-text" />
+                                        <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <div class="form-item">
+                                        <label asp-for="Input.LastName" class="form-item-label"></label>
+                                        <input asp-for="Input.LastName" id="email" class="input-text" />
+                                        <span asp-validation-for="Input.LastName" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <div class="form-item">
+                                        <label asp-for="Input.PhoneNumber" class="form-item-label"></label>
+                                        <input asp-for="Input.PhoneNumber" id="email" class="input-text" />
+                                        <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <div class="form-item">
+                                        <label asp-for="Input.Email" class="form-item-label"></label>
+                                        <input asp-for="Input.Email" id="email" class="input-text" />
+                                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <div class="form-item">
+                                        <label asp-for="Input.Password" class="form-item-label"></label>
+                                        <input asp-for="Input.Password" id="email" class="input-text" />
+                                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <div class="form-item">
+                                        <label asp-for="Input.ConfirmPassword" class="form-item-label"></label>
+                                        <input asp-for="Input.ConfirmPassword" id="email" class="input-text" />
+                                        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <div class="form-item">
+                                         
+                                        <label   class="form-item-label">Select Your business type</label>
+                                        @Html.DropDownList("Select Your business type",
+                                        new SelectList(new List<SelectListItem>
+                                            {
+                                                new SelectListItem { Selected = false, Text = "Store", Value = "0"},
+                                                new SelectListItem { Selected = false, Text = "Doctor", Value = "1"},
+                                                new SelectListItem { Selected = false, Text = "Manufacturer", Value = "2"},
+                                                new SelectListItem { Selected = false, Text = "Services", Value = "2"},
+                                            }, "Value", "Text", 1))
+
+                                    </div>
+                            </div>
+                                <div class="col-lg-6 col-sm-12 no-label">
+                                    <div class="form-item">
+                                        <input type="submit" class="input-submit" value="Create" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="contact-information-image">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</main>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,193 @@
+@import "main-styles";
+
+.col-lg-12, .col-lg-11, .col-lg-10, .col-lg-9, .col-lg-8, .col-lg-7, .col-lg-6, .col-lg-5, .col-lg-4, .col-lg-3, .col-lg-2, .col-lg-1,
+.col-md-12, .col-md-11, .col-md-10, .col-md-9, .col-md-8, .col-md-7, .col-md-6, .col-md-5, .col-md-4, .col-md-3, .col-md-2, .col-md-1,
+.col-sm-12, .col-sm-11, .col-sm-10, .col-sm-9, .col-sm-8, .col-sm-7, .col-sm-6, .col-sm-5, .col-sm-4, .col-sm-3, .col-sm-2, .col-sm-1 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+  max-width: 1310px;
+  @include big {
+    max-width: 1140px;
+  }
+  @include large {
+    max-width: 970px;
+  }
+  @include tablet {
+    max-width: 750px;
+  }
+  @include mobile {
+    max-width: 750px;
+  }
+}
+
+.contain {
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  height: 100%;
+}
+
+.row {
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+
+  .col-lg-1 {
+    @include col($size1);
+  }
+
+  .col-lg-2 {
+    @include col($size2);
+  }
+
+  .col-lg-3 {
+    @include col($size3);
+  }
+
+  .col-lg-4 {
+    @include col($size4);
+  }
+
+  .col-lg-5 {
+    @include col($size5);
+  }
+
+  .col-lg-6 {
+    @include col($size6);
+  }
+
+  .col-lg-7 {
+    @include col($size7);
+  }
+
+  .col-lg-8 {
+    @include col($size8);
+  }
+
+  .col-lg-9 {
+    @include col($size9);
+  }
+
+  .col-lg-10 {
+    @include col($size10);
+  }
+
+  .col-lg-11 {
+    @include col($size12);
+  }
+
+  .col-lg-12 {
+    @include col($size12);
+  }
+
+  @include tablet {
+    .col-md-1 {
+      @include col($size1);
+    }
+
+    .col-md-2 {
+      @include col($size2);
+    }
+
+    .col-md-3 {
+      @include col($size3);
+    }
+
+    .col-md-4 {
+      @include col($size4);
+    }
+
+    .col-md-5 {
+      @include col($size5);
+    }
+
+    .col-md-6 {
+      @include col($size6);
+    }
+
+    .col-md-7 {
+      @include col($size7);
+    }
+
+    .col-md-8 {
+      @include col($size8);
+    }
+
+    .col-md-9 {
+      @include col($size9);
+    }
+
+    .col-md-10 {
+      @include col($size10);
+    }
+
+    .col-md-11 {
+      @include col($size12);
+    }
+
+    .col-md-12 {
+      @include col($size12);
+    }
+
+  }
+
+  @include mobile {
+    .col-sm-1 {
+      @include col($size1);
+    }
+
+    .col-sm-2 {
+      @include col($size2);
+    }
+
+    .col-sm-3 {
+      @include col($size3);
+    }
+
+    .col-sm-4 {
+      @include col($size4);
+    }
+
+    .col-sm-5 {
+      @include col($size5);
+    }
+    .col-sm-6 {
+      @include col($size6);
+    }
+    .col-sm-7 {
+      @include col($size7);
+    }
+    .col-sm-8 {
+      @include col($size8);
+    }
+    .col-sm9 {
+      @include col($size9);
+    }
+    .col-sm-10 {
+      @include col($size10);
+    }
+    .col-sm-11 {
+      @include col($size11);
+    }
+    .col-sm-12 {
+      @include col($size12);
+    }
+  }
+}
+

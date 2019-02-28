@@ -1,0 +1,301 @@
+﻿@model storeadmin.ScaffoldModels.Product
+@{
+    ViewData["Title"] = "Create Product";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+<main class="page-content">
+
+    <div class="container-fluid store-body">
+        <!-- contact information Start-->
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <h2 class="section-title">
+                    Add Product
+                </h2>
+
+            </div>
+        </div>
+
+        <div class="add-product-button">
+            Add product +
+        </div>
+
+        <form asp-action="Create" method="post" id="addProductForm" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12">
+                        <div class="form-item">
+                            <label for="selectCategory" class="form-item-label">
+                                Select Category*
+                                <span class="information-popup-button">
+                                    <i class="fas fa-info-circle"></i>
+
+                                    <span class="information-popup"></span>
+                                </span>
+                            </label>
+                            <div class="rail-select">
+                                <div class="select-side">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <select id="IDs" asp-for="StoreMenuId" class="form-control" required>
+                                    <option value="">Select Menu</option>
+                                    @foreach (var item in (ViewBag.Menus as IEnumerable<storeadmin.ScaffoldModels.Menu>))
+                                    {
+                                        <option value="@item.Id">@item.Name</option>
+                                    }
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row contact-information justify-content-center">
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-3 col-sm-12">
+                                <div class="form-item">
+                                    <label asp-for="ProductName" class="control-label"></label>
+                                    <input asp-for="ProductName" class="form-control" />
+                                    <span asp-validation-for="ProductName" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-12">
+
+                                <div class="form-item">
+                                    <label asp-for="ProductTitle" class="control-label"></label>
+                                    <input asp-for="ProductTitle" class="form-control" />
+                                    <span asp-validation-for="ProductTitle" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-12">
+
+                                <div class="form-item">
+                                    <label asp-for="ProductDescription" class="control-label"></label>
+                                    <input asp-for="ProductDescription" class="form-control" />
+                                    <span asp-validation-for="ProductDescription" class="text-danger"></span>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-item">
+                                            <label for="" class="form-item-label">
+                                                Select Product image*<span class="information-popup-button">
+                                                    <i class="fas fa-info-circle"></i>
+
+                                                    <span class="information-popup"></span>
+                                                </span>
+                                            </label>
+                                            <input type="file" name="uploads" required/>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-item">
+                                            <label asp-for="ProductPrice" class="control-label"></label>
+                                            <input asp-for="ProductPrice" class="form-control" />
+                                            <span asp-validation-for="ProductPrice" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-item">
+                                            <label asp-for="ProductSize" class="control-label"></label>
+                                            <input asp-for="ProductSize" class="form-control" />
+                                            <span asp-validation-for="ProductSize" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                    @*<div class="col-lg-12 col-sm-12">
+                                            <div class="form-item">
+                                                <label for="" class="form-item-label">
+                                                    Select Size* <span class="information-popup-button">
+                                                        <i class="fas fa-info-circle"></i>
+
+                                                        <span class="information-popup"></span>
+                                                    </span>
+                                                </label>
+                                                <div class="selected-size-block">
+                                                    <label class="size-item">
+                                                        <input type="checkbox" class="input-checkbox" name="productSize" value="size1" />
+                                                        <span class=" size-item-size">1G</span>
+                                                        <input placeholder="price $" class="product-size-price input-number"
+                                                               type="number" min="0">
+                                                    </label>
+
+                                                    <label class="size-item">
+                                                        <input type="checkbox" class="input-checkbox" name="productSize" value="size2" />
+                                                        <span class="size-item-size">1/8</span>
+                                                        <input placeholder="price $" class="product-size-price input-number"
+                                                               type="number" min="0">
+                                                    </label>
+
+                                                    <label class="size-item">
+
+                                                        <input type="checkbox" class="input-checkbox" name="productSize" value="size3" />
+                                                        <span class=" size-item-size">1/4</span>
+                                                        <input placeholder="price $" class="product-size-price input-number"
+                                                               type="number" min="0">
+                                                    </label>
+                                                    <label class="size-item">
+                                                        <input type="checkbox" class="input-checkbox" name="productSize" value="size4" />
+                                                        <span class=" size-item-size">1/2</span>
+                                                        <input placeholder="price $" class="product-size-price input-number"
+                                                               type="number" min="0">
+                                                    </label>
+                                                    <label class="size-item">
+                                                        <input type="checkbox" class="input-checkbox" name="productSize" value="size4" />
+                                                        <span class=" size-item-size">OZ</span>
+                                                        <input placeholder="price $" class="product-size-price input-number"
+                                                               type="number" min="0">
+                                                    </label>
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>*@
+
+                                </div>
+
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="form-item">
+                            <label for="producMetaKey" class="form-item-label">Product Meta Keys</label>
+                            <input type="text" class="input-text" id="producMetaKey">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 col-sm-12 no-label justify-content-center">
+
+
+                        <input type="submit" value="Create" class="btn btn-default" />
+
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+
+
+
+        <div class="products-block">
+            <div class="col-md-2">
+                <label class="size-item">Fliter Products for Menu</label>
+                <select id="tst" class="form-control">
+                    <option value="">Select Menu</option>
+                    @foreach (var item in (ViewBag.Menus as IEnumerable<storeadmin.ScaffoldModels.Menu>))
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                </select>
+            </div></br>
+            <div id="ssss"></div>
+
+            @*<ul>
+                    <li id="ssss" class="row product-item">
+                        <div  class=" col-lg-3 product-item-col   product-item-name">
+
+                        </div>
+
+                        <div class=" product-item-col product-item-icon  product-item-edit">
+                            <i class="far fa-edit"></i>
+                        </div>
+                        <div class=" product-item-col  product-item-icon product-item-delete">
+                            <i class="far fa-trash-alt"></i>
+                        </div>
+                    </li>
+                </ul>*@
+
+
+        </div>
+    </div>
+
+</main>
+
+<script src="~/js/jquery-1.10.2.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#tst").change(function () {
+            console.log($("#tst").val());
+            var url = '@Url.Content("~/")' + "Product/getProduct";
+
+            $.get(url, { parentId: $("#tst").val() }, function (data) {
+                $("#ssss").empty();
+
+                $("#ssss").append("<table>");
+
+                $("#ssss").append("<tr>");
+                $("#ssss").append("<th>ID</th>");
+                $("#ssss").append("<th>ProductName</th>");
+                $("#ssss").append("</tr>");
+                $.each(data, function (i, getProduct) {
+                    //$("#ssss").append("<div>'" +  +"|"+ getProduct.text + "</div>")
+
+
+
+
+                    $("#ssss").append("<tr>");
+                    $("#ssss").append("<td>"+getProduct.value+"</td>");
+                    $("#ssss").append("<td>" + getProduct.text + "</td>");
+                    $("#ssss").append("</tr>");
+
+
+
+                });
+                $("#ssss").append("</table>");
+
+                $('#ssss table').addClass("ssss");
+                $('#ssss table thead').addClass("ssssTh");
+                $('#ssss table tbody td').addClass("ssssTd");
+            });
+        });
+    });
+
+
+
+</script>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

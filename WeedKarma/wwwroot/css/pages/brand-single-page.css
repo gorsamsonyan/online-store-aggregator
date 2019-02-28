@@ -1,0 +1,46 @@
+/* font family */
+.brand-page {
+  background-color: #ececed;
+  padding: 25px 0; }
+
+.brand-product-item {
+  display: block;
+  color: black;
+  border: 1px solid #ececed;
+  background-color: white;
+  margin-bottom: 25px; }
+
+.brand-item-product-name {
+  color: #4a4a4a;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  border-bottom: 1px solid #ececed; }
+
+.brand-item-product-img {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 100%;
+  border-bottom: 1px solid #ececed; }
+
+.brand-item-product-bottom-block {
+  padding: 10px; }
+
+.brand-item-product-rating {
+  position: relative; }
+  .brand-item-product-rating .brand-ratingImg {
+    width: 25px;
+    height: 25px; }
+  .brand-item-product-rating .brand-ratingIndex {
+    position: absolute;
+    top: -6px;
+    right: -11px;
+    font-size: 10px; }
+
+.brand-item-product-category {
+  color: #818285;
+  font-size: 13px; }
+
+/*# sourceMappingURL=brand-single-page.css.map */

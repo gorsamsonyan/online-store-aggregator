@@ -1,0 +1,91 @@
+@import "../main-styles";
+@import "../form-styles";
+
+.add-product-button {
+  @include green-button;
+  max-width: 200px;
+  margin-bottom: 30px;
+}
+
+#addProductForm {
+  display: none;
+  margin-bottom: 20px;
+}
+
+textarea {
+  font-size: 13px;
+  padding: 10px 5px;
+  border: 1px solid #868686;
+  /*border-radius: 5px;*/
+  outline: none;
+  width: 100%;
+  height: 100px;
+  resize: none;
+}
+
+.add-size-button {
+  @include green-button;
+  max-width: 150px;
+}
+
+.size-price-add-block {
+  display: none;
+  .form-item {
+    max-width: 100px;
+    margin-right: 5px;
+  }
+}
+
+.size-price-list {
+  .form-item {
+    max-width: 100px;
+    margin-right: 5px;
+  }
+  ul {
+    padding: 0;
+  }
+}
+
+input[type="number"] {
+  font-size: 13px;
+  padding: 10px 10px;
+  border: 1px solid #868686;
+  outline: none;
+  width: 100%;
+
+}
+
+.size-price-add-button {
+  @include green-button;
+  max-width: 50px;
+  margin-top: 25px;
+}
+
+.size-price-item-delete {
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  border: 1px solid $color-green;
+  padding: 4px 10px;
+  &:hover {
+    color: red;
+  }
+}
+.product-item-col{
+  border: 1px solid $color-green;
+  padding: 10px;
+}
+.product-item-icon{
+  font-size: 20px;
+  cursor: pointer;
+}
+.product-item-delete{
+  &:hover {
+    color: red;
+  }
+}
+.products-block{
+  ul{
+    padding: 0;
+  }
+}

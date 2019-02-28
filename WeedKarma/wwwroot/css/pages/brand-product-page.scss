@@ -1,0 +1,147 @@
+@import "../main-styles";
+
+.brand-product-page {
+  .brand-product-cover {
+    position: relative;
+    margin-top: 26px;
+  }
+
+  .brand-item-name {
+    position: relative;
+  }
+  .brand-logo {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    img {
+      height: 40px;
+      width: 40px;
+    }
+  }
+  .brand-item-name-block {
+    color: white;
+    font-size: 18px;
+    .brand-name{
+      display: block;
+      color: white;
+    }
+  }
+
+  .brand-reating-block {
+    position: relative;
+    .brand-ratingIndex {
+      color: white;
+      font-size: 13px;
+      top: -10px;
+      right: -10px;
+      position: absolute;
+
+    }
+  }
+  .brand-info-block {
+    padding: 0 20px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.brand-product-section {
+  margin-bottom: 35px;
+  .brand-product-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: 1px solid $lightBrown;
+  }
+
+  .brand-product-top-block {
+    margin-bottom: 20px;
+  }
+  .brand-product-name {
+    font-size: 18px;
+    font-weight: bold;
+
+  }
+  .brand-product-rating-block {
+    position: relative;
+    margin-right: 15px;
+
+  }
+  .brand-ratingImg {
+    height: 25px;
+    width: 25px;
+  }
+  .brand-ratingIndex {
+    font-size: 10px;
+    position: absolute;
+    top: -8px;
+    right: -9px;
+  }
+}
+
+.product-in-stores {
+  .product-in-stores-title-block {
+    padding: 10px 10px 3px;
+    font-size: 18px;
+    color: $color-green;
+    font-weight: bold;
+    border-bottom: 1px solid $lightBrown;
+  }
+}
+
+.product-in-stores-block {
+  margin-bottom: 40px;
+
+}
+
+.product-in-stores-item {
+  margin-bottom: 5px;
+
+}
+
+.product-in-stores-item-link {
+  padding: 10px 20px;
+  color: black;
+  border: 1px solid $lightBrown;
+  .left-block {
+    img {
+      height: 45px;
+      margin-right: 10px;
+    }
+    @include mobile{
+      margin-bottom: 10px;
+    }
+  }
+  .right-block {
+    .product-size-price-block-item {
+      padding: 0 15px;
+      border-left: 1px solid $lightBrown;
+      text-align: center;
+      &:last-child{
+        @include mobile{
+          border-right:1px solid $lightBrown ;
+        }
+
+      }
+      .product-size {
+        font-size: 13px;
+      }
+      .product-price {
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+  @include mobile{
+    flex-direction: column;
+  }
+
+}

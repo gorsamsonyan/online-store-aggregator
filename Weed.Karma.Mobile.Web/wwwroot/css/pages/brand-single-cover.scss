@@ -1,0 +1,73 @@
+@import "../main-styles";
+
+
+
+.brand-item-cover {
+  margin-top: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  height: 215px;
+  margin-bottom: 25px;
+  @include border-radius(6px);
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(15, 15, 15, 0.5);
+  }
+}
+.brand-product-cover{
+  height: 80px;
+  margin-top: 0;
+}
+
+.brand-item-name {
+  position: absolute;
+  color: white;
+  font-size: 18px;
+  right: 15px;
+  bottom: 90px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.brand-item-page-buttons-block {
+  position: absolute;
+  color: white;
+  font-size: 16px;
+  right: 15px;
+  bottom: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  .left-button {
+    margin-right: 10px;
+  }
+}
+
+.brand-item-page-button {
+  text-align: center;
+  display: block;
+  color: white;
+  padding: 10px;
+  border: 1px solid white;
+  @include border-radius(4px)
+}
+
+.brand-item-reating-block {
+  position: absolute;
+  color: white;
+  font-size: 16px;
+  left: 15px;
+  bottom: 40px;
+  .brand-ratingIndex {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    font-size: 11px;
+  }
+}

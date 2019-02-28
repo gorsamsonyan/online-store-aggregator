@@ -1,0 +1,223 @@
+﻿@using Weed.Karma.Models.StoreModels
+@model ICollection<AddStoreViewModel>
+@{
+
+    ViewData["Title"] = "Weed Karma" + @ViewData["Message"];
+}
+<link rel="stylesheet" href="~/css/pages/home-page.css" />
+<div id="changeRegionMobilePopup">
+    <div class="changeRegionMobile-header fx fx-center-v">
+        <div class="back-button"><i class="fas fa-arrow-left"></i></div>
+        <form action="" class="fx fx-center-h">
+            <div class="header-search-block fx">
+
+                <input id="changeRegionMobile-header-search" type="search" placeholder="yorur city" class="input-text" />
+                <button aria-label="Locate Me" class="header-search-locate-button">
+                    <svg class="wm-locate" width="20px" height="20px" viewBox="0 0 20 20"
+                         version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 6.364C7.99 6.364 6.364 7.99 6.364 10c0 2.01 1.627 3.636 3.636 3.636 2.01 0 3.636-1.627 3.636-3.636 0-2.01-1.627-3.636-3.636-3.636zm8.127 2.727C17.71 5.3 14.7 2.29 10.91 1.874V0H9.09v1.873C5.3 2.29 2.29 5.3 1.874 9.09H0v1.82h1.873c.418 3.79 3.427 6.8 7.218 7.217V20h1.82v-1.873c3.79-.418 6.8-3.427 7.217-7.218H20V9.09h-1.873zM10 16.365c-3.518 0-6.364-2.846-6.364-6.364S6.482 3.636 10 3.636 16.364 6.482 16.364 10 13.518 16.364 10 16.364z"
+                              fill="#fff"></path>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <div class="changeRegionMobile-body">
+        <ul class="city-list">
+            <li class="city-list-item" data-city-name="Los Angeles" data-city-id="56" data-abbreviation="LA">Los Angeles</li>
+            <li class="city-list-item" data-city-name="Los Altos" data-city-id="33" data-abbreviation="LA">Los Altos</li>
+            <li class="city-list-item" data-city-name="Los Altos" data-city-id="33" data-abbreviation="LA">San Diego</li>
+            <li class="city-list-item" data-city-name="Los Altos" data-city-id="33" data-abbreviation="LA">San Jose</li>
+            <li class="city-list-item" data-city-name="Los Altos" data-city-id="33" data-abbreviation="LA">San Francisco</li>
+        </ul>
+    </div>
+</div>
+<section class="container--medium s--inactive header-slider-container">
+    <!--<div class="container">-->
+    <div class="header-slider">
+        <div class="header-slider-description">
+
+            <div class="header-slider-description-img"></div>
+            <div class="header-slider-title">ORDER PICKUP AND DELIVERY</div>
+            <div class="header-slider-sub-title">Find medical and recreational marijuana dispensaries.</div>
+
+            <div class="mobile-app-icons">
+
+                <a href="#" class="android-app-icon app-icon"><img src="~/img/header-slider/mobile-app-icon-android.png" alt=""></a>
+                <a href="#" class="ios-app-icon app-icon"><img src="~/img/header-slider/mobile-app-icon-ios.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <!--</div>-->
+</section>
+<main>
+
+    <section class="offersSection">
+        <div class="container--medium">
+            <!-- <div class="fx"> -->
+            <div class="wkTitle fx">
+                <h2 class="wkTitle__text">
+                    Best Offer of <span id="bestOffer"></span>
+                    <span class="change-region"><img class="change-city-icon-img" src="/img/icons/wkpin.png" /> change</span>
+                </h2>
+                <span class="wkTitle__restLine"></span>
+            </div>
+            <!-- </div> -->
+        </div>
+        <div style="background-color:#ececed;display: none" id="noLocation">
+
+            <div class="container--medium">
+                <div class="no-location fx fx-center-h fx-center-v" style="min-height: 400px">
+                    <div class="no-location-img"> <img src="/img/logo.svg" alt="" style="width: 200px; margin-right: 20px"> </div>
+                    <div class="no-location-content">
+                        <h2>Weed Karma</h2>
+                        @*<p> THIS CITY HASN'T LEGALIZED MEDICAL OR RECREATIONAL MARIJUANA. <br /> CHANGE YOUR LOCATION ABOVE </p>*@
+                    </div>
+                </div>
+            </div> <hr />
+        </div>
+
+        <div class="offersSection__container" id="offersSection">
+
+            <div class="container--medium offersSection-item">
+                <h3>
+                    <span class="offersSection-item-title">Popular Brands</span>
+                </h3>
+
+                <div class="row fx fx-center-h fx-wrap wkProduct-row" id="featuredBrands">
+
+                </div>
+            </div>
+
+            <div class="container--medium offersSection-item">
+                <h3>
+                    <span class="offersSection-item-title">Dispensary Store</span>
+                </h3>
+                <div class="row fx fx-center-h fx-wrap wkProduct-row" id="bestOfferDispensaries">
+
+                </div>
+            </div>
+            <div class="container--medium offersSection-item">
+                <h3>
+                    <span class="offersSection-item-title">Delivery Services</span>
+                </h3>
+                <div class="row fx fx-center-h fx-wrap wkProduct-row" id="deliveryServices">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="blogSection">
+        <div class="container--medium">
+            <!-- <div class="fx"> -->
+            <div class="wkTitle fx">
+                <h2 class="wkTitle__text">Blog/Tv</h2>
+                <span class="wkTitle__restLine"></span>
+            </div>
+            <!-- </div> -->
+        </div>
+        <div class="section--lightBrown blogSection__bg">
+            <div class="container--medium blogSection__container fx fx-center-h fx-center-v">
+                <div class="blogSection__leftBox blogSection__box">
+                    <div class="blogSection__videoBox">
+                        <span class="blogSection__line"></span>
+                        <iframe src="https://www.youtube.com/embed/E-EueW0yiRY?controls=0" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="blogSection__rightBox blogSection__box">
+                    <div class="blogSection__detailsBox">
+                        <div class="blogSection__detailsSubBox">
+                            <div class="blogSection__detailsRow fx fx-center-v">
+                                <img src="~/img/blog_1.png" alt="" />
+                                <div class="blogSection__details">
+                                    <h5 class="blogSection__title">Club Members</h5>
+                                    <span class="block blogSection__count">1 000 000</span>
+                                    <!-- <p class="blogSection__text" title="readable content of a readable content of a readable content of a readable content of a readable content of a">
+                                        readable content of a readable content of a readable content of a readable content of a readable content of a
+                                    </p> -->
+                                </div>
+                            </div>
+                            <hr class="blogSection__separator" />
+                            <div class="blogSection__detailsRow fx fx-center-v">
+                                <img src="~/img/blog_2.png" alt="" />
+                                <div class="blogSection__details">
+                                    <h5 class="blogSection__title">dispensaries</h5>
+                                    <span class="block blogSection__count">1 600</span>
+                                    <!-- <p class="blogSection__text" title="readable content of a readable content of a readable content of a readable content of a readable content of a">
+                                        readable content of a readable content of a readable content of a readable content of a readable content of a
+                                    </p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="aboutSection">
+        <div class="container--medium">
+            <!-- <div class="fx"> -->
+            <div class="wkTitle fx">
+                <h2 class="wkTitle__text">About Weed Karma</h2>
+                <span class="wkTitle__restLine"></span>
+            </div>
+            <!-- </div> -->
+        </div>
+        <div class="container--medium aboutSection__container">
+            <h6 class="aboutSection__heading">
+                Weed Karma is an independent joint project which unites hundreds of
+                Cannabis Dispensary and Delivery Services in one unit delivery system.
+                The project aims։
+            </h6>
+
+            <ul class="aboutSection__text">
+                <li>
+                    To provide its clients with opportunities for fast, comfortable and profitable online ordering
+                    services.
+                </li>
+                <li>To give an opportunity to choose among various delivery services within a one website.</li>
+                <li>To provide with club managers help in case of quality problems in provided services.</li>
+                <li>
+                    To give an opportunity to put an order from a single private office without double data entry.
+                </li>
+                <li>
+                    To give an opportunity to get bonus points from orders and exchange them with valuable prices.
+                </li>
+                <li>To provide with an opportunity to compare prices.</li>
+                <li>To assess the quality of the provided services of partners.</li>
+                <li>To post comments and suggestions within the website.</li>
+                <li>To be involved in special offers and sell-offs, which are available only for club members.</li>
+            </ul>
+
+
+        </div>
+        <div class="aboutSection__bottom">
+
+            <div class="container--medium aboutSection__bottom-container">
+                <h2 class="aboutSection__bottom-title">Wiki Karma</h2>
+                <div class=" fx aboutSection__bottomContainer">
+
+                    <ul class="fx fx-between wkMarketLinks">
+                        <li class="wkMarketLinks">
+                            <a href="" class="block wkMarketLinks__link">
+                                <img src="~/img/1.png" alt="" class="wkMarketLinks__img" />
+                            </a>
+                        </li>
+                        <li class="wkMarketLinks">
+                            <a href="" class="block wkMarketLinks__link">
+                                <img src="~/img/2.png" alt="" class="wkMarketLinks__img" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="~/js/home-page.js"></script>

@@ -1,0 +1,123 @@
+﻿<style>
+    #thankYouPopup {
+        display: none;
+        overflow: auto;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 22;
+        background-color: rgba(50, 50, 50, 0.5);
+    }
+
+        #thankYouPopup .thank-you-popup-body {
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 18px;
+            -webkit-border-raius: 18px;
+            -moz-border-radius: 18px;
+            width: 100%;
+            max-width: 600px;
+            position: absolute;
+            padding: 25px;
+            display: block;
+            z-index: 2500;
+            background-color: #f7f7f7;
+        }
+
+        #thankYouPopup .thank-you-text {
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #038423;
+        }
+</style>
+<div id="thankYouPopup">
+    <div class="thank-you-popup-body">
+        <div class="thank-you-text">
+            You Have <br />
+            New Order <a href="">Click</a> to View ...
+        </div>
+    </div>
+</div>
+<div class="header-block">
+
+    <div class="navbar-header d-flex justify-content-between align-items-center">
+
+        <a id="show-sidebar" class="btn-lg left-menu-open-icon p-0 " href="#">
+            <i class="fas fa-bars"></i>
+        </a>
+        <a class="header-logo" href="/" target="_blank">
+            <img src="~/businessDashboard/img/logo.svg" width="50px" alt="">
+            <div class="logo-text">Weed Karma</div>
+        </a>
+        <div class="header-search">
+            <div>
+                <div class="input-group">
+                    <input type="text" class="form-control search-menu" placeholder="Search...">
+                    <div class="header-search-icon">
+
+                        <i class="fa fa-search" aria-hidden="true"></i>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-date-block">
+            <div class="date-title">Date</div>
+            <div class="date"></div>
+
+        </div>
+
+        <div class="header-user-name">@User.Identity.Name</div>
+        <div class="header-right-block">
+            <a href="#">
+                <img class="header-right-block-icon" src="~/businessDashboard/img/header-icons/notification.png" alt="">
+                <span class="badge badge-pill notification-count " id="notificationCount">0</span>
+            </a>
+
+            <a href="/Account/LogOut">
+                <img class="header-right-block-icon" src="~/businessDashboard/img/header-icons/logout.png" alt="">
+            </a>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="~/businessDashboard/scripts/signalr.min.js"></script>
+<script>
+    // SignalR bootstrap
+    var a = 0;
+    var updaterConnection;
+    openConnection();
+
+    function openConnection() {
+        $("#msg").html("Preparing...");
+        updaterConnection = new signalR.HubConnection("/orderHub");
+        updaterConnection
+            .start();
+    };
+
+</script>
+<script>
+    updaterConnection.on("NotificationCount",
+        (notificationCount) => {
+            $("#notificationCount").empty();
+            $("#notificationCount").append(notificationCount);
+            $("#thankYouPopup").show();
+        });
+</script>
+<script>
+    $("#notificationCount").on("click",
+        function () {
+            if (parseInt($(this).text()) != 0) {
+                console.log(parseInt($(this).text()))
+                location.reload();
+            }
+        });
+</script>
+@await Component.InvokeAsync("NToastNotify")

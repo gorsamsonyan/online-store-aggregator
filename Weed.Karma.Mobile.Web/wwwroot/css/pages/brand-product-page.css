@@ -1,0 +1,104 @@
+/* font family */
+.brand-product-page .brand-product-cover {
+  position: relative;
+  margin-top: 26px; }
+.brand-product-page .brand-item-name {
+  position: relative; }
+.brand-product-page .brand-logo {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px; }
+  .brand-product-page .brand-logo img {
+    height: 40px;
+    width: 40px; }
+.brand-product-page .brand-item-name-block {
+  color: white;
+  font-size: 18px; }
+  .brand-product-page .brand-item-name-block .brand-name {
+    display: block;
+    color: white; }
+.brand-product-page .brand-reating-block {
+  position: relative; }
+  .brand-product-page .brand-reating-block .brand-ratingIndex {
+    color: white;
+    font-size: 13px;
+    top: -10px;
+    right: -10px;
+    position: absolute; }
+.brand-product-page .brand-info-block {
+  padding: 0 20px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.brand-product-section {
+  margin-bottom: 35px; }
+  .brand-product-section .brand-product-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: 1px solid #ececed; }
+  .brand-product-section .brand-product-top-block {
+    margin-bottom: 20px; }
+  .brand-product-section .brand-product-name {
+    font-size: 18px;
+    font-weight: bold; }
+  .brand-product-section .brand-product-rating-block {
+    position: relative;
+    margin-right: 15px; }
+  .brand-product-section .brand-ratingImg {
+    height: 25px;
+    width: 25px; }
+  .brand-product-section .brand-ratingIndex {
+    font-size: 10px;
+    position: absolute;
+    top: -8px;
+    right: -9px; }
+
+.product-in-stores .product-in-stores-title-block {
+  padding: 10px 10px 3px;
+  font-size: 18px;
+  color: #215f24;
+  font-weight: bold;
+  border-bottom: 1px solid #ececed; }
+
+.product-in-stores-block {
+  margin-bottom: 40px; }
+
+.product-in-stores-item {
+  margin-bottom: 5px; }
+
+.product-in-stores-item-link {
+  padding: 10px 20px;
+  color: black;
+  border: 1px solid #ececed; }
+  .product-in-stores-item-link .left-block img {
+    height: 45px;
+    margin-right: 10px; }
+  @media only screen and (max-width: 768px) {
+    .product-in-stores-item-link .left-block {
+      margin-bottom: 10px; } }
+  .product-in-stores-item-link .right-block .product-size-price-block-item {
+    padding: 0 15px;
+    border-left: 1px solid #ececed;
+    text-align: center; }
+    @media only screen and (max-width: 768px) {
+      .product-in-stores-item-link .right-block .product-size-price-block-item:last-child {
+        border-right: 1px solid #ececed; } }
+    .product-in-stores-item-link .right-block .product-size-price-block-item .product-size {
+      font-size: 13px; }
+    .product-in-stores-item-link .right-block .product-size-price-block-item .product-price {
+      font-size: 16px;
+      font-weight: bold; }
+  @media only screen and (max-width: 768px) {
+    .product-in-stores-item-link {
+      flex-direction: column; } }
+
+/*# sourceMappingURL=brand-product-page.css.map */

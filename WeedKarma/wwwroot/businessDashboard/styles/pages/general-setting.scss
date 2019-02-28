@@ -1,0 +1,103 @@
+@import "../main-styles";
+@import "../form-styles";
+
+.checked-button {
+  display: block;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 4px;
+  background-color: $darkBrown;
+  min-width: 60px;
+}
+
+.checking-block {
+  input {
+    display: none;
+    &:active + .checked-button {
+      background-color: #0c401e;
+      color: white;
+    }
+
+    &:checked + .checked-button {
+      background-color: #0c401e;
+      color: white;
+    }
+  }
+}
+
+.delivery-order-app {
+
+}
+
+.order-app-button {
+  min-width: 80px;
+
+}
+
+
+.notification-button {
+  width: 15px;
+  min-width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  padding: 0;
+  margin-right: 5px;
+}
+.notification-label{
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  @include mobile{
+    flex-direction: column;
+  }
+}
+
+.business-integration-block {
+  //flex-direction: row;
+}
+
+.business-integration {
+  display: flex;
+  label {
+    display: flex;
+    padding: 0 15px;
+    align-items: center;
+  }
+}
+
+.business-integration-button {
+  background-color: $darkBrown;
+  height: 15px;
+  width: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 11px;
+  margin: 0 5px;
+}
+
+.business-integration-checkd {
+  display: none;
+}
+
+.business-integration {
+  input {
+    display: none;
+    &:active + .business-integration-button  {
+      background-color: $color-green;
+      //color: white;
+    }
+
+    &:checked + .business-integration-button  {
+      background-color: $color-green;
+    }
+  }
+}

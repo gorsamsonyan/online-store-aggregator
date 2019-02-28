@@ -1,0 +1,102 @@
+﻿@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/global-styles.css">
+
+    <link rel="stylesheet" href="~/css/main-respons.css">
+    <link rel="stylesheet" href="~/css/pages/signIn.css">
+
+    <title>Home</title>
+</head>
+<body>
+    <div class="reg-page">
+        <div class="mobile-container">
+
+            <div class="signIn-page-title">
+                Registration
+            </div>
+            <div class="white-logo">
+                <img src="img/white-logo.png" alt="">
+            </div>
+
+            <form class="registration-form" method="post">
+                <div class="signIn-input-block">
+                    <label class="">
+                        <input type="text" class="signIn-input-text" id="UserName" name="NickName" required>
+                        <img src="~/img/reg-log/user-icon.png" class="signIn-input-img" alt="">
+                        <div class="signIn-input-placeholder" aria-hidden="true">UserName</div>
+                    </label>
+                </div>
+                <div class="signIn-input-block">
+                    <label class="">
+                        <input type="text" class="signIn-input-text" id="Email" name="Email" required>
+                        <img src="~/img/reg-log/emai-icon.png" class="signIn-input-img" alt="">
+                        <div class="signIn-input-placeholder" aria-hidden="true">Email</div>
+                    </label>
+                </div>
+                <div class="signIn-input-block">
+                    <label class="">
+                        <input type="password" class="signIn-input-text" id="Password" name="Password" required>
+                        <img src="~/img/reg-log/password.png" class="signIn-input-img" alt="">
+                        <div class="signIn-input-placeholder" aria-hidden="true">Password</div>
+                    </label>
+                </div>
+                <div class="signIn-input-block">
+                    <label class="">
+                        <input type="password" class="signIn-input-text" id="ConfirmPassword" name="ConfirmPassword" required>
+                        <img src="~/img/reg-log/password.png" class="signIn-input-img" alt="">
+                        <div class="signIn-input-placeholder" aria-hidden="true">Confirm Password</div>
+                    </label>
+                </div>
+
+                <div class="checkbox-block">
+                    <label class="display-flex align-items-center">
+                        <input type="checkbox" checked>
+                        <div class="checkbox">
+                            <div class="checkbox-checked">&#10003</div>
+                        </div>
+                        <span class="checkbox-text">
+                            I agree to the <a href="#">Terms and Conditions</a>
+                        </span>
+                    </label>
+                </div>
+
+                <label class="signIn-submit-button">
+                    <input type="submit">
+                    <span class="submit-button"<a href="/Account/Login"> Register</a></span>
+                </label>
+
+                @*<div class="signIn-or"> OR </div>
+
+                <div class="signIn-or-buttons">
+                    <a href="#"> <img src="~/img/reg-log/facebook-button.png" alt=""></a>
+                    <a href="#"> <img src="~/img/reg-log/google-button.png" alt=""></a>
+                </div>*@
+            </form>
+
+            <div class="signIn-bottom-block">
+                Already have an Account?<a href="/Account/Login"> Login here.</a>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</body>
+<script src="~/js/jquery.min.js"></script>
+<script src="~/js/reg-log.js"></script>
+
+
+<script>
+
+</script>
+</html>

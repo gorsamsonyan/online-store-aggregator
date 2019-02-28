@@ -1,0 +1,96 @@
+/* font family */
+.no-label {
+  display: flex;
+  align-items: flex-end;
+  min-height: 74px; }
+
+.form-item {
+  font-family: "Open Sans", "PT Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 100%; }
+  .form-item label {
+    cursor: pointer;
+    font-size: 13px;
+    color: #444444;
+    line-height: 1.482;
+    margin-left: 10px;
+    padding: auto; }
+
+input[type="text"] {
+  font-size: 13px;
+  padding: 10px 10px;
+  border: 1px solid #868686;
+  outline: none;
+  width: 100%; }
+
+input[type="password"] {
+  font-size: 13px;
+  padding: 10px 10px;
+  border: 1px solid #868686;
+  outline: none;
+  width: 100%; }
+
+input[type="email"] {
+  font-size: 13px;
+  padding: 10px 10px;
+  border: 1px solid #868686;
+  outline: none;
+  width: 100%; }
+
+input[type="submit"] {
+  background-color: #0f3311;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid #0f3311;
+  padding: 10px 5px;
+  outline: none;
+  transition: 0.3s;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  text-transform: uppercase;
+  max-width: 165px;
+  width: 165px;
+  font-weight: normal; }
+
+select, option {
+  background-color: #0f3311;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid #0f3311;
+  padding: 10px 5px;
+  outline: none;
+  transition: 0.3s; }
+
+select {
+  width: 100%;
+  background-color: #0f3311;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+option {
+  background-color: #afafaf;
+  padding: 10px 10px;
+  line-height: 50px;
+  color: #0f3311; }
+
+.rail-select {
+  position: relative; }
+  .rail-select .select-side {
+    position: absolute;
+    right: 10px;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; }
+
+/*# sourceMappingURL=form-styles.css.map */

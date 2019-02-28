@@ -1,0 +1,60 @@
+﻿@using Weed.Karma.Models.AccountModels 
+@model LoginViewModel
+@{
+    Model.RedirectUrl = Model.RedirectUrl ?? Url.Content("~/");
+
+}
+<!-- Creat account form start -->
+<main class="signinMain-container">
+    <div class="signIn__container container--medium">
+        <div class="fx signIn__row">
+            <div class="signIn__left">
+                <form class="signIn__form" action="./Login" method="post">
+                    <input type="hidden" name="returnUrl" value="@Model.RedirectUrl"/>
+                    <h1 class="signIn-title_green signIn__title">Sign in</h1>
+                    <div class="signIn__inputField">
+                        <label class="block">Email address:</label>
+                        <input type="email" placeholder="enter your email" name="Email" required class="signIn__input signIn__emailInput"/>
+                    </div>
+                    <div class="signIn__inputField">
+                        <label class="block">Password:</label>
+                        <input type="password" placeholder="enter your password" name="Password" required class="signIn__input signIn__passwordInput"/>
+                    </div>
+                    <div class="">
+                        <button class="signIn__btn signIn__login">Sign in</button>
+                        <a href="#" class="signIn__forgotPassword block">Forgot your password?</a>
+                    </div>
+                </form>
+            </div>
+            <div class="signIn__right">
+                <h1 class="signIn__title signIn__title_dark">New Customer?</h1>
+                <div class="signIn-right-wrapper">
+                    <form class="registration_form" method="post">
+                        <div class="regForm__inputField">
+                            <label class="block">Email address:</label>
+                            <input type="email" placeholder="enter your email" name="Email" required  class="regForm__input reg__emailInput"  />
+                        </div>
+                        <div class="regForm__inputField">
+                            <label class="block">Password</label>
+                            <input type="password" placeholder="enter password" name="Password" required class="regForm__input reg__passw" minlength="6" />
+                        </div>
+                        <div class="regForm__inputField">
+                            <label class="block">Repeat Password</label>
+                            <input type="password" placeholder="repeat password"  name="ConfirmPassword" required class="regForm__input reg__repeatPassw" minlength="6" />
+                        </div>
+                        <button class="signIn__create">SIGN UP</button>
+                    </form>
+                   
+                </div>
+                @*<span class="signIn_span block"> or </span>
+                <a class="signIn__social facebook block" href="#">
+                    <span><img class="signIn_socialbtn" src="~/img/facebook.svg" alt="connect with facebook" title="facebook button" /> </span>Sign up with Facebook
+                </a>
+                <a class="signIn__social google block" href="#">
+                    <span><img class="signIn_socialbtn" src="~/img/gmail.svg" alt="connect via google" title="google icon" /> </span>Sign up with Google
+                </a>*@
+            </div>
+        </div>
+    </div>
+</main>
+<!-- Creat account form end -->

@@ -1,0 +1,95 @@
+﻿@using Weed.Karma.Models.DealModels
+@model IEnumerable<AllDealsViewModel>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Deals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/businessDashboard/styles/main-respons.css">
+    <!--<link rel="stylesheet" href="styles/global-styles.css">-->
+    <link rel="stylesheet" href="~/businessDashboard/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="~/businessDashboard/styles/global-styles.css">
+
+    <!--<link rel="stylesheet" href="styles/form-styles.css">-->
+    <link rel="stylesheet" href="~/businessDashboard/styles/pages/store-page.css">
+    <link rel="stylesheet" href="~/businessDashboard/styles/pages/store-products.css">
+    <link rel="stylesheet" href="~/businessDashboard/styles/pages/all-stores.css">
+
+</head>
+<body>
+    <div class="page-wrapper chiller-theme toggled">
+        <!--header block-->
+        @await Html.PartialAsync("_AdminHeader")
+        <!--header block End-->
+
+        @await Html.PartialAsync("_StoreAdminLeftMenu")
+
+
+        <!--sidebar-wrapper-->
+
+
+        <main class="page-content margin-top">
+            <div class="container-fluid store-body">
+
+                <h1 class="section-title">
+                    Store Products
+                </h1>
+                <div class="body-section">
+
+                    <a href="/Store/AddProduct" class="add-product-button">
+                        <span class="icon-plus">+</span>
+                        <span>All Products</span>
+                    </a>
+
+
+
+                    <div class="products-block container">
+
+                        <ul class="col-lg-12">
+                            @foreach (var item in Model)
+                            {
+                                <li class="row product-item">
+                                    <div class=" col-lg-3 col-md-6 product-item-col   product-item-name">
+                                        <img src="/img/left-menu/product.png" alt="">
+                                        <span><a href="/Store/@item.StoreId" title="Go To '@item.ShopName' - Store">@item.ShopName</a> - @item.ProductName</span>
+                                    </div>
+
+                                    <div class=" product-item-col product-item-icon  product-item-edit">
+                                        <i class="far fa-edit"></i>
+                                    </div>
+                                    <div class=" product-item-col  product-item-icon product-item-delete">
+                                        <i class="far fa-trash-alt"></i>
+                                    </div>
+                                    <a href="/Deals/AddToDeal/@item.Id" class=" store-item-col store-item-all-button  "> Remove from Deal</a>
+                                </li>
+                            }
+
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <!--page-content"-->
+
+
+    </div>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="~/businessDashboard/scripts/bootstrap.min.js"></script>
+<script src="~/businessDashboard/scripts/store-page.js"></script>
+
+</html>

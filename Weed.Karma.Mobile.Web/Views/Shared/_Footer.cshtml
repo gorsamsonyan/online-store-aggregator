@@ -1,0 +1,45 @@
+﻿<footer>
+    <div class="footer-nav-bar">
+
+        <ul class="footer-menu display-flex">
+            <li class="footer-menu-item" id="item1">
+                <a href="/Dispensaries" class="footer-menu-item-link">
+                    <img src="/img/footer-menu/dispansery.png" alt="Dispensary"> Dispensary
+                </a>
+            </li>
+
+            <li class="footer-menu-item" id="item2">
+                
+            </li>
+            <li class="footer-menu-item" id="item3">
+                <a href="/Brands" class="footer-menu-item-link">
+                    <img src="/img/footer-menu/profile.png" alt="Dispensary"> Brands
+                </a>
+            </li>
+            <li class="footer-menu-item " >
+                <a class="footer-menu-item-link open-card-button wkBag">
+                    <img src="/img/footer-menu/bag.png"
+                         alt="Dispensary"> Bag
+                </a>
+            </li>
+            @if (User.Identity.IsAuthenticated)
+            {
+
+                <li class="footer-menu-item">
+                    <a href="/Members" class="footer-menu-item-link">
+                        <img src="/img/footer-menu/profile.png" alt="Dispensary"> Profile
+                    </a>
+                </li>
+            }
+            else
+            {
+                <li class="footer-menu-item">
+                    <a href="/Account/Login" class="footer-menu-item-link">
+                        <img src="/img/footer-menu/profile.png" alt="Dispensary"> Profile
+                    </a>
+                </li>
+            }
+        </ul>
+
+    </div>
+</footer>

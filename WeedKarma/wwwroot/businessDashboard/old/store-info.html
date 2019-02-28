@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/main-respons.css">
+    <!--<link rel="stylesheet" href="styles/global-styles.css">-->
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/select2.min.css">
+
+    <!--<link rel="stylesheet" href="styles/form-styles.css">-->
+    <link rel="stylesheet" href="styles/pages/store-page.css">
+    <link rel="stylesheet" href="styles/global-styles.css">
+    <link rel="stylesheet" href="styles/pages/store-info.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+</head>
+<body>
+<div class="page-wrapper chiller-theme toggled">
+    <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+        <i class="fas fa-bars"></i>
+    </a>
+    <nav id="sidebar" class="sidebar-wrapper">
+        <div class="sidebar-content">
+            <div class="sidebar-brand">
+                <a href="#">Weed Karma Store</a>
+                <div id="close-sidebar">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="sidebar-header">
+                <div class="user-pic">
+                    <img class="img-responsive img-rounded"
+                         src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+                         alt="User picture">
+                </div>
+                <div class="user-info">
+                    <span class="user-name">Store name
+                    </span>
+                    <!--<span class="user-role">Administrator</span>-->
+                    <!--<span class="user-status">-->
+                    <!--<i class="fa fa-circle"></i>-->
+                    <!--<span>Online</span>-->
+                    <!--</span>-->
+                </div>
+            </div>
+            <!-- sidebar-header  -->
+            <div class="sidebar-menu">
+                <ul>
+                    <li class="header-menu">
+                        <span>General</span>
+                    </li>
+                    <li>
+                        <a href="store-info.html">
+                            <i class="fa fa-store"></i>
+                            <span>Store info</span>
+                            <!--<span class="badge badge-pill badge-danger">New</span>-->
+                        </a>
+
+                    </li>
+                    <li class="sidebar-dropdown">
+                        <a href="javascript:void(0);">
+
+
+                            <i class="fa fa-address-book"></i>
+                            <span>Contact information</span>
+                            <!--<span class="badge badge-pill badge-danger">New</span>-->
+                        </a>
+
+                        <div class="sidebar-submenu">
+                            <ul>
+                                <li>
+                                    <a href="managment-info.html">Managment
+                                        <!--<span class="badge badge-pill badge-success">Pro</span>-->
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="staff-indo.html">Staff</a>
+                                </li>
+                                <li>
+                                    <a href="operator-info.html">Operator</a>
+                                </li>
+                                <li>
+                                    <a href="curer-info.html">Courier</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="general-setting.html">
+                            <i class="fa fa-cog"></i>
+                            <span>General Settings</span>
+
+                        </a>
+
+                    </li>
+                    <li class="">
+                        <a href="menu-page.html">
+                            <i class="far fa-gem"></i>
+                            <span>menu</span>
+                        </a>
+                        <!--<div class="sidebar-submenu">-->
+                        <!--<ul>-->
+                        <!--<li>-->
+                        <!--<a href="#">General</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                        <!--<a href="#">Panels</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                        <!--<a href="#">Tables</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                        <!--<a href="#">Icons</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                        <!--<a href="#">Forms</a>-->
+                        <!--</li>-->
+                        <!--</ul>-->
+                        <!--</div>-->
+                    </li>
+                    <li class="">
+                        <a href="store-product-add.html">
+                            <i class="fa fa-chart-line"></i>
+                            <span>Product</span>
+                        </a>
+                        <!--<div class="sidebar-submenu">-->
+                        <!--<ul>-->
+                        <!--<li>-->
+                        <!--<a href="#">Pie chart</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                        <!--<a href="#">Line chart</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                        <!--<a href="#">Bar chart</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                        <!--<a href="#">Histogram</a>-->
+                        <!--</li>-->
+                        <!--</ul>-->
+                        <!--</div>-->
+                    </li>
+                    <li class="sidebar-dropdown">
+                        <a href="#">
+                            <i class="fa fa-globe"></i>
+                            <span>Orders</span>
+                        </a>
+                        <!--<div class="sidebar-submenu">-->
+                        <!--<ul>-->
+                        <!--<li>-->
+                        <!--<a href="#">Google maps</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                        <!--<a href="#">Open street map</a>-->
+                        <!--</li>-->
+                        <!--</ul>-->
+                        <!--</div>-->
+                    </li>
+                    <li class="sidebar-dropdown">
+                        <a href="#">
+                            <i class="fa fa-chart-line"></i>
+                            <span>Reports</span>
+                        </a>
+                        <!--<div class="sidebar-submenu">-->
+                        <!--<ul>-->
+                        <!--<li>-->
+                        <!--<a href="#">Google maps</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                        <!--<a href="#">Open street map</a>-->
+                        <!--</li>-->
+                        <!--</ul>-->
+                        <!--</div>-->
+                    </li>
+
+
+                    <!--<li class="header-menu">-->
+                    <!--<span>Reports</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                    <!--<a href="#">-->
+                    <!--<i class="fa fa-calendar"></i>-->
+                    <!--<span>Calendar</span>-->
+                    <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                    <!--<a href="#">-->
+                    <!--<i class="fa fa-folder"></i>-->
+                    <!--<span>Examples</span>-->
+                    <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                    <!--<a href="#">-->
+                    <!--<i class="fa fa-book"></i>-->
+                    <!--<span>Documentation</span>-->
+                    <!--</a>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+            <!-- sidebar-menu  -->
+        </div>
+        <!-- sidebar-content  -->
+        <!--<div class="sidebar-footer">-->
+        <!--<a href="#">-->
+        <!--<i class="fa fa-bell"></i>-->
+        <!--<span class="badge badge-pill badge-warning notification">3</span>-->
+        <!--</a>-->
+        <!--<a href="#">-->
+        <!--<i class="fa fa-envelope"></i>-->
+        <!--<span class="badge badge-pill badge-success notification">7</span>-->
+        <!--</a>-->
+        <!--<a href="#">-->
+        <!--<i class="fa fa-cog"></i>-->
+        <!--<span class="badge-sonar"></span>-->
+        <!--</a>-->
+        <!--<a href="#">-->
+        <!--<i class="fa fa-power-off"></i>-->
+        <!--</a>-->
+        <!--</div>-->
+    </nav>
+
+    <!--sidebar-wrapper-->
+
+    <!--header block-->
+    <div class="header-block">
+
+
+        <div class="navbar-header d-flex justify-content-between align-items-center">
+
+            <a class="header-logo">
+                <img src="img/logo.svg" width="50px" alt="">
+                <div class="logo-text">Weed Karma</div>
+            </a>
+            <div class="header-search">
+                <div>
+                    <div class="input-group">
+                        <input type="text" class="form-control search-menu" placeholder="Search...">
+                        <div class="input-group-append">
+                            <span class="input-group-text">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-date-block">
+                <div class="date-title">Date</div>
+                <div class="date"></div>
+
+            </div>
+
+            <div class="header-user-name"> User Name</div>
+            <div class="header-right-block">
+                <a href="#">
+                    <i class="fa fa-bell"></i>
+                    <span class="badge badge-pill badge-warning notification">3</span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-envelope"></i>
+                    <span class="badge badge-pill badge-success notification">7</span>
+                </a>
+
+                <a href="#">
+                    <i class="fa fa-power-off"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--header block End-->
+
+
+    <main class="page-content">
+
+        <div class="container-fluid store-body">
+
+            <h1 class="section-title">
+                Store Information
+            </h1>
+
+            <div class="body-section">
+                <form action="#" method="post" id="storeInformation">
+                    <div class="container">
+
+                        <div class="row store-information justify-content-center">
+
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-6 col-sm-12">
+                                        <div class="form-item">
+                                            <label for="shopName" class="form-item-label">Shop name*</label>
+                                            <input type="text" class="input-text" id="shopName"
+                                                   placeholder="show in website"
+                                                   required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12">
+                                        <div class="form-item">
+                                            <label for="shop-legal-name" class="form-item-label">Shop legal
+                                                name*</label>
+                                            <input type="text" class="input-text" id="shop-legal-name"
+                                                   placeholder="Name LLC"
+                                                   required>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-12 col-sm-12 no-label select-state">
+                                        <div class="form-item">
+                                            <div class="select-arrow"><i class="fas fa-angle-down"></i></div>
+                                            <label for="selectState"></label>
+                                            <select name="" id="selectState">
+                                                <option hidden disabled selected>State</option>
+                                                <option value="cl">California</option>
+                                                <option value="al">Alabama</option>
+
+                                            </select>
+                                            <!--<div class="rail-select">-->
+                                            <!--<div class="select-side">-->
+                                            <!--<i class="fas fa-chevron-down"></i>-->
+                                            <!--</div>-->
+                                            <!--<select required class="input-select" id="selectState">-->
+                                            <!--<option value="" hidden disabled selected> Choose State</option>-->
+                                            <!--<option value="cl"> California</option>-->
+                                            <!--<option value="al"> Alabama</option>-->
+                                            <!--</select>-->
+                                            <!--</div>-->
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-sm-12 no-label select-city">
+                                        <div class="form-item">
+
+                                            <div class="select-arrow"><i class="fas fa-angle-down"></i></div>
+                                            <label for="selectState"></label>
+                                            <select name="" id="selectCity">
+                                                <option hidden disabled selected> Choose City</option>
+                                                <option value="cl"> Los Angeles</option>
+                                                <option value="al"> Guver</option>
+                                                <option value="al"> Obern</option>
+
+                                            </select>
+                                            <!--<div class="rail-select">-->
+                                            <!--<div class="select-side">-->
+                                            <!--<i class="fas fa-chevron-down"></i>-->
+                                            <!--</div>-->
+                                            <!--<select id="selectCity" class="input-select" required>-->
+                                            <!--<option value="" hidden disabled selected> Choose City</option>-->
+                                            <!--<option value="cl"> Los Angeles</option>-->
+                                            <!--<option value="al"> Guver</option>-->
+                                            <!--<option value="al"> Obern</option>-->
+                                            <!--</select>-->
+                                            <!--</div>-->
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-sm-12 no-label delivery-region-block">
+                                        <div class="form-item">
+
+                                            <div class="dropdown-delivery-region">
+
+                                                <div class="region-dropbtn">Choose Region
+                                                    <div class="select-arrow"><i class="fas fa-angle-down"></i></div>
+
+                                                </div>
+
+                                                <div id="regionDropdown" class="dropdown--delivery-region-content">
+                                                    <ul>
+                                                        <li>
+                                                            <label><input type="checkbox" class="input-checkbox"
+                                                                          name="delivery region">
+                                                                Region1</label>
+                                                        </li>
+                                                        <li>
+                                                            <label><input type="checkbox" class="input-checkbox"
+                                                                          name="delivery region">
+                                                                Region1</label>
+                                                        </li>
+                                                        <li>
+                                                            <label><input type="checkbox" class="input-checkbox"
+                                                                          name="delivery region">
+                                                                Region1</label>
+                                                        </li>
+                                                        <li>
+                                                            <label><input type="checkbox" class="input-checkbox"
+                                                                          name="delivery region">
+                                                                Region1</label>
+                                                        </li>
+                                                        <li>
+                                                            <label><input type="checkbox" class="input-checkbox"
+                                                                          name="delivery region">
+                                                                Region1</label>
+                                                        </li>
+
+
+                                                    </ul>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12 no-label">
+                                        <div class="form-item img-download-block">
+                                            <!--<label class="form-item-label">Insert logo*</label>-->
+                                            <label class="file-container">
+                                                <span class="insert-image">Insert Logo</span>
+                                                <div class="dowonloded-text">
+                                                    <span class="file-is-done"> file iz done</span>
+                                                    <span class="icon">ok</span>
+                                                </div>
+                                                <input type="file" class="input-file" id="file-download" required>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12 no-label">
+                                        <div class="form-item img-download-block">
+                                            <!--<label class="form-item-label">Insert Store image*</label>-->
+                                            <label class="file-container">
+                                                <span class="insert-image ">Insert Store Image</span>
+                                                <div class="dowonloded-text">
+                                                    <span class="file-is-done"> file iz done</span>
+                                                    <span class="icon">ok</span>
+                                                </div>
+                                                <input type="file" class="input-file" id="file-download-store" required>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-sm-12">
+                                        <div class="form-item">
+                                            <label class="form-item-label">Choose Payment Method*</label>
+                                            <div class="row credit-card-block align-items-center">
+                                                <div class="col-lg-3 text-center">
+                                                    <input id="visa" type="checkbox" class="input-checkbox"
+                                                           name="credit-card"
+                                                           value="visa"/>
+                                                    <label class=" credit-card-img " for="visa">
+                                                        <img src="img/payment-metod/visa.png" alt="visa">
+                                                    </label>
+                                                </div>
+                                                <div class="col-lg-3 text-center">
+                                                    <input id="mastercard" type="checkbox" class="input-checkbox"
+                                                           name="credit-card"
+                                                           value="mastercard"/>
+                                                    <label class=" credit-card-img " for="mastercard">
+                                                        <img src="img/payment-metod/master.png"
+                                                             alt="mastercard">
+                                                    </label>
+                                                </div>
+                                                <div class="col-lg-3 text-center">
+                                                    <input id="americanExpress" type="checkbox" class="input-checkbox"
+                                                           name="credit-card"
+                                                           value="americanExpress"/>
+                                                    <label class=" credit-card-img " for="americanExpress">
+                                                        <img src="img/payment-metod/american.png"
+                                                             alt="americanExpress">
+                                                    </label>
+                                                </div>
+                                                <div class="col-lg-3 text-center">
+                                                    <input id="cash" type="checkbox" name="credit-card"
+                                                           class="input-checkbox"
+                                                           value="cash"/>
+                                                    <label class=" credit-card-img " for="cash">
+                                                        <img src="img/payment-metod/cash.png" alt="cash">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="cc-selector">
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-sm-6">
+                                        <div class="form-item">
+                                            <label for="taxnumber" class="form-item-label">Tax number*</label>
+                                            <input type="text" class="input-text" id="taxnumber" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6">
+                                        <div class="form-item">
+                                            <label for="contactnumber" class="form-item-label">Contact
+                                                number*</label>
+                                            <input type="text" class="input-text" id="contactnumber" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6">
+                                        <div class="form-item">
+                                            <label for="licensenumber" class="form-item-label">License
+                                                number*</label>
+                                            <input type="text" class="input-text" id="licensenumber" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-sm-6">
+                                        <div class="form-item">
+                                            <label for="specifyWebsite" class="form-item-label">Specify
+                                                Website</label>
+                                            <input type="text" class="input-text" id="specifyWebsite">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-12 col-sm-12 address">
+                                        <div class="form-item">
+                                            <label for="physicalAdress" class="form-item-label">Physical
+                                                Adress*</label>
+                                            <input type="text" class="input-text" id="physicalAdress" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-sm-12 address">
+                                        <div class="form-item">
+                                            <label for="legalAdress" class="form-item-label">Legal Adress*</label>
+                                            <input type="text" class="input-text" id="legalAdress" required>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-12 col-sm-12">
+                                        <div class="form-item">
+
+                                            <label for="workingHours" class="form-item-label label-center">Working
+                                                Hours*</label>
+                                            <div class="working-hourse-block">
+                                                <div class="from  ">
+                                                    FROM
+                                                    <div class="rail-select">
+                                                        <div class="select-arrow"><i class="fas fa-angle-down"></i>
+                                                        </div>
+                                                        <select id="workingHours" class="input-select" required>
+                                                            <option value="" hidden disabled selected>08:00
+                                                            </option>
+                                                            <option>08:30</option>
+                                                            <option>09:00</option>
+                                                            <option>09:30</option>
+                                                            <option>10:00</option>
+                                                            <option>10:30</option>
+                                                            <option>11:00</option>
+                                                            <option>11:30</option>
+
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="to   ">
+                                                    TO
+                                                    <div class="rail-select">
+                                                        <div class="select-arrow"><i class="fas fa-angle-down"></i>
+                                                        </div>
+                                                        <select class="input-select" required>
+                                                            <option value="" hidden disabled selected>20:00
+                                                            </option>
+                                                            <option>20:30</option>
+                                                            <option>21:00</option>
+                                                            <option>21:30</option>
+                                                            <option>22:00</option>
+                                                            <option>22:30</option>
+                                                            <option>23:00</option>
+                                                            <option>23:30</option>
+                                                            <option>24:00</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-sm-12 weekend-block ">
+                                        <div class="form-item">
+                                            <label class="form-item-label label-center">Weekend*</label>
+                                            <!--<div a>-->
+                                            <ul class="checkbox-block text-center">
+                                                <li>
+                                                    <input type="checkbox" class="input-checkbox" name="weekend"
+                                                           value="Monday">Mo
+                                                    <!--<span class="checked-button"></span>-->
+                                                </li>
+                                                <li><input type="checkbox" class="input-checkbox" name="weekend"
+                                                           value="Tuesday">Tu
+                                                    <!--<span class="checked-button"></span>-->
+
+                                                </li>
+                                                <li><input type="checkbox" class="input-checkbox" name="weekend"
+                                                           value="Wednesday">We
+                                                    <!--<span class="checked-button"></span>-->
+
+                                                </li>
+                                                <li><input type="checkbox" class="input-checkbox" name="weekend"
+                                                           value="Thursday">Th
+                                                </li>
+                                                <input type="checkbox" class="input-checkbox" name="weekend"
+                                                       value="Friday">Fr
+                                                </li>
+                                                <li><input type="checkbox" class="input-checkbox" name="weekend"
+                                                           value="Saturday">Sa
+                                                </li>
+                                                <li><input type="checkbox" class="input-checkbox" name="weekend"
+                                                           value="Sunday">Su
+                                                </li>
+
+                                            </ul>
+                                            <!--</div>-->
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-sm-12 justify-content-center">
+                                        <div class="form-item ">
+                                            <label class="form-item-label label-center">Delivery service</label>
+                                            <div class="delivery-block">
+                                                <label class="delivery-service">
+                                                    <input type="radio" class="input-radio" name="delivery-service"
+                                                           checked
+                                                           value="yes"/>
+                                                    <span class="delivery-service-button"></span>
+                                                    <span class="">Yes</span>
+                                                </label>
+
+                                                <label class="delivery-service">
+                                                    <input type="radio" class="input-radio" name="delivery-service"
+                                                           value="no"/>
+                                                    <span class="delivery-service-button"></span>
+                                                    <span class="">No</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--<div class="col-lg-6 col-sm-12 no-label delivery-all-block">-->
+                                    <!--<div class="form-item">-->
+
+                                    <!--<div class="dropdown-delivery-region">-->
+
+                                    <!--<div class="region-dropbtn">Choose Region <i-->
+                                    <!--class="fas fa-chevron-down"></i></div>-->
+
+                                    <!--<div id="regionDropdown" class="dropdown&#45;&#45;delivery-region-content">-->
+                                    <!--<ul>-->
+                                    <!--<li>-->
+                                    <!--<label><input type="checkbox" class="input-checkbox" name="delivery region">-->
+                                    <!--Region1</label>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                    <!--<label><input type="checkbox" class="input-checkbox" name="delivery region">-->
+                                    <!--Region1</label>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                    <!--<label><input type="checkbox" class="input-checkbox" name="delivery region">-->
+                                    <!--Region1</label>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                    <!--<label><input type="checkbox" class="input-checkbox" name="delivery region">-->
+                                    <!--Region1</label>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                    <!--<label><input type="checkbox" class="input-checkbox" name="delivery region">-->
+                                    <!--Region1</label>-->
+                                    <!--</li>-->
+
+
+                                    <!--</ul>-->
+
+
+                                    <!--</div>-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+
+
+                                    <!--</div>-->
+
+                                    <div class="col-lg-12 col-sm-12 delivery-all-block delivery-all-block-active">
+                                        <div class="row">
+
+
+                                            <div class="col-lg-12 col-sm-12">
+                                                <div class="form-item">
+
+                                                    <label for="deliveryTime" class="form-item-label label-center">Delivery
+                                                        Time*</label>
+                                                    <div class="working-hourse-block">
+                                                        <div class="from  ">
+                                                            FROM
+                                                            <div class="rail-select">
+                                                                <div class="select-arrow"><i
+                                                                        class="fas fa-angle-down"></i>
+                                                                </div>
+                                                                <select id="deliveryTime" class="input-select" required>
+                                                                    <option value="" hidden disabled selected>08:00
+                                                                    </option>
+                                                                    <option>08:30</option>
+                                                                    <option>09:00</option>
+                                                                    <option>09:30</option>
+                                                                    <option>10:00</option>
+                                                                    <option>10:30</option>
+                                                                    <option>11:00</option>
+                                                                    <option>11:30</option>
+
+
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="to   ">
+                                                            TO
+                                                            <div class="rail-select">
+                                                                <div class="select-arrow"><i
+                                                                        class="fas fa-angle-down"></i>
+                                                                </div>
+                                                                <select class="input-select" required>
+                                                                    <option value="" hidden disabled selected>20:00
+                                                                    </option>
+                                                                    <option>20:30</option>
+                                                                    <option>21:00</option>
+                                                                    <option>21:30</option>
+                                                                    <option>22:00</option>
+                                                                    <option>22:30</option>
+                                                                    <option>23:00</option>
+                                                                    <option>23:30</option>
+                                                                    <option>24:00</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-12 col-sm-12 no-label">
+                                                <div class="form-item d-flex flex-row align-items-center justify-content-center">
+                                                    <label class="d-flex align-items-center">
+                                                    <span class="delivery-all-block-text">MIN ORDER DELIVERY</span>
+                                                    <input class="input-text delivery-all-block-input " type="text">
+                                                    </label>
+                                                    <div class="delivery-all-block-price">USD</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-sm-12 no-label">
+                                                <div class="form-item d-flex flex-row align-items-center justify-content-center">
+                                                    <label class="d-flex align-items-center">
+                                                    <span class="delivery-all-block-text">DELIVERY PRICE</span>
+                                                    <input class="input-text delivery-all-block-input " type="text">
+                                                    </label>
+                                                    <div class="delivery-all-block-price">USD</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--<div class="form-item">-->
+                                        <!--<label for="Deliveryduration" class="form-item-label">Delivery-->
+                                        <!--duration*</label>-->
+                                        <!--<div class="  delivery-duration-block">-->
+                                        <!--<div class="col-lg-7 pl-0">-->
+                                        <!--<input type="text" class="input-text" id="Deliveryduration"-->
+                                        <!--required>-->
+                                        <!--</div>-->
+                                        <!--<div class="col-lg-5 pr-0">-->
+                                        <!--<div class="rail-select">-->
+                                        <!--<div class="select-side">-->
+                                        <!--<i class="fas fa-chevron-down"></i></div>-->
+                                        <!--<select class="duration-time input-select" required>-->
+
+                                        <!--<option> Hours</option>-->
+                                        <!--<option> Minute</option>-->
+                                        <!--</select>-->
+                                        <!--</div>-->
+                                        <!--</div>-->
+                                        <!--</div>-->
+
+                                        <!--</div>-->
+                                    </div>
+                                    <!--<div class="col-lg-6 col-sm-12">-->
+                                    <!--<div class="form-item">-->
+                                    <!--<label for="minimumOrderAmount" class="form-item-label">-->
+                                    <!--Minimum orderamount*-->
+                                    <!--</label>-->
+                                    <!--<input type="text" id="minimumOrderAmount" required>-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-lg-6 col-sm-12">-->
+                                    <!--<div class="form-item">-->
+                                    <!--<label for="deliveryFee" class="form-item-label">Delivery-->
+                                    <!--Fee*</label>-->
+                                    <!--<input type="text" id="deliveryFee" required>-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-lg-6 col-sm-12 ">-->
+                                    <!--<div class="form-item">-->
+                                    <!--<label for="regionZip" class="form-item-label">Region Zip*</label>-->
+                                    <!--<input type="text" id="regionZip" required>-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+
+
+                                    <div class="col-lg-12 col-sm-12 no-label">
+                                        <div class="form-item">
+
+                                            <input type="submit" class="input-submit" value="Save">
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <!-- Store info End-->
+        </div>
+    </main>
+    <!--page-content"-->
+
+
+</div>
+
+<!-- page-wrapper -->
+
+
+<!--<div class="container">-->
+<!--<div class="row">-->
+<!--<header>-->
+<!--<div class="site-logo">-->
+<!--<img src="img/logo.svg">-->
+<!--</div>-->
+<!--<div class="store-img-block">-->
+<!--<h4 class="store-name">Store Name</h4>-->
+<!--<img src="img/store-img.jpg" alt="">-->
+<!--</div>-->
+<!--</header>-->
+<!--</div>-->
+<!--<div class="row" style="position: relative">-->
+<!--<div class="sidenav-block">-->
+<!--<div id="mySidenav" class="sidenav">-->
+
+
+<!--&lt;!&ndash;<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-arrow-left"></i></a>&ndash;&gt;-->
+<!--<a href="#">Store ingo</a>-->
+<!--<a href="#">General settings</a>-->
+<!--<a href="#">Menu</a>-->
+<!--<a href="#">Product</a>-->
+<!--<a href="#">Orders</a>-->
+<!--<a href="#">Reports</a>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<span class="left-menu-icon">&#9776; </span>-->
+<!--</div>-->
+<!--</div>-->
+</body>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/store-page.js"></script>
+<script src="scripts/select2.full.min.js"></script>
+<script src="scripts/store-info.js"></script>
+</html>

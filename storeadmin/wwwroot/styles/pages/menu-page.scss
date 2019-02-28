@@ -1,0 +1,33 @@
+@import "../main-styles";
+@import "../form-styles";
+
+
+.add-menu-button{
+  @include green-button;
+  max-width: 200px;
+  margin-bottom: 30px;
+}
+
+#addMenuForm{
+  display: none;
+  margin-bottom: 20px;
+}
+.add-menu-block{
+  ul{
+    padding: 0;
+  }
+
+}
+.add-menu-item-col{
+  border: 1px solid $color-green;
+  padding: 10px;
+}
+.add-menu-item-icon{
+  font-size: 20px;
+  cursor: pointer;
+}
+.add-menu-item-delete{
+  &:hover {
+    color: red;
+  }
+}

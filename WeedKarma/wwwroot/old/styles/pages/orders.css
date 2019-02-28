@@ -1,0 +1,50 @@
+/* font family */
+.gray-button {
+  color: #47484b; }
+
+.green-button {
+  color: #4b7e18; }
+
+.dark-green-button {
+  color: #4b7e18; }
+
+.green-button {
+  color: #4b7e18; }
+
+.section-title {
+  text-align: center;
+  background-color: #4b7e18;
+  padding: 20px 0;
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  border-radius: 20px 20px 0px 0px;
+  -webkit-border-radius: 20px 20px 0px 0px;
+  -moz-border-radius: 20px 20px 0px 0px;
+  margin: 0; }
+
+.body-section {
+  background-color: #ececed;
+  height: 300px;
+  padding: 20px 0; }
+
+.order-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.order-menu-item {
+  padding: 0 5px; }
+
+.order-menu-item-link {
+  text-align: center;
+  background-color: #47484b;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  color: white; }
+  .order-menu-item-link:hover {
+    color: white; }
+
+/*# sourceMappingURL=orders.css.map */

@@ -1,0 +1,219 @@
+﻿@model storeadmin.ScaffoldModels.Store
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Store Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="~/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="~/styles/main-respons.css">
+    <link rel="stylesheet" href="~/styles/global-styles.css">
+    <link rel="stylesheet" href="~/styles/form-styles.css">
+    <link rel="stylesheet" href="~/styles/pages/login-page.css">
+    <link rel="stylesheet" href="~/styles/pages/contact-information.css">
+    <link rel="stylesheet" href="~/styles/pages/general-setting.css">
+    <link rel="stylesheet" href="~/styles/pages/menu-page.css">
+    <link rel="stylesheet" href="~/styles/pages/store-product-add.css">
+    <link rel="stylesheet" href="~/styles/pages/store-page.css">
+    <link rel="stylesheet" href="~/styles/pages/store-info.css">
+
+</head>
+<body>
+    <div class="page-wrapper chiller-theme toggled">
+        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+            <i class="fas fa-bars"></i>
+        </a>
+        <!--sidebar-wrapper-->
+        <!--header block--> 
+        <div class="header-block">
+
+
+            <div class="navbar-header d-flex justify-content-between align-items-center">
+
+                <a class="header-logo">
+                    <img src="img/logo.svg" width="50px" alt="">
+                    <div class="logo-text">Weed Karma</div>
+                </a>
+                <div class="header-search">
+                    <div>
+                        <div class="input-group">
+                            <input type="text" class="form-control search-menu" placeholder="Search...">
+                            <div class="input-group-append">
+                                <span class="input-group-text">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-date-block">
+                    <div class="date-title">Date</div>
+                    <div class="date"></div>
+
+                </div>
+
+                <div class="header-user-name"> User Name</div>
+                <div class="header-right-block">
+                    <a href="#">
+                        <i class="fa fa-bell"></i>
+                        <span class="badge badge-pill badge-warning notification">3</span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-envelope"></i>
+                        <span class="badge badge-pill badge-success notification">7</span>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa fa-power-off"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--header block End--> 
+        <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+                <div class="sidebar-brand">
+                    <a href="#">Weed Karma Store</a>
+                    <div id="close-sidebar">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+
+
+
+                <div class="sidebar-header">
+                    @foreach (var item in (ViewBag.Stores as IEnumerable<storeadmin.ScaffoldModels.Store>))
+                    {
+                        <div class="user-pic">
+
+                            <img src="src=@Url.Content("~/Files/"+item.StoreLogoPath)"
+                                 class="img-responsive img-rounded"
+                                 alt="User picture">
+                        </div>
+                        <div class="user-info">
+                            <span class="user-name">
+                                @item.ShopName
+                            </span>
+                            <!--<span class="user-role">Administrator</span>-->
+                            <!--<span class="user-status">-->
+                            <!--<i class="fa fa-circle"></i>-->
+                            <!--<span>Online</span>-->
+                            <!--</span>-->
+                        </div>
+                    }
+
+                </div>
+
+
+                <!-- sidebar-header  -->
+                <div class="sidebar-menu">
+                    <ul>
+                        <li class="header-menu">
+                            <span>General</span>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Create","StoreInfo")">
+                                <i class="fa fa-store"></i>
+                                <span>Store info</span>
+                                <!--<span class="badge badge-pill badge-danger">New</span>-->
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="javascript:void(0);"> 
+                                <i class="fa fa-address-book"></i>
+                                <span>Contact information</span>
+                                <!--<span class="badge badge-pill badge-danger">New</span>-->
+                            </a>
+
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="managment-info.html">
+                                            Managment
+                                            <!--<span class="badge badge-pill badge-success">Pro</span>-->
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="staff-indo.html">Staff</a>
+                                    </li>
+                                    <li>
+                                        <a href="operator-info.html">Operator</a>
+                                    </li>
+                                    <li>
+                                        <a href="curer-info.html">Courier</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="general-setting.html">
+                                <i class="fa fa-cog"></i>
+                                <span>General Settings</span>
+
+                            </a>
+
+                        </li>
+                        <li class="">
+                            <a href="@Url.Action("Create","MenuPage")">
+                                <i class="far fa-gem"></i>
+                                <span>menu</span>
+                            </a>
+                            
+                        </li>
+                        <li class="">
+                            <a href="@Url.Action("Create","Product")">
+                                <i class="fa fa-chart-line"></i>
+                                <span>Product</span>
+                            </a>
+                            
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-globe"></i>
+                                <span>Orders</span>
+                            </a>
+                            
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-chart-line"></i>
+                                <span>Reports</span>
+                            </a>
+                             
+                        </li>
+                         
+                    </ul>
+                </div>
+                <!-- sidebar-menu  -->
+            </div> 
+        </nav>
+
+
+        @RenderBody()
+    </div>
+
+    <!--sidebar-wrapper-->
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="~/scripts/bootstrap.min.js"></script>
+
+    <script src="~/scripts/contact-info.js"></script>
+    <script src="~/scripts/general-setting.js"></script>
+    <script src="~/scripts/menu-page.js"></script>
+    <script src="~/scripts/store-product-add.js"></script>
+    <script src="~/scripts/store-page.js"></script>
+    <script src="~/scripts/store-info.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

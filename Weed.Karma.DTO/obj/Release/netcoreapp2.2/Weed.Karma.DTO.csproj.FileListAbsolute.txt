@@ -1,0 +1,13 @@
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.DTO\bin\Release\netcoreapp2.2\Weed.Karma.DTO.deps.json
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.DTO\bin\Release\netcoreapp2.2\Weed.Karma.DTO.dll
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.DTO\bin\Release\netcoreapp2.2\Weed.Karma.DTO.pdb
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.DTO\bin\Release\netcoreapp2.2\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.DTO\bin\Release\netcoreapp2.2\Microsoft.IdentityModel.Tokens.pdb
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.DTO\bin\Release\netcoreapp2.2\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.DTO\obj\Release\netcoreapp2.2\Weed.Karma.DTO.csprojAssemblyReference.cache
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.DTO\obj\Release\netcoreapp2.2\Weed.Karma.DTO.csproj.CoreCompileInputs.cache
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.DTO\obj\Release\netcoreapp2.2\Weed.Karma.DTO.AssemblyInfoInputs.cache
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.DTO\obj\Release\netcoreapp2.2\Weed.Karma.DTO.AssemblyInfo.cs
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.DTO\obj\Release\netcoreapp2.2\Weed.Karma.DTO.csproj.CopyComplete
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.DTO\obj\Release\netcoreapp2.2\Weed.Karma.DTO.dll
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.DTO\obj\Release\netcoreapp2.2\Weed.Karma.DTO.pdb

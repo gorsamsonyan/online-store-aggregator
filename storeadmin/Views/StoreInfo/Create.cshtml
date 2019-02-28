@@ -1,0 +1,467 @@
+﻿@model storeadmin.ScaffoldModels.Store
+
+@{
+    ViewData["Title"] = "Create Store";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main class="page-content margin-top">
+
+    <div class="container-fluid store-body">
+
+        <h1 class="section-title">
+            Store Information
+        </h1>
+
+        <form asp-action="Create" method="post" id="storeInformation" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="container">
+                <div class="row store-information justify-content-center">
+                    @*<div class="col-lg-12 col-md-12">
+            <h2 class="store-information-title">
+                Store Information
+            </h2>
+        </div>*@
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-item">
+                                    <label asp-for="ShopName" class="form-item-label"></label>
+                                    <input asp-for="ShopName" class="input-text" type="text" placeholder="ShopName" />
+                                    <span asp-validation-for="ShopName" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-item">
+                                    <label asp-for="ShopLegalName" class="form-item-label"></label>
+                                    <input asp-for="ShopLegalName" class="input-text" type="text" placeholder="ShopLegalName" />
+                                    <span asp-validation-for="ShopLegalName" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-sm-12 no-label select-state">
+                                <div class="form-item">
+                                    <div class="select-arrow"><i class="fas fa-angle-down"></i></div>
+                                    <label for="selectState"></label>
+                                    <select id="selectState" asp-for="StateId" asp-items="ViewBag.StateItems" class="form-control">
+                                        <option value="1">-- Select Stat --</option>
+                                    </select>
+                                    @*@if (ViewBag.StateItems != null)
+                {
+                    @Html.DropDownListFor(m => m.state.ID, ViewBag.StateItems as SelectList, "Select State", new { @class = "input-select" })
+                }*@
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-sm-12 no-label select-city">
+                                <div class="form-item">
+                                    <div class="select-arrow"><i class="fas fa-angle-down"></i></div>
+                                    <label for="selectState"></label>
+                                    <select asp-for="CityId" id="selectCity">
+                                        <option value="">-- Select City --</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            @*<div class="col-lg-12 col-sm-12">
+            <div class="form-item">
+                <label asp-for="PhysicalAddress" class="control-label"></label>
+                <input asp-for="PhysicalAddress" class="form-control" />
+                <span asp-validation-for="PhysicalAddress" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-lg-12 col-sm-12">
+            <div class="form-item">
+                <label asp-for="LegalAddress" class="control-label"></label>
+                <input asp-for="LegalAddress" class="form-control" />
+                <span asp-validation-for="LegalAddress" class="text-danger"></span>
+            </div>
+        </div>*@
+
+
+                            <div class="col-lg-12 col-sm-12 no-label delivery-region-block">
+                                <div class="form-item">
+                                    <div class="dropdown-delivery-region">
+                                        <div class="region-dropbtn">Choose Region
+                                            <div class="select-arrow"><i class="fas fa-angle-down"></i></div>
+                                        </div>
+                                        <select asp-for="RegionId" id="regionDropdown" class="dropdown--delivery-region-content">
+                                            <option value="">-- Select Region --</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-sm-12 no-label">
+                                <div class="form-item img-download-block">
+                                    <label asp-for="StoreLogoPath" class="control-label">
+                                        <span class="insert-image">Upload Logo</span>
+                                        <div class="dowonloded-text">
+                                            <span class="file-is-done"> file iz done</span>
+                                            <span class="icon">ok</span>
+                                        </div>
+                                        <input type="file" name="logoUpload" class="input-file" id="file-download" />
+                                        <span asp-validation-for="StoreLogoPath" class="text-danger"></span>
+                                    </label> 
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="col-lg-6 col-sm-12 no-label">
+                                <div class="form-item img-download-block">
+                                    <label asp-for="StoreImagePath" class="control-label"> 
+                                        <span class="insert-image ">Upload Store Image</span>
+                                        <div class="dowonloded-text">
+                                            <span class="file-is-done"> file iz done</span>
+                                            <span class="icon">ok</span>
+                                        </div>
+                                        <input type="file" name="imageUpload" class="input-file" id="file-download-store" />
+                                        <span asp-validation-for="StoreImagePath" class="text-danger"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-sm-12 delivery-all-block">
+                                <div class="form-item">
+                                    <label asp-for="DeliveryDuration" class="form-item-label"></label>
+                                    <div class="  delivery-duration-block">
+                                        <div class="col-lg-7 pl-0">
+                                            <input asp-for="DeliveryDuration" class="form-control" id="Deliveryduration" />
+                                        </div>
+                                        <div class="col-lg-5 pr-0">
+                                            <div class="rail-select">
+                                                <div class="select-side">
+                                                    <i class="fas fa-chevron-down"></i>
+                                                </div>
+                                                <select class="form-control">
+                                                    <option>Hours</option>
+                                                    <option>Minute</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="delivery-all-block">
+                                <div class="col-lg-6 col-sm-12">
+                                    <div class="form-item">
+                                        <label asp-for="MinOrderAmount" class="control-label"></label>
+                                        <input asp-for="MinOrderAmount" class="form-control" />
+                                        <span asp-validation-for="MinOrderAmount" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <div class="form-item">
+                                        <label asp-for="DeliveryFee" class="control-label"></label>
+                                        <input asp-for="DeliveryFee" class="form-control" />
+                                        <span asp-validation-for="DeliveryFee" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-item">
+                                    <label asp-for="PaymentMethod" class="control-label"></label>
+                                    <div class="row credit-card-block">
+                                        <div class="col-lg-3">
+                                            <input asp-for="PaymentMethod" id="visa" type="checkbox" value="1" />
+                                            <label class=" credit-card-img " for="visa">
+                                                <img src="~/img/payment-metod/visa.png" alt="1">
+                                            </label>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <input asp-for="PaymentMethod" id="mastercard" type="checkbox" value="2" />
+                                            <label class=" credit-card-img " for="mastercard">
+                                                <img src="~/img/payment-metod/master.png"
+                                                     alt="mastercard">
+                                            </label>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <input asp-for="PaymentMethod" id="americanExpress" type="checkbox" value="3" />
+                                            <label class=" credit-card-img " for="americanExpress">
+                                                <img src="~/img/payment-metod/american.png"
+                                                     alt="americanExpress">
+                                            </label>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <input asp-for="PaymentMethod" id="cash" type="checkbox" value="4" />
+                                            <label class="credit-card-img " for="cash">
+                                                <img src="~/img/payment-metod/cash.png" alt="cash">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="cc-selector">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-item">
+                                    <label asp-for="TaxNumber" class="control-label"></label>
+                                    <input asp-for="TaxNumber" class="form-control" />
+                                    <span asp-validation-for="TaxNumber" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-item">
+                                    <label asp-for="LicenseNumber" class="control-label"></label>
+                                    <input asp-for="LicenseNumber" class="form-control" />
+                                    <span asp-validation-for="LicenseNumber" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-item">
+                                    <label asp-for="ContactNumber" class="control-label"></label>
+                                    <input asp-for="ContactNumber" class="form-control" />
+                                    <span asp-validation-for="ContactNumber" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-item">
+                                    <label asp-for="SpecifyWebsite" class="control-label"></label>
+                                    <input asp-for="SpecifyWebsite" class="form-control" />
+                                    <span asp-validation-for="SpecifyWebsite" class="text-danger"></span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-item">
+
+                                    <label asp-for="WorkingHoursFrom" class="form-item-label label-center"></label>
+                                    <div class="working-hourse-block">
+                                        <div class="from  ">
+                                            FROM
+                                            <div class="rail-select">
+                                                <div class="select-arrow">
+                                                    <i class="fas fa-angle-down"></i>
+                                                </div>
+                                                <select asp-for="WorkingHoursFrom" id="workingHours" class="input-select">
+                                                    <option value="08:00">08:00</option>
+                                                    <option value="08:30">08:30</option>
+                                                    <option value="09:00">09:00</option>
+                                                    <option value="09:30">09:30</option>
+                                                    <option value="10:00">10:00</option>
+                                                    <option value="10:30">10:30</option>
+                                                    <option value="11:00">11:00</option>
+                                                    <option value="11:30">11:30</option>
+                                                </select>
+                                                <span asp-validation-for="WorkingHoursFrom" class="text-danger"></span>
+
+                                            </div>
+                                        </div>
+                                        <div class="to   ">
+                                            TO
+                                            <div class="rail-select">
+                                                <div class="select-arrow">
+                                                    <i class="fas fa-angle-down"></i>
+                                                </div>
+                                                <select asp-for="WorkingHoursTo" class="form-control">
+                                                    <option value="08:00">08:00</option>
+                                                    <option value="08:30">08:30</option>
+                                                    <option value="09:00">09:00</option>
+                                                    <option value="09:30">09:30</option>
+                                                    <option value="10:00">10:00</option>
+                                                    <option value="10:30">10:30</option>
+                                                    <option value="11:00">11:00</option>
+                                                    <option value="11:30">11:30</option>
+                                                </select>
+                                                <span asp-validation-for="WorkingHoursTo" class="text-danger"></span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-sm-12 weekend-block ">
+                                <div class="form-item">
+                                    <label asp-for="WeekendDeys" class="form-item-label label-center"></label>
+                                    <ul class="checkbox-block">
+                                        @*<li><input asp-for="Deys_Monday" class="input-checkbox"  type="checkbox"  value="1">Monday</li>
+                    <li><input asp-for="Deys_Tuesday" class="input-checkbox"  type="checkbox"  value="2">Tuesday</li>
+                    <li><input asp-for="Deys_Wednesday" class="input-checkbox"  type="checkbox"  value="3">Wednesday</li>
+                    <li><input asp-for="Deys_Thursday" class="input-checkbox"  type="checkbox"  value="4">Thursday</li>
+                    <li><input asp-for="Deys_Friday" class="input-checkbox"  type="checkbox"  value="5">Friday</li>
+                    <li><input asp-for="Deys_Saturday" class="input-checkbox"  type="checkbox"  value="6">Saturday</li>
+                    <li><input asp-for="Deys_Sunday" class="input-checkbox"  type="checkbox"  value="7">Sunday</li>*@
+                                        <li><input type="checkbox" value="1" class="input-checkbox">Monday</li>
+                                        <li><input type="checkbox" value="2" class="input-checkbox">Tuesday</li>
+                                        <li><input type="checkbox" value="3" class="input-checkbox">Wednesday</li>
+                                        <li><input type="checkbox" value="4" class="input-checkbox">Thursday</li>
+                                        <li><input type="checkbox" value="5" class="input-checkbox">Friday</li>
+                                        <li><input type="checkbox" value="6" class="input-checkbox">Saturday</li>
+                                        <li><input type="checkbox" value="7" class="input-checkbox">Sunday</li>
+                                    </ul>
+                                    <span asp-validation-for="WeekendDeys" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-sm-12 justify-content-center">
+                                <div class="form-item">
+                                    <label asp-for="DeliveryStatus" class="form-item-label label-center"></label>
+                                    <div class="delivery-block">
+                                        <label class="delivery-service">
+                                            <input asp-for="DeliveryStatus" type="radio" class="input-radio" value="true" />
+                                            <span class="delivery-service-button"></span>
+                                            <span class="">Yes</span>
+                                        </label>
+
+                                        <label class="delivery-service">
+                                            <input asp-for="DeliveryStatus" type="radio" class="input-radio" value="false" />
+                                            <span class="delivery-service-button"></span>
+                                            <span class="">No</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-12 col-sm-12 delivery-all-block delivery-all-block-active">
+                                <div class="row">
+                                    <div class="col-lg-12 col-sm-12">
+                                        <div class="form-item">
+                                            <label for="deliveryTime" class="form-item-label label-center">Delivery Time* </label>
+                                            <div class="working-hourse-block">
+                                                <div class="from  ">
+                                                    FROM
+                                                    <div class="rail-select">
+                                                        <div class="select-arrow">
+                                                            <i class="fas fa-angle-down"></i>
+                                                        </div>
+                                                        <select asp-for="WorkingHoursFrom" id="workingHours" class="input-select">
+                                                            <option value="08:00">08:00</option>
+                                                            <option value="08:30">08:30</option>
+                                                            <option value="09:00">09:00</option>
+                                                            <option value="09:30">09:30</option>
+                                                            <option value="10:00">10:00</option>
+                                                            <option value="10:30">10:30</option>
+                                                            <option value="11:00">11:00</option>
+                                                            <option value="11:30">11:30</option>
+                                                        </select>
+                                                        <span asp-validation-for="WorkingHoursFrom" class="text-danger"></span>
+
+                                                    </div>
+                                                </div>
+                                                <div class="to   ">
+                                                    TO
+                                                    <div class="rail-select">
+                                                        <div class="select-arrow">
+                                                            <i class="fas fa-angle-down"></i>
+                                                        </div>
+                                                        <select asp-for="WorkingHoursTo" class="form-control">
+                                                            <option value="08:00">08:00</option>
+                                                            <option value="08:30">08:30</option>
+                                                            <option value="09:00">09:00</option>
+                                                            <option value="09:30">09:30</option>
+                                                            <option value="10:00">10:00</option>
+                                                            <option value="10:30">10:30</option>
+                                                            <option value="11:00">11:00</option>
+                                                            <option value="11:30">11:30</option>
+                                                        </select>
+                                                        <span asp-validation-for="WorkingHoursTo" class="text-danger"></span>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-sm-12 no-label">
+                                        <div class="form-item d-flex flex-row align-items-center justify-content-center">
+                                            <label class="d-flex align-items-center">
+                                                <span class="delivery-all-block-text">MIN ORDER DELIVERY</span>
+                                                <input class="input-text delivery-all-block-input " type="text">
+                                            </label>
+                                            <div class="delivery-all-block-price">USD</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-sm-12 no-label">
+                                        <div class="form-item d-flex flex-row align-items-center justify-content-center">
+                                            <label class="d-flex align-items-center">
+                                                <span class="delivery-all-block-text">DELIVERY PRICE</span>
+                                                <input class="input-text delivery-all-block-input " type="text">
+                                            </label>
+                                            <div class="delivery-all-block-price">USD</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-sm-12 no-label">
+                                <div class="form-item">
+
+                                    <input type="submit" class="input-submit" value="Save">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    </div>
+                </div>
+        </form>
+
+
+        <!-- Store info End-->
+    </div>
+</main>
+<script src="~/js/jquery-1.10.2.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#StateID").change(function () {
+            var url = '@Url.Content("~/")' + "StoreInfo/getCity";
+
+            $.get(url, { parentId: $("#StateID").val() }, function (data) {
+                $("#CityID").empty();
+                $.each(data, function (i, getCity) {
+                    $("#CityID").append("<option value='" + getCity.value + "'>" + getCity.text + "</option>")
+
+                });
+            });
+        });
+    });
+
+    $(document).ready(function () {
+    $("#CityID").change(function () {
+            var url = '@Url.Content("~/")' + "StoreInfo/getRegion";
+
+        $.get(url, { parentId: $("#CityID").val() }, function (data) {
+                $("#RegionID").empty();
+                $.each(data, function (i, getRegion) {
+                    $("#RegionID").append("<option value='" + getRegion.value + "'>" + getRegion.text + "</option>")
+
+                });
+            });
+        });
+    });
+
+
+
+</script>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

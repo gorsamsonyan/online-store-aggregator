@@ -1,0 +1,142 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeedKarma", "WeedKarma\WeedKarma.csproj", "{5FEFA068-3289-4A61-BF9A-11032EC42C28}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "storeadmin", "storeadmin\storeadmin.csproj", "{25694D5A-AA33-4806-8BA2-E8C64A65F7D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weed.Karma.BLL", "Weed.Karma.BLL\Weed.Karma.BLL.csproj", "{61B253FE-0DF3-4F97-947A-F09AB05A2BB9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weed.Karma.BLL.Interfaces", "Weed.Karma.BLL.Interfaces\Weed.Karma.BLL.Interfaces.csproj", "{2A3348BB-8FC2-4400-AB6F-49452B055E8E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weed.karma.BLL.Mapper", "Weed.karma.BLL.Mapper\Weed.karma.BLL.Mapper.csproj", "{A28AB75E-E0C9-499D-B3FF-448CB051DE50}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weed.Karma.DAL", "Weed.Karma.DAL\Weed.Karma.DAL.csproj", "{EB9EE619-00DE-4802-B515-81304606A1EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weed.Karma.Entities", "Weed.Karma.Entities\Weed.Karma.Entities.csproj", "{33F2EEC6-6064-4D66-8A30-6BE59847FFA6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weed.Karma.Enums", "Weed.Karma.Enums\Weed.Karma.Enums.csproj", "{0E99B390-76E8-4FB8-97C0-8C79C8098DFE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weed.Karma.Models", "Weed.Karma.Models\Weed.Karma.Models.csproj", "{8E234BBE-F4A5-4CEC-8F6D-B22660794357}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weed.Karma.DTO", "Weed.Karma.DTO\Weed.Karma.DTO.csproj", "{425CCD84-ADBD-41E4-BEE3-61731EBB8F3A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weed.Karma.Core", "Weed.Karma.Core\Weed.Karma.Core.csproj", "{A253302A-0A80-4ACA-A7A9-16FEEFB99DB4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weed.Karma.Mobile.Web", "Weed.Karma.Mobile.Web\Weed.Karma.Mobile.Web.csproj", "{D201EEC8-2D2A-4B12-8493-0722F77EF834}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weed.Karma.Web.API", "Weed.Karma.Web.API\Weed.Karma.Web.API.csproj", "{9206CD9B-4449-42CF-ABEE-E0438C155E50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5FEFA068-3289-4A61-BF9A-11032EC42C28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FEFA068-3289-4A61-BF9A-11032EC42C28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FEFA068-3289-4A61-BF9A-11032EC42C28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FEFA068-3289-4A61-BF9A-11032EC42C28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25694D5A-AA33-4806-8BA2-E8C64A65F7D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25694D5A-AA33-4806-8BA2-E8C64A65F7D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25694D5A-AA33-4806-8BA2-E8C64A65F7D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25694D5A-AA33-4806-8BA2-E8C64A65F7D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61B253FE-0DF3-4F97-947A-F09AB05A2BB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61B253FE-0DF3-4F97-947A-F09AB05A2BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61B253FE-0DF3-4F97-947A-F09AB05A2BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61B253FE-0DF3-4F97-947A-F09AB05A2BB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A3348BB-8FC2-4400-AB6F-49452B055E8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A3348BB-8FC2-4400-AB6F-49452B055E8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A3348BB-8FC2-4400-AB6F-49452B055E8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A3348BB-8FC2-4400-AB6F-49452B055E8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A28AB75E-E0C9-499D-B3FF-448CB051DE50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A28AB75E-E0C9-499D-B3FF-448CB051DE50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A28AB75E-E0C9-499D-B3FF-448CB051DE50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A28AB75E-E0C9-499D-B3FF-448CB051DE50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB9EE619-00DE-4802-B515-81304606A1EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB9EE619-00DE-4802-B515-81304606A1EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB9EE619-00DE-4802-B515-81304606A1EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB9EE619-00DE-4802-B515-81304606A1EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33F2EEC6-6064-4D66-8A30-6BE59847FFA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33F2EEC6-6064-4D66-8A30-6BE59847FFA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33F2EEC6-6064-4D66-8A30-6BE59847FFA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33F2EEC6-6064-4D66-8A30-6BE59847FFA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E99B390-76E8-4FB8-97C0-8C79C8098DFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E99B390-76E8-4FB8-97C0-8C79C8098DFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E99B390-76E8-4FB8-97C0-8C79C8098DFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E99B390-76E8-4FB8-97C0-8C79C8098DFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E234BBE-F4A5-4CEC-8F6D-B22660794357}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E234BBE-F4A5-4CEC-8F6D-B22660794357}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E234BBE-F4A5-4CEC-8F6D-B22660794357}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E234BBE-F4A5-4CEC-8F6D-B22660794357}.Release|Any CPU.Build.0 = Release|Any CPU
+		{425CCD84-ADBD-41E4-BEE3-61731EBB8F3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{425CCD84-ADBD-41E4-BEE3-61731EBB8F3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{425CCD84-ADBD-41E4-BEE3-61731EBB8F3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{425CCD84-ADBD-41E4-BEE3-61731EBB8F3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A253302A-0A80-4ACA-A7A9-16FEEFB99DB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A253302A-0A80-4ACA-A7A9-16FEEFB99DB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A253302A-0A80-4ACA-A7A9-16FEEFB99DB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A253302A-0A80-4ACA-A7A9-16FEEFB99DB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D201EEC8-2D2A-4B12-8493-0722F77EF834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D201EEC8-2D2A-4B12-8493-0722F77EF834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D201EEC8-2D2A-4B12-8493-0722F77EF834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D201EEC8-2D2A-4B12-8493-0722F77EF834}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9206CD9B-4449-42CF-ABEE-E0438C155E50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9206CD9B-4449-42CF-ABEE-E0438C155E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9206CD9B-4449-42CF-ABEE-E0438C155E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9206CD9B-4449-42CF-ABEE-E0438C155E50}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C867B066-7AA7-4A11-ACED-F2976B0BA376}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 14
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://levon-tsverianov.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = WeedKarma\\WeedKarma.csproj
+		SccProjectName1 = WeedKarma
+		SccLocalPath1 = WeedKarma
+		SccProjectUniqueName2 = storeadmin\\storeadmin.csproj
+		SccProjectName2 = storeadmin
+		SccLocalPath2 = storeadmin
+		SccProjectUniqueName3 = Weed.Karma.BLL\\Weed.Karma.BLL.csproj
+		SccProjectName3 = Weed.Karma.BLL
+		SccLocalPath3 = Weed.Karma.BLL
+		SccProjectUniqueName4 = Weed.Karma.BLL.Interfaces\\Weed.Karma.BLL.Interfaces.csproj
+		SccProjectName4 = Weed.Karma.BLL.Interfaces
+		SccLocalPath4 = Weed.Karma.BLL.Interfaces
+		SccProjectUniqueName5 = Weed.karma.BLL.Mapper\\Weed.karma.BLL.Mapper.csproj
+		SccProjectName5 = Weed.karma.BLL.Mapper
+		SccLocalPath5 = Weed.karma.BLL.Mapper
+		SccProjectUniqueName6 = Weed.Karma.DAL\\Weed.Karma.DAL.csproj
+		SccProjectName6 = Weed.Karma.DAL
+		SccLocalPath6 = Weed.Karma.DAL
+		SccProjectUniqueName7 = Weed.Karma.Entities\\Weed.Karma.Entities.csproj
+		SccProjectName7 = Weed.Karma.Entities
+		SccLocalPath7 = Weed.Karma.Entities
+		SccProjectUniqueName8 = Weed.Karma.Enums\\Weed.Karma.Enums.csproj
+		SccProjectName8 = Weed.Karma.Enums
+		SccLocalPath8 = Weed.Karma.Enums
+		SccProjectUniqueName9 = Weed.Karma.Models\\Weed.Karma.Models.csproj
+		SccProjectName9 = Weed.Karma.Models
+		SccLocalPath9 = Weed.Karma.Models
+		SccProjectUniqueName10 = Weed.Karma.DTO\\Weed.Karma.DTO.csproj
+		SccProjectName10 = Weed.Karma.DTO
+		SccLocalPath10 = Weed.Karma.DTO
+		SccProjectUniqueName11 = Weed.Karma.Core\\Weed.Karma.Core.csproj
+		SccProjectName11 = Weed.Karma.Core
+		SccLocalPath11 = Weed.Karma.Core
+		SccProjectUniqueName12 = Weed.Karma.Mobile.Web\\Weed.Karma.Mobile.Web.csproj
+		SccProjectName12 = Weed.Karma.Mobile.Web
+		SccLocalPath12 = Weed.Karma.Mobile.Web
+		SccProjectUniqueName13 = Weed.Karma.Web.API\\Weed.Karma.Web.API.csproj
+		SccProjectName13 = Weed.Karma.Web.API
+		SccLocalPath13 = Weed.Karma.Web.API
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,187 @@
+﻿@using Weed.Karma.Models.DeliveryModels
+@using Weed.Karma.Enums
+@model List<OrderDeliveryViewModel>
+@{
+    Layout = null;
+    var NotificationStatusesCount = Enum.GetNames(typeof(NotificationStatuses)).Length;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="/businessDashboard/styles/main-respons.css">
+    <!--<link rel="stylesheet" href="styles/global-styles.css">-->
+    <link rel="stylesheet" href="/businessDashboard/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/businessDashboard/styles/global-styles.css">
+
+    <!--<link rel="stylesheet" href="styles/form-styles.css">-->
+    <link rel="stylesheet" href="/businessDashboard/styles/pages/store-page.css">
+    <link rel="stylesheet" href="/businessDashboard/styles/pages/orders.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/businessDashboard/styles/pages/contact-information.css">
+    <link rel="stylesheet" href="/businessDashboard/styles/pages/store-page.css">
+    <link rel="stylesheet" href="/businessDashboard/styles/pages/store-info.css">
+    <link rel="stylesheet" href="/businessDashboard/styles/pages/all-stores.css">
+
+</head>
+<body>
+    <div class="page-wrapper chiller-theme toggled">
+        <!--header block-->
+        <div class="header-block">
+
+
+            <div class="navbar-header d-flex justify-content-between align-items-center">
+
+                <a id="show-sidebar" class="btn-lg left-menu-open-icon p-0 " href="#">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <a class="header-logo">
+                    <img src="/img/logo.svg" width="50px" alt="">
+                    <div class="logo-text">Weed Karma</div>
+                </a>
+                <div class="header-search">
+                    <div>
+                        <div class="input-group">
+                            <input type="text" class="form-control search-menu" placeholder="Search...">
+                            <div class="header-search-icon">
+
+                                <i class="fa fa-search" aria-hidden="true"></i>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-date-block">
+                    <div class="date-title">Date</div>
+                    <div class="date"></div>
+
+                </div>
+
+                <div class="header-user-name"> User Name</div>
+                <div class="header-right-block">
+                    <a href="#">
+                        <img class="header-right-block-icon" src="/img/header-icons/notification.png" alt="">
+                        <span class="badge badge-pill notification-count ">3</span>
+                    </a>
+                    <a href="#">
+                        <img class="header-right-block-icon" src="/img/header-icons/mail.png" alt="">
+                        <span class="badge badge-pill mail-count">7</span>
+                    </a>
+
+                    <a href="#">
+                        <img class="header-right-block-icon" src="/img/header-icons/logout.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--header block End-->
+
+        @await Html.PartialAsync("_AdminHeader")
+
+        <!--sidebar-wrapper-->
+        @await Html.PartialAsync("_StoreAdminLeftMenu")
+
+
+        <main class="page-content margin-top">
+            <div class="container-fluid store-body">
+
+                <h1 class="section-title">
+                    Managment Information
+                </h1>
+                <div class="body-section">
+
+                    <div class="ibox-content">
+
+                        <table class="footable table table-stripped toggle-arrow-tiny footable-loaded tablet breakpoint" data-page-size="15">
+                            <thead>
+                                <tr>
+
+                                    <th class="footable-visible footable-sortable footable-first-column">Cart ID<span class="footable-sort-indicator"></span></th>
+                                    <th data-hide="phone" class="footable-sortable footable-visible" style="">Address<span class="footable-sort-indicator"></span></th>
+                                    <th data-hide="phone" class="footable-sortable footable-visible" style="">Phone Number<span class="footable-sort-indicator"></span></th>
+                                    <th data-hide="phone" class="footable-sortable footable-visible" style="">Order date<span class="footable-sort-indicator"></span></th>
+                                    <th data-hide="phone,tablet" class="footable-sortable">Status<span class="footable-sort-indicator"></span></th>
+                                    <th data-hide="phone" class="footable-sortable footable-visible" style="">New Status<span class="footable-sort-indicator"></span></th>
+                                    <th class="text-right footable-visible footable-sortable footable-last-column">Action<span class="footable-sort-indicator"></span></th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <form method="post">
+                                    <input type="hidden" name="CartId" value="@Model.Select(s=>s.CartId).First()" />
+                                    <input type="hidden" name="ItemId" value="@Model.Select(s=>s.Id).First()" />
+                                    <tr class="footable-even" style="">
+
+                                        @foreach (var item in Model)
+                                        {
+
+                                            <td class="footable-visible ">
+                                                <span class="footable-toggle"></span>
+                                                @item.CartId
+                                            </td>
+                                            <td class="footable-visible" style="">
+                                                @item.Address , @item.Home / @item.Floor
+                                            </td>
+                                            <td class="footable-visible" style="">
+                                                @item.PhoneNumber
+                                            </td>
+                                            <td class="footable-visible" style="">
+                                                @item.CreatedDate
+                                            </td>
+
+                                            <td class="footable-visible" style="">
+                                                <span class="label label-primary"> @GetNotificationStatus.GetNotificationStatuses(Convert.ToInt32(item.Status))</span>
+                                            </td>
+                                            <td class="footable-visible" style="">
+                                                <select class="input-select" name="NewOrder">
+                                                    @for (int i = 0; i < NotificationStatusesCount; i++)
+                                                    {
+                                                        <option value="@i">@GetNotificationStatus.GetNotificationStatuses(i)</option>
+                                                    }
+                                                </select>
+                                            </td>
+                                            <td class="text-right footable-visible footable-last-column">
+                                                <div class="btn-group">
+                                                    <button class="btn-white btn btn-xs">Checkout</button>
+                                                </div>
+                                            </td>
+                                        }
+                                    </tr>
+
+                                </form>
+
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!--page-content"-->
+
+
+    </div>
+
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="~/businessDashboard/scripts/bootstrap.min.js"></script>
+<script src="~/businessDashboard/scripts/store-page.js"></script>
+<script src="~/businessDashboard/scripts/orders.js"></script>
+<script src="~/businessDashboard/scripts/signalr.min.js"></script>
+
+<script src="/businessDashboard/scripts/contact-info.js"></script>
+
+
+

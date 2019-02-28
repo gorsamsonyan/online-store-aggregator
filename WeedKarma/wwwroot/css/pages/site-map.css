@@ -1,0 +1,127 @@
+/* font family */
+.p-0 {
+  padding: 0 !important; }
+
+.p-5 {
+  padding: 5px !important; }
+
+.site-map-row {
+  margin-bottom: 20px; }
+
+.align-center {
+  align-items: center; }
+
+.justify-center {
+  justify-content: center; }
+
+.site-map {
+  padding: 100px 0; }
+
+.site-map-item {
+  display: block;
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px 5px;
+  width: 100%;
+  min-height: 75px;
+  background-color: #ececed;
+  color: black;
+  max-width: 80px;
+  margin: 0 auto 20px;
+  z-index: 2;
+  position: relative; }
+  .site-map-item img {
+    height: 20px;
+    margin-bottom: 5px; }
+  .site-map-item-title {
+    font-size: 10px; }
+
+.small-height {
+  min-height: 60px; }
+
+.big-block {
+  max-width: 100px; }
+  .big-block img {
+    height: 50px; }
+  .big-block .site-map-item-title {
+    color: #1e7e41;
+    font-weight: bold; }
+    .big-block .site-map-item-title span {
+      font-weight: 400; }
+
+.home-page-block {
+  max-width: 100px; }
+  .home-page-block img {
+    height: 50px; }
+
+.vertical-bottom-line {
+  background-color: rgba(114, 114, 114, 0.78);
+  width: 1px;
+  margin: 0 auto;
+  height: 31px;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.city-vertical-bottom-line {
+  background-color: rgba(114, 114, 114, 0.78);
+  width: 1px;
+  margin: 0 auto;
+  height: 76px;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.vertical-top-line {
+  background-color: rgba(114, 114, 114, 0.78);
+  width: 1px;
+  margin: 0 auto;
+  height: 26px;
+  position: absolute;
+  top: -26px;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.horizontal-line {
+  background-color: rgba(114, 114, 114, 0.78);
+  width: 100%;
+  margin: 0 auto;
+  height: 1px;
+  margin-bottom: 20px; }
+
+.horizontal-left-line {
+  background-color: rgba(114, 114, 114, 0.78);
+  width: 90%;
+  left: -40%;
+  margin: 0 auto;
+  height: 1px;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 1; }
+
+.horizontal-right-line {
+  background-color: rgba(114, 114, 114, 0.78);
+  width: 60%;
+  right: -15%;
+  margin: 0 auto;
+  height: 1px;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 1; }
+
+.wiki-karma-horizontal-left-line {
+  background-color: rgba(114, 114, 114, 0.78);
+  width: 40px;
+  right: -20px;
+  margin: 0 auto;
+  height: 1px;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 1; }
+
+/*# sourceMappingURL=site-map.css.map */

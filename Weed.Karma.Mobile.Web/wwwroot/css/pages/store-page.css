@@ -1,0 +1,272 @@
+/* font family */
+.product-page {
+  padding-top: 5px; }
+
+.product-category-menu-container {
+  background-color: #ececed; }
+
+.product-category-menu {
+  position: relative;
+  margin-top: 10px;
+  padding: 5px 15px; }
+  .product-category-menu ul {
+    justify-content: space-between;
+    overflow: auto; }
+  .product-category-menu .product-category-menu-item {
+    margin: 0 3px; }
+
+.category-menu-see-all-button {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  border: 1px solid #215f24;
+  border-right: 0;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 20px 0px 0px 20px;
+  -webkit-border-radius: 20px 0px 0px 20px;
+  -moz-border-radius: 20px 0px 0px 20px;
+  background-color: #ececed;
+  box-shadow: -26px 2px 29px -6px white;
+  -webkit-box-shadow: -26px 2px 29px -6px white;
+  -moz-box-shadow: -26px 2px 29px -6px white; }
+
+.product-category-menu-item-link {
+  color: #818285;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold; }
+
+.product-category-menu .active {
+  color: #038423;
+  font-weight: 700; }
+
+.product-item-container {
+  padding: 5px 30px; }
+
+.product-item {
+  margin-top: 5px;
+  padding: 5px 0;
+  border-bottom: 1px solid #ececed; }
+
+.product-item-left-block, .product-item-ri-block {
+  padding: 0 !important; }
+
+.product-item-name {
+  color: #215f24;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px; }
+
+.product-order-info {
+  margin-bottom: 10px; }
+
+.product-order-info-buttons .product-order-info-button {
+  padding: 6px 20px;
+  line-height: 1;
+  background-color: #87878a;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px; }
+.product-order-info-buttons .size-button {
+  margin-right: 10px; }
+
+.product-order-info .size-item {
+  display: inline; }
+  .product-order-info .size-item input {
+    display: none; }
+    .product-order-info .size-item input:checked + .size-radio-button {
+      background-color: #038423; }
+  .product-order-info .size-item .size-radio-button {
+    background-color: #87878a;
+    color: white;
+    padding: 3px 2px;
+    min-width: 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    font-size: 12px;
+    text-align: center;
+    margin-right: 4px; }
+.product-order-info .pcs-block {
+  display: none;
+  align-items: center; }
+  .product-order-info .pcs-block input {
+    background-color: #038423;
+    width: 50px;
+    text-align: center;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    margin: 0 3px;
+    font-size: 12px;
+    padding: 5px 2px; }
+  .product-order-info .pcs-block .pcs-change-button {
+    background-color: #87878a;
+    color: white;
+    border-radius: 50%;
+    width: 15px;
+    text-align: center;
+    line-height: 15px;
+    height: 15px;
+    display: inline-block; }
+
+.product-order-button {
+  background-color: #038423;
+  padding: 5px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  width: 100px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  margin-right: 10px;
+  transition: background-color,0.3s; }
+
+.product-price {
+  font-size: 13px;
+  color: #038423; }
+
+.product-item-right-block .product-img {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 100px;
+  margin: 0 auto; }
+
+/* Cart */
+.addedToCart {
+  height: 60px;
+  width: 262px;
+  line-height: 60px;
+  /* background-color: #fff; */
+  /* border: 3px solid var(--darkGreen); */
+  /* border-radius: 10px; */
+  /* margin-left: 8px; */
+  /* margin-right: 8px; */
+  /* margin-bottom: 16px; */
+  position: fixed;
+  left: 30%;
+  bottom: -100%;
+  z-index: -10;
+  opacity: 0;
+  transition: 0.3s ease-in-out; }
+
+.addedToCart--open {
+  opacity: 1;
+  bottom: 70px;
+  z-index: 10;
+  transition: 0.3s ease-in-out; }
+
+.addedToCart__text {
+  color: var(--darkGreen);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.addedToCart__text img {
+  height: 22px;
+  max-width: 100%;
+  width: 22px;
+  display: block;
+  margin-right: 10px; }
+
+.addedToCart__tiangle {
+  height: 28px;
+  width: 28px;
+  background-color: #fff;
+  border-bottom: 3px solid var(--darkGreen);
+  border-right: 3px solid var(--darkGreen);
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -16px;
+  transform: rotate(36deg) skew(-20deg); }
+
+.addedToCart__image {
+  height: auto;
+  max-width: 100%;
+  /* width: 100%; */
+  display: block; }
+
+/* Basket */
+.basketPopup {
+  height: 50px;
+  width: 60%;
+  background-color: #fff;
+  margin: 0 auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  /* box-shadow: 0 0 30px 1px #cacacd; */
+  opacity: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  z-index: 10;
+  transition: 0.3s; }
+  @media only screen and (max-width: 768px) {
+    .basketPopup {
+      width: 90%; } }
+
+.basketPopup--open {
+  opacity: 1;
+  bottom: 0;
+  transition: 0.3s; }
+
+.basketPopup__left {
+  padding-left: 70px;
+  position: relative; }
+
+.basketPopup__imgBox {
+  /* width: 50px; */
+  /* margin-left: 15px; */
+  /* margin-right: 15px; */
+  position: absolute;
+  left: 10px;
+  bottom: 0; }
+  .basketPopup__imgBox .basketPopup__img {
+    max-width: 100%;
+    width: 50px;
+    height: auto;
+    display: block; }
+
+.basketPopup__right {
+  width: 170px;
+  background-color: #038423;
+  border-top-right-radius: 10px;
+  padding: 0 10px; }
+
+.basketPopup__rightTitle {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600; }
+
+.basketPopup__price {
+  font-size: 15px; }
+
+.basketPopup__priceWarning {
+  color: #818285;
+  font-size: 13px; }
+
+.basketPopup__goToCartIcon {
+  color: #fff;
+  font-size: 25px; }
+
+::-webkit-scrollbar {
+  height: 5px; }
+
+/*# sourceMappingURL=store-page.css.map */

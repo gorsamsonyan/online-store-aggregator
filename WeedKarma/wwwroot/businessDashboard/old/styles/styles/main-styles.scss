@@ -1,0 +1,177 @@
+//-------------------- variables -----------------------
+$big-width: 1440px;
+$large-width: 1200px;
+$desktop-width: 1024px;
+$tablet-width: 991px;
+$mobile-width: 768px;
+//$tablet-width: 768px;
+//$mobile-width: 480px;
+
+$size1: 8.333333%;
+$size2: 16.666667%;
+$size3: 25%;
+$size4: 33.333333%;
+$size5: 41.666667%;
+$size6: 50%;
+$size7: 58.333333%;
+$size8: 66.666667%;
+$size9: 75%;
+$size10: 83.333333%;
+$size11: 91.666667%;
+$size12: 100%;
+
+$green: #1e7e41;
+$darkGreen: #215b23;
+$green-2: #2e7d32;
+$headerColor: #e8e9e7;
+$darkBrown: #47484b;
+$lightBrown: #ececed;
+$brown:#87878a;
+$grey: #3c3c3c;
+$grey2: #333;
+$white: #fff;
+$lightBrown2: #ececec;
+$grey-3: #5f5f5f;
+$bottom-line-grey: #ececed;
+$color-green: rgb(15, 51, 17);
+
+
+$main-titleSize: 22px;
+$second-titleSize: 18px;
+$sub-titleSize: 16px;
+$main-size: 14px;
+
+$buttonSmallSize: 13px;
+$buttonMediumSize: 14px;
+$buttonBigSize: 16px;
+//$footerFontSize: ;
+/* font family */
+$mainFontFamily: 'Open Sans', 'PT Sans', sans-serif;
+$titleFontFamily: 'Open Sans', 'PT Sans', sans-serif;
+
+//-------------------- mixins -----------------------
+
+@mixin flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+@mixin alihgn-items-center {
+  -ms-align-items: center;
+  align-items: center;
+}
+
+@mixin flex-center {
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+@mixin flex-direction-column {
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+}
+
+@mixin fx-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+  -moz-flex-wrap: $wrap;
+  -ms-flex-wrap: $wrap;
+  -o-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+
+@mixin border-radius($border-radius-size) {
+  border-radius: $border-radius-size;
+  -webkit-border-radius: $border-radius-size;
+  -moz-border-radius: $border-radius-size;
+}
+
+@mixin box-shadow($shadow){
+  box-shadow: $shadow;
+  -webkit-box-shadow:$shadow;
+  -moz-box-shadow: $shadow;
+}
+@mixin green-button {
+  background-color: $color-green;
+  font-size: $main-size;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+
+  border: 1px solid $color-green;
+  padding: 10px 5px;
+  outline: none;
+  transition: 0.3s
+}
+
+@mixin main-title {
+  font-family: $titleFontFamily;
+  font-size: $main-titleSize;
+  color: $color-green;
+
+}
+
+@mixin second-title {
+  font-family: $titleFontFamily;
+  font-size: $second-titleSize;
+  color: $color-green;
+}
+
+@mixin sub-title {
+  font-family: $titleFontFamily;
+  font-size: $sub-titleSize;
+  //color: $color-green;
+}
+
+//media queries
+@mixin big {
+  @media only screen and (max-width: $big-width) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (max-width: $large-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (max-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: $mobile-width) {
+    @content;
+  }
+}
+@mixin mysize($size) {
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+}
+
+
+//------------------------sizes------------------------------
+@mixin col($size) {
+  -ms-flex: 0 0 $size;
+  flex: 0 0 $size;
+  max-width: $size;
+}
+
+

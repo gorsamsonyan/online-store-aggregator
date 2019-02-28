@@ -1,0 +1,6 @@
+.regBusiness__container {
+ display:flex;
+}
+#disable-input{
+ font-style: italic;
+}

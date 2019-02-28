@@ -1,0 +1,243 @@
+﻿@using Weed.Karma.Models.StoreModels
+@model StoreProductsViewModel
+
+
+    <link rel="stylesheet" href="/css/pages/store-header.css">
+    <link rel="stylesheet" href="/css/pages/store-page.css">
+    <div class="store-page-main-header">
+        <div class="store-header display-flex flex-center">
+            <a href="/Dispensaries" class="button-back"><i class="fas fa-chevron-left"></i></a>
+            <div class="store-img">
+                <img src="@Model.Store.LogoPath" alt="">
+            </div>
+            <h1 class="store-title">@Model.Store.ShopName</h1>
+        </div>
+        <div class="store-info">
+            <div class="store-info-top-buttons">
+                <div class="store-rating store-info-top-buttons-item">
+                    <div class="store-rating-text">+ <span class="rating-eval">5</span></div>
+                    <div class="store-rating-icon store-info-icon">
+                        <img src="/img/store/reating-icon.png" alt="">
+                    </div>
+                    <div class="store-rating-text"></div>
+                </div>
+                <div class="store-share store-info-top-buttons-item">
+                    <div class="store-share-icon store-info-icon">
+                        <img src="/img/store/share-icon.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+
+                        <div class="row align-items-center store-info-row ">
+                            <div class="col-lg-6">
+                                <div class="store-filter-item-right-block display-flex align-items-center">
+                                    <div class="icon-block">
+                                        <img src="/img/store/clock-icon.png" class="icon" />
+                                    </div>
+
+                                    <div class="text">Working Hours</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="store-filter-item-left-block">
+                                    @Model.Store.WorkingHoursFrom - @Model.Store.WorkingHoursTo
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center store-info-row">
+                            <div class="col-lg-6">
+                                <div class="store-filter-item-right-block display-flex align-items-center">
+                                    <div class="icon-block">
+                                        <img src="/img/store/delivery.png" class="icon" />
+                                    </div>
+
+                                    <div class="text">Delivery Time</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="store-filter-item-left-block">
+                                    30-60 min
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+
+                        <div class="row align-items-center store-info-row ">
+                            <div class="col-lg-8">
+                                <div class="store-filter-item-right-block display-flex align-items-center">
+                                    <div class="icon-block">
+                                        <img src="/img/store/delivery_price.png" class="icon" />
+                                    </div>
+
+                                    <div class="text">Delivery Price</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="store-filter-item-left-block">
+                                    @Model.DeliveryTime.DeliveryPrice USD
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center store-info-row">
+                            <div class="col-lg-8">
+                                <div class="store-filter-item-right-block display-flex align-items-center">
+                                    <div class="icon-block">
+                                        <img src="/img/store/min_order_amount.png" class="icon" />
+                                    </div>
+
+                                    <div class="text">Min Order Ammount</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="store-filter-item-left-block">
+                                    @Model.DeliveryTime.MinOrderDelivery USD
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="store-navbar">
+            <ul class="display-flex ">
+                <li class="store-navbar-item   active">
+                    <a href="/Store/Products/@Model.Store.Id" class="store-navbar-item-link "> menu</a>
+                </li>
+                <li class="store-navbar-item ">
+                    <a href="/Store/Info/@Model.Store.Id" class="store-navbar-item-link "> info</a>
+                </li>
+                @*<li class="store-navbar-item">
+                    <a href="/store-feedback.html" class="store-navbar-item-link ">feedback</a>
+                </li>*@
+            </ul>
+        </div>
+    </div>
+    <!-- Cart -->
+
+    <main class="product-page">
+        <div class="product-category-menu-container">
+
+            <div class="product-category-menu">
+                <ul class="display-flex">
+                    <li class="product-category-menu-item ">
+                        <a href="#" class="product-category-menu-item-link active">Popular</a>
+                    </li>
+                    <li class="product-category-menu-item">
+                        <a href="#" class="product-category-menu-item-link">Indica</a>
+                    </li>
+                    <li class="product-category-menu-item">
+                        <a href="#" class="product-category-menu-item-link">Sativa</a>
+                    </li>
+                    <li class="product-category-menu-item">
+                        <a href="#" class="product-category-menu-item-link">Wax</a>
+                    </li>
+                    <li class="product-category-menu-item">
+                        <a href="#" class="product-category-menu-item-link">Concetrat</a>
+                    </li>
+                    <li class="product-category-menu-item">
+                        <a href="#" class="product-category-menu-item-link">Concetrat</a>
+                    </li>
+                    <li class="product-category-menu-item">
+                        <a href="#" class="product-category-menu-item-link">Concetrat</a>
+                    </li>
+                    <li class="product-category-menu-item">
+                        <a href="#" class="product-category-menu-item-link">Concetrat</a>
+                    </li>
+                    <li class="product-category-menu-item">
+                        <a href="#" class="product-category-menu-item-link">Concetrat</a>
+                    </li>
+                    <li class="product-category-menu-item">
+                        <a href="#" class="product-category-menu-item-link">Concetrat</a>
+                    </li>
+                </ul>
+                @*<a class="category-menu-see-all-button">
+                    SEE ALL
+                </a>*@
+            </div>
+        </div>
+
+        <div class="product-item-container">
+            <div class="container">
+                @foreach (var item in Model.Products)
+                {
+                    <div class="row product-item" data-store-id="@item.StoreId" data-product-id="@item.Id">
+                        <div class="col-lg-8 product-item-left-block ">
+                            <div class="product-item-name">
+                                @item.ProductName
+                            </div>
+                            <div class="product-order-info">
+                                @*<div class="product-order-info-buttons display-flex">
+                                    <div class="size-button product-order-info-button">size</div>
+                                    <div class="pcs-button product-order-info-button">pcs</div>
+                                </div>*@
+                                <div class="size-block">
+                                    <ul class="display-flex">
+                                        @foreach (var units in item.StoreProductUnits)
+                                        {
+
+
+                                            if (units.CurrentPrice <= item.StoreProductUnits.Select(s => s.CurrentPrice).Min())
+                                            {
+                                                <li class="size-item">
+                                                    <label>
+                                                        <input name="product-size-@item.Id" value="@units.CurrentPrice" data-size="@units.Size" type="radio" checked>
+                                                        <div class="size-radio-button" data-price="@units.CurrentPrice">@units.Size</div>
+                                                    </label>
+                                                </li>
+                                            }
+                                            else
+                                            {
+                                                <li class="size-item">
+                                                    <label>
+                                                        <input name="product-size-@item.Id" value="@units.CurrentPrice" data-size="@units.Size" type="radio">
+                                                        <div class="size-radio-button" data-price="@units.CurrentPrice">@units.Size</div>
+                                                    </label>
+                                                </li>
+                                            }
+
+                                        }
+
+
+                                    </ul>
+                                </div>
+                                @*<div class="pcs-block display-flex">
+                                    <div class="pcs-minus pcs-change-button">-</div>
+                                    <input type="number" min="0" value="1">
+                                    <div class="pcs-plus pcs-change-button">+</div>
+
+                                </div>*@
+                            </div>
+                            <div class="product-item-bottom-block display-flex align-items-center">
+                                <div class="product-order-button">order</div>
+                                <div class="product-price">price <span class="product-price-coast"
+                            data-price-coast="@item.StoreProductUnits.Select(s => s.CurrentPrice).Min()">
+                                    @item.StoreProductUnits.Select(s => s.CurrentPrice).Min()
+                                      </span>$</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 product-item-right-block">
+                            <div class="product-img" style="background-image: url('@item.ImagePath')">
+
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+            </div>
+
+        </div>
+    </main>
+
+
+
+<script src="/js/store.js"></script>
+<script src="~/js/store-products.js"></script>
+
+

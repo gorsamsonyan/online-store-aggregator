@@ -1,0 +1,236 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/businessDashboard/styles/main-respons.css">
+    <!--<link rel="stylesheet" href="~/businessDashboard/styles/global-styles.css">-->
+    <link rel="stylesheet" href="~/businessDashboard/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="~/businessDashboard/styles/global-styles.css">
+
+    <!--<link rel="stylesheet" href="~/businessDashboard/styles/form-styles.css">-->
+    <link rel="stylesheet" href="~/businessDashboard/styles/pages/store-page.css">
+    <link rel="stylesheet" href="~/businessDashboard/styles/pages/store-product-add.css">
+</head>
+<body>
+    <div class="page-wrapper chiller-theme toggled">
+        <!--header block-->
+        @await Html.PartialAsync("_AdminHeader")
+        <!--header block End-->
+        <!--sidebar-wrapper-->
+
+        @await Html.PartialAsync("_StoreAdminLeftMenu")
+        <main class="page-content margin-top">
+            <div class="container-fluid store-body">
+
+                <h1 class="section-title">
+                    Add Product
+                </h1>
+                <div class="body-section">
+                    <form method="post" id="addProductForm">
+                        <input type="hidden" name="StoreId" value="@*@Model.StoreId*@" />
+                        <input type="hidden" name="ImagePath" id="Image" />
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-3 col-md-3 col-sm-12">
+
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-item">
+                                                <label for="selectCategory" class="form-item-label">
+                                                    Select Category*
+                                                    <span class="information-popup-button">
+                                                        <i class="fas fa-info-circle"></i>
+                                                        <span class="information-popup"></span>
+                                                    </span>
+                                                </label>
+                                                <div class="rail-select">
+                                                    <div class="select-side">
+                                                        <i class="fas fa-chevron-down"></i>
+                                                    </div>
+                                                    <select required class="input-select" id="selectCategory" name="CategoryName">
+                                                        <option value="" data-product-size="1" hidden disabled selected>Select Category</option>
+                                                        @*@foreach (var item in Model.Categories)
+                                                            {
+                                                            }*@
+                                                        <option value="@*@item.Id*@" data-product-size="@*@item.IsEach*@">@*@item.Name*@</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-lg-12 col-sm-12">
+                                            <div class="form-item">
+                                                <label for="productName" class="form-item-label">
+                                                    Product Name*<span class="information-popup-button">
+                                                        <i class="fas fa-info-circle"></i>
+
+                                                        <span class="information-popup"></span>
+                                                    </span>
+                                                </label>
+                                                <input type="text" class="input-text" id="productName" required name="ProductName">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-item">
+                                                <label for="producMetaKey" class="form-item-label">Product Meta Keys</label>
+                                                <input type="text" class="input-text" id="producMetaKey" name="Hashtag">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-12 d-flex justify-content-between flex-column">
+
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12">
+
+                                            <div class="form-item">
+                                                <label for="productDescription" class="form-item-label">
+                                                    Description*
+                                                    <span class="information-popup-button">
+                                                        <i class="fas fa-info-circle"></i>
+
+                                                        <span class="information-popup"></span>
+                                                    </span>
+                                                </label>
+                                                <textarea type="text" class="input-textarea" id="productDescription"
+                                                          required name="Description"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12">
+                                            <div class="downloaded-product-image">
+
+                                            </div>
+
+
+
+                                            <div class="form-item img-download-block">
+                                                <!--<label class="form-item-label">Insert logo*</label>-->
+                                                <label class="file-container">
+                                                    <span class="insert-image">Product image</span>
+                                                    <img class="img-download-button-icon"
+                                                         src="img/img-download-button-icon.png" alt="">
+                                                    <div class="dowonloded-text">
+                                                        <span class="file-is-done"> file is done</span>
+                                                        <span class="icon">ok</span>
+                                                    </div>
+
+                                                    <input type="file" class="input-file" data-base64="" id="file-download" name="Image" value="" required>
+
+
+                                                </label>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-12">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12">
+
+                                            <div class="form-item text-center">
+                                                <div class="product-size-g">
+                                                    <div class="product-sizes-block-title">
+                                                        <label for="" class="form-item-label">
+                                                            Select Size
+
+
+                                                        </label>
+                                                        <label for="" class="form-item-label">
+                                                            Price
+
+                                                        </label>
+                                                    </div>
+                                                    <div class="product-sizes-block checking-block d-flex flex-column">
+                                                        @*@foreach (var item in Model.Units)
+                                                        {
+                                                            if (item.Size.ToUpper() != "EACH")
+                                                            {*@
+                                                                <div class="product-sizes-block-item">
+                                                                    <label>
+                                                                        <input type="checkbox" class="input-checkbox" name="Size"
+                                                                               value="@*@item.Id*@" />
+                                                                        <span class="size-item-size checked-button">@*@item.Size*@</span>
+
+                                                                    </label>
+                                                                    <input disabled placeholder="price $" class="product-size-price input-number" name="Price"
+                                                                           type="number" min="0">
+                                                                </div>
+                                                            @*}
+
+                                                        }*@
+
+                                                    </div>
+                                                </div>
+                                                <div class="product-size-each">
+                                                    <div class="product-sizes-block-title">
+                                                        <label for="" class="form-item-label">
+                                                            Each price
+                                                            <input type="hidden" class="input-checkbox" name="Size"
+                                                                   value="6" />
+
+                                                        </label>
+
+                                                    </div>
+                                                    <label>
+
+                                                        <input placeholder="each price $" class="product-size-price input-number" name="Price"
+                                                               type="number" min="0">
+                                                    </label>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-sm-12 no-label justify-content-center">
+
+                                <input type="submit" class="input-submit" id="" value="Save">
+
+                            </div>
+                        </div>
+
+
+                    </form>
+
+                </div>
+            </div>
+
+        </main>
+        <!--page-content"-->
+
+
+    </div>
+
+
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="~/businessDashboard/scripts/bootstrap.min.js"></script>
+<script src="~/businessDashboard/scripts/store-page.js"></script>
+<script src="~/businessDashboard/scripts/store-product-add.js"></script>

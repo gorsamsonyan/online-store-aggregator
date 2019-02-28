@@ -1,0 +1,399 @@
+﻿<main class="page-content">
+
+    <div class="container-fluid store-body">
+       
+        <form action="#" method="post" id="storeInformation">
+            <div class="container">
+
+                <div class="row store-information justify-content-center">
+                    <div class="col-lg-12 col-md-12">
+                        <h2 class="store-information-title">
+                            Store Information
+                        </h2>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-item">
+                                    <label for="shopName" class="form-item-label">Shop name*</label>
+                                    <input type="text" id="shopName" placeholder="show in website"
+                                           required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-item">
+                                    <label for="shop-legal-name" class="form-item-label">
+                                        Shop legal
+                                        name*
+                                    </label>
+                                    <input type="text" id="shop-legal-name" placeholder="Name LLC"
+                                           required>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-12 col-sm-12 no-label select-state">
+                                <div class="form-item">
+                                    <div class="rail-select">
+                                        <div class="select-side">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                        <select required id="selectState">
+                                            <option value="" hidden disabled selected> Choose State</option>
+                                            <option value="cl"> California</option>
+                                            <option value="al"> Alabama</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-sm-12 no-label select-city">
+                                <div class="form-item">
+                                    <div class="rail-select">
+                                        <div class="select-side">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                        <select id="selectCity" required>
+                                            <option value="" hidden disabled selected> Choose City</option>
+                                            <option value="cl"> Los Angeles</option>
+                                            <option value="al"> Guver</option>
+                                            <option value="al"> Obern</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-sm-12 address">
+                                <div class="form-item">
+                                    <label for="physicalAdress" class="form-item-label">
+                                        Physical
+                                        Adress*
+                                    </label>
+                                    <input type="text" id="physicalAdress" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-sm-12 address">
+                                <div class="form-item">
+                                    <label for="legalAdress" class="form-item-label">Legal Adress*</label>
+                                    <input type="text" id="legalAdress" required>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-item">
+
+                                    <label for="workingHours" class="form-item-label">
+                                        Working
+                                        Hours*
+                                    </label>
+                                    <div class="working-hourse-block">
+                                        <div class="from  ">
+                                            FROM
+                                            <div class="rail-select">
+                                                <div class="select-side">
+                                                    <i class="fas fa-chevron-down"></i>
+                                                </div>
+                                                <select id="workingHours" required>
+                                                    <option value="" hidden disabled selected>
+                                                        08:00
+                                                    </option>
+                                                    <option>08:30</option>
+                                                    <option>09:00</option>
+                                                    <option>09:30</option>
+                                                    <option>10:00</option>
+                                                    <option>10:30</option>
+                                                    <option>11:00</option>
+                                                    <option>11:30</option>
+
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="to   ">
+                                            TO
+                                            <div class="rail-select">
+                                                <div class="select-side">
+                                                    <i class="fas fa-chevron-down"></i>
+                                                </div>
+                                                <select required>
+                                                    <option value="" hidden disabled selected>
+                                                        20:00
+                                                    </option>
+                                                    <option>20:30</option>
+                                                    <option>21:00</option>
+                                                    <option>21:30</option>
+                                                    <option>22:00</option>
+                                                    <option>22:30</option>
+                                                    <option>23:00</option>
+                                                    <option>23:30</option>
+                                                    <option>24:00</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-sm-12 ">
+                                <div class="form-item">
+                                    <label class="form-item-label">Weekend*</label>
+                                    <div>
+                                        <ul class="checkbox-block">
+                                            <li><input type="checkbox" name="weekend" value="Monday">Mo</li>
+                                            <li>
+                                                <input type="checkbox" name="weekend" value="Tuesday">Tu
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" name="weekend" value="Wednesday">We
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" name="weekend" value="Thursday">Th
+                                            </li>
+                                            <li><input type="checkbox" name="weekend" value="Friday">Fr</li>
+                                            <li>
+                                                <input type="checkbox" name="weekend" value="Saturday">Sa
+                                            </li>
+                                            <li><input type="checkbox" name="weekend" value="Sunday">Su</li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-item img-download-block">
+                                    <label class="form-item-label">Insert logo*</label>
+                                    <label class="file-container">
+                                        <span class="insert-image">Insert image</span>
+                                        <div class="dowonloded-text">
+                                            <span class="file-is-done"> file iz done</span>
+                                            <span class="icon">ok</span>
+                                        </div>
+                                        <input type="file" id="file-download" required>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-item img-download-block">
+                                    <label class="form-item-label">Insert Store image*</label>
+                                    <label class="file-container">
+                                        <span class="insert-image ">Insert image</span>
+                                        <div class="dowonloded-text">
+                                            <span class="file-is-done"> file iz done</span>
+                                            <span class="icon">ok</span>
+                                        </div>
+                                        <input type="file" id="file-download-store" required>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-sm-12 ">
+                                <div class="form-item">
+                                    <label class="form-item-label">Delivery service</label>
+                                    <div class="delivery-block">
+                                        <label class="delivery-service">
+                                            <input type="radio" name="delivery-service" value="yes" />
+                                            <span class="delivery-service-button">Yes</span>
+                                        </label>
+
+                                        <label class="delivery-service">
+                                            <input type="radio" name="delivery-service" value="no" />
+                                            <span class="delivery-service-button">No</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-6 col-sm-12 no-label delivery-all-block">
+                                <div class="form-item">
+
+                                    <div class="dropdown-delivery-region">
+
+                                        <div class="region-dropbtn">
+                                            Choose Region <i class="fas fa-chevron-down"></i>
+                                        </div>
+
+                                        <div id="regionDropdown" class="dropdown--delivery-region-content">
+                                            <ul>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="delivery region">
+                                                        Region1
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="delivery region">
+                                                        Region1
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="delivery region">
+                                                        Region1
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="delivery region">
+                                                        Region1
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="delivery region">
+                                                        Region1
+                                                    </label>
+                                                </li>
+
+
+                                            </ul>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="col-lg-6 col-sm-12 delivery-all-block">
+                                <div class="form-item">
+                                    <label for="Deliveryduration" class="form-item-label">
+                                        Delivery
+                                        duration*
+                                    </label>
+                                    <div class="  delivery-duration-block">
+                                        <div class="col-lg-7 pl-0">
+                                            <input type="text" id="Deliveryduration" required>
+                                        </div>
+                                        <div class="col-lg-5 pr-0">
+                                            <div class="rail-select">
+                                                <div class="select-side">
+                                                    <i class="fas fa-chevron-down"></i>
+                                                </div>
+                                                <select class="duration-time" required>
+
+                                                    <option> Hours</option>
+                                                    <option> Minute</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--<div class="col-lg-6 col-sm-12">-->
+                            <!--<div class="form-item">-->
+                            <!--<label for="minimumOrderAmount" class="form-item-label">-->
+                            <!--Minimum orderamount*-->
+                            <!--</label>-->
+                            <!--<input type="text" id="minimumOrderAmount" required>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="col-lg-6 col-sm-12">-->
+                            <!--<div class="form-item">-->
+                            <!--<label for="deliveryFee" class="form-item-label">Delivery-->
+                            <!--Fee*</label>-->
+                            <!--<input type="text" id="deliveryFee" required>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="col-lg-6 col-sm-12 ">-->
+                            <!--<div class="form-item">-->
+                            <!--<label for="regionZip" class="form-item-label">Region Zip*</label>-->
+                            <!--<input type="text" id="regionZip" required>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-item">
+                                    <label class="form-item-label">Choose Payment Method*</label>
+                                    <div class="row credit-card-block">
+                                        <div class="col-lg-3">
+                                            <input id="visa" type="checkbox" name="credit-card"
+                                                   value="visa" />
+                                            <label class=" credit-card-img " for="visa">
+                                                <img src="img/payment-metod/visa.png" alt="visa">
+                                            </label>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <input id="mastercard" type="checkbox" name="credit-card"
+                                                   value="mastercard" />
+                                            <label class=" credit-card-img " for="mastercard">
+                                                <img src="img/payment-metod/master.png"
+                                                     alt="mastercard">
+                                            </label>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <input id="americanExpress" type="checkbox"
+                                                   name="credit-card"
+                                                   value="americanExpress" />
+                                            <label class=" credit-card-img " for="americanExpress">
+                                                <img src="img/payment-metod/american.png"
+                                                     alt="americanExpress">
+                                            </label>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <input id="cash" type="checkbox" name="credit-card"
+                                                   value="cash" />
+                                            <label class=" credit-card-img " for="cash">
+                                                <img src="img/payment-metod/cash.png" alt="cash">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="cc-selector">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-item">
+                                    <label for="taxnumber" class="form-item-label">Tax number*</label>
+                                    <input type="text" id="taxnumber" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-item">
+                                    <label for="contactnumber" class="form-item-label">
+                                        Contact
+                                        number*
+                                    </label>
+                                    <input type="text" id="contactnumber" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-item">
+                                    <label for="licensenumber" class="form-item-label">
+                                        License
+                                        number*
+                                    </label>
+                                    <input type="text" id="licensenumber" required>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-item">
+                                    <label for="specifyWebsite" class="form-item-label">
+                                        Specify
+                                        Website
+                                    </label>
+                                    <input type="text" id="specifyWebsite">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-sm-12 no-label">
+                                <div class="form-item">
+
+                                    <input type="submit" value="Save">
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </form>
+
+        <!-- Store info End-->
+    </div>
+</main>

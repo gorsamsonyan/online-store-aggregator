@@ -1,0 +1,106 @@
+﻿@using Weed.Karma.Models.StoreModels
+@model IEnumerable<StoreInfoViewModel>
+@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/businessDashboard/styles/main-respons.css">
+    <!--<link rel="stylesheet" href="~/businessDashboard/styles/global-styles.css">-->
+    <link rel="stylesheet" href="~/businessDashboard/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="~/businessDashboard/styles/global-styles.css">
+
+    <!--<link rel="stylesheet" href="~/businessDashboard/styles/form-styles.css">-->
+    <link rel="stylesheet" href="~/businessDashboard/styles/pages/store-page.css">
+    <link rel="stylesheet" href="~/businessDashboard/styles/pages/store-product-add.css">
+    <link rel="stylesheet" href="~/businessDashboard/styles/pages/all-stores.css">
+
+</head>
+<body>
+    <div class="page-wrapper chiller-theme toggled">
+        <!--header block-->
+
+        @await Html.PartialAsync("_AdminHeader")
+
+        <!--header block End-->
+
+
+        @await Html.PartialAsync("_StoreAdminLeftMenu")
+        <!--sidebar-wrapper-->
+
+
+        <main class="page-content margin-top">
+
+            <div class="container-fluid store-body">
+
+                <h1 class="section-title">
+                    All Stores
+                </h1>
+
+                <div class="body-section">
+                    <a href="/Business/AddStore" class="add-store-button">
+                        <span class="icon-plus">+</span>
+                        <span>Add Store</span>
+                    </a>
+                    @foreach (var item in Model)
+                    {
+                        <div class="stores-block container">
+
+                            <ul class="col-lg-12">
+                                <li class="row store-item align-items-center">
+                                    <div class=" col-lg-3 col-md-6 store-item-col   store-item-name">
+                                        <img src="img/left-menu/product.png" alt="">
+                                        <span>@item.ShopName</span>
+                                    </div>
+
+                                    <div class=" store-item-col store-item-icon  store-item-edit">
+                                        <i class="far fa-edit"></i>
+                                    </div>
+                                    <div class=" store-item-col store-item-icon store-item-delete">
+                                        <i class="far fa-trash-alt"></i>
+                                    </div>
+                                    <a href="/Store/AddProduct/@item.Id" class=" store-item-col store-item-all-button "> Add Product</a>
+                                    <a href="/Store/AddBrandProduct/@item.Id" class=" store-item-col store-item-all-button "> Add Brand Product</a>
+                                    <a href="/Store/Orders/@item.Id" class=" store-item-col store-item-all-button ">Orders</a>
+                                </li>
+
+
+                            </ul>
+
+
+                        </div>
+                    }
+                </div>
+                <!-- Store info End-->
+            </div>
+        </main>
+        <!--page-content"-->
+
+
+    </div>
+
+
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="~/businessDashboard/scripts/bootstrap.min.js"></script>
+<script src="~/businessDashboard/scripts/store-page.js"></script>
+
+<script src="~/businessDashboard/scripts/store-product-add.js"></script>
+
+
+<script src="~/businessDashboard/scripts/select2.full.min.js"></script>
+<script src="~/businessDashboard/scripts/store-info.js"></script>
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/order-notification.js"></script>

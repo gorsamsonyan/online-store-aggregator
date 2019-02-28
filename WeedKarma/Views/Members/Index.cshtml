@@ -1,0 +1,107 @@
+﻿@using Weed.Karma.Models.Members
+@model CurrentUserViewModel
+@{
+
+}
+<link rel="stylesheet" href="~/css/pages/account.css" />
+<main class="account-profile">
+    <div class="container--medium">
+        <div class="row">
+            <div id="content">
+                <div class="card_profile">
+                    <div class="card_profile-header content-item-header">
+
+
+                        <h1 class="card_profile-header-title content-item-header-title"> <i class="fas fa-address-card"></i>My profile</h1>
+                        <div class="for_buttons">
+                            <a class="bttn" href="/Members/EditProfile">Edit Profile</a>
+                            <a class="bttn" href="/Members/ChangePassword">Change password</a>
+                        </div>
+                    </div>
+
+
+                    <div class="profile_info">
+                        <ul>
+                            <li class="profile_info-item fx">
+                                <div class="profile_info-item-left-block"><strong>First Name</strong></div>
+                                <div class="profile_info-item-right-block"> @Model.FirstName </div>
+                            </li>
+                            <li class="profile_info-item fx">
+                                <div class="profile_info-item-left-block"><strong>Last Name</strong></div>
+                                <div class="profile_info-item-right-block"> @Model.LastName </div>
+                            </li>
+                            <li class="profile_info-item fx">
+                                <div class="profile_info-item-left-block"><strong>Nick Name</strong></div>
+                                <div class="profile_info-item-right-block"> @Model.NickName</div>
+                            </li>
+                            <li class="profile_info-item fx">
+                                <div class="profile_info-item-left-block"><strong>E-mail</strong></div>
+                                <div class="profile_info-item-right-block"> @Model.UserName</div>
+                            </li>
+                            <li class="profile_info-item fx">
+                                <div class="profile_info-item-left-block"><strong> Phone Number </strong></div>
+                                <div class="profile_info-item-right-block"> @Model.PhoneNumber</div>
+                            </li>
+                            <li class="profile_info-item fx">
+                                <div class="profile_info-item-left-block"><strong>Date of birth</strong></div>
+                                <div class="profile_info-item-right-block"> @Model.DateOfBirth</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="card_address">
+                    <div class="content-item-header">
+                        <h1 class="content-item-header-title"> <i class="fas fa-globe-americas"></i> My address</h1>
+
+                    </div>
+
+
+                    <div class="user-form__wrap address">
+                        <form action="" method="post" class="user-addr__form" id="user-addr__form">
+                            <label class="user-addr__label">
+                                <span class="tooltip-v2-par .tooltip-v2-par">
+                                    <input type="text" placeholder="City, Street, home" id="user-addr__input"
+                                           class="user-addr__input user-addr__input__type1 user-addr__input__select ui-autocomplete-input"
+                                           value="" autocomplete="off"><span role="status" aria-live="polite"
+                                                                             class="ui-helper-hidden-accessible"></span>
+
+                                </span>
+                                <span class="user-addr__links">
+
+                                </span>
+
+                            </label>
+
+                            <label>
+                                <a href="#" class="user-addr__submit sbm-btn">Add Address</a>
+                                <input type="submit" hidden="">
+                            </label>
+                            <!--addresses list-->
+                        </form>
+                    </div><!--user-form__wrap-->
+                    <div class="addresses">
+                        <div class="uaddresses-str">
+                            <b>City, Street, home</b>
+                            <div class="address-edit fx fx-center-v">
+
+                                <a class="delete_uaddress" rel="" href="javascript:void(0)">
+                                    <img class="va" height="16" width="12" src="/img/account/delete_red.png" alt="delete"
+                                         title="delete">
+                                    delete
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</main>

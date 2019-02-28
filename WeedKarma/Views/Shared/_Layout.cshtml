@@ -1,0 +1,150 @@
+﻿@using Microsoft.AspNetCore.Http.Extensions
+@using Microsoft.AspNetCore.Identity;
+@using System.Web;
+
+@{
+    string baseUrl = Context.Request.Scheme + "://" + Context.Request.Host.Value;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <title>@ViewData["Title"]</title>
+    <meta name="description" content="In our website you can find and order medical marijuana pickup or delivery from your favorite dispensaries using function near me. Get Medical Cannabis Card Online with Doctor Locator." />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="hy" />
+    <link rel="SHORTCUT ICON" href="~/img/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+          rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+            crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="@Url.Content("~/library/font-awesome-4.7.0/css/font-awesome.min.css")">
+
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+          crossorigin="anonymous" />
+    <!--
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="library/slick/slick/slick.css" /> -->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="@Url.Content("~/css/main-respons.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/pages/cart.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/variables.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/fonts.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/lib.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/main.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/helpers.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/global-styles.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/modules/product.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/pages/carer.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/pages/about-us.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/style.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/modules/wkStructure.css")" />
+    @*<link rel="stylesheet" href="@Url.Content("~/css/pages/stores.css")" />*@
+    <link rel="stylesheet" href="@Url.Content("~/library/slick/slick/slick.css")" />
+    <link rel="stylesheet" href="~/css/pages/signin.css" />
+    <link rel="stylesheet" href="@Url.Content("~/css/pages/deals.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/modules/footer.css")">
+    <link rel="stylesheet" href="@Url.Content("~/css/pages/contact-us.css")" />
+    <link rel="stylesheet" href="~/css/region-pop-up.css" />
+
+    <link href="@Url.Content("~/css/site-map.css")" rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/library/slick/slick/slick-theme.css" />
+    <link rel="stylesheet" href="~/css/pages/header-slider.css" />
+    <link rel="stylesheet" href="~/css/pages/registration-busines.css" />
+
+    <link rel="stylesheet" href="~/css/pages/single-product.css" />
+    <link rel="stylesheet" href="~/css/responsive.css" />
+
+
+
+    <environment include="Development">
+    </environment>
+    <environment exclude="Development">
+    </environment>
+</head>
+<body onload="Onload()">
+
+    @*Weed Karma Header*@
+    @await Html.PartialAsync("_Header")
+
+    @*Weed Karma Boady*@
+    @RenderBody()
+
+    @*Weed Karma Footer*@
+    @await Html.PartialAsync("_Footer")
+
+
+
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+            crossorigin="anonymous"></script>
+    @if (@Context.Request.Path.Value == "/Deals")
+    {
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="@Url.Content("~/js/deals.js")"></script>
+    }
+    else
+    {
+
+    }
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.3/jquery.slimscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.13.4/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    @*<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>*@
+    <script src="~/businessDashboard/scripts/signalr.min.js"></script>
+    <script src="@Url.Content("~/js/menu.js")"></script>
+    <script src="@Url.Content("~/library/slick/slick/slick.min.js")"></script>
+    <script src="@Url.Content("~/js/cart.js")"></script>
+    <script src="@Url.Content("~/js/carers.js")"></script>
+    <script src="~/js/region-pop-up.js"></script>
+
+    <script src="~/js/registration-busines.js"></script>
+    <script src="@Url.Content("~/js/custom.js")"></script>
+    <script src="~/js/back.js"></script>
+    <script src="~/js/shoping-card.js"></script>
+
+    <environment include="Development">
+    </environment>
+    <environment exclude="Development">
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+@await Component.InvokeAsync("NToastNotify")
+
+</html>
+<script>
+    function Onload() {
+        localStorage.setItem("baseUrl",'@baseUrl');
+        getState(1, '@baseUrl');
+        GetBestOffers();
+        initRouting();
+        if ($("main").hasClass("mp-main")) {
+
+            GetStoresByRegionForMap(localStorage.getItem("RegionAbbreviation"), '@baseUrl');
+        }
+        GetStoresByCityId(localStorage.getItem("RegionAbbreviation"), '@baseUrl');
+        GetBrandsByCityId(localStorage.getItem("RegionAbbreviation"), '@baseUrl');
+        if (localStorage.getItem("RegionAbbreviation") === null ||
+            localStorage.getItem("RegionAbbreviation") == "null") {
+            $("#choseRegionPopUp").show();
+        } else {
+            $("#bestOffer").html(localStorage.getItem("RegionName"));
+            $("#choseRegionPopUp").hide();
+            }
+    }
+</script>

@@ -1,0 +1,92 @@
+﻿@using Weed.Karma.Models.Members
+@model EditProfileViewModel
+
+@{
+    ViewData["Title"] = "EditProfile";
+}
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/css/pages/account.css" />
+<main class="edit-profile-page">
+    <div class="container--medium">
+        <div class="row">
+            <div class="edit-profile-section">
+                <h1 class="edit-profile__header">Profile</h1>
+                <div class="edit-profile__content">
+                    <form action="" method="post" id="edit-profile-form" class="edit-profile-form">
+                        <label class="edit-profile-form__label label-for-input">
+                            <span class="decor edit-profile-form__caption">
+                                First Name
+                            </span>
+                            <input class="input-text edit-profile-form__input edit-profile-form__input__username" id="userName"
+                                   name="FirstName" type="text" value="@Model.FirstName" maxlength="64">
+                        </label>
+                        <label class="edit-profile-form__label label-for-input">
+                            <span class="decor edit-profile-form__caption">
+                                Last Name
+                            </span>
+                            <input class="input-text edit-profile-form__input edit-profile-form__input__username" id="userName"
+                                   name="LastName" type="text" value="@Model.LastName" maxlength="64">
+                        </label>
+
+                        <label class="edit-profile-form__label label-for-input">
+                            <span class="decor edit-profile-form__caption">
+                                NickName
+                            </span>
+                            <input class="input-text edit-profile-form__input edit-profile-form__input__username" id="userName"
+                                   name="NickName" type="text" value="@Model.NickName" maxlength="64">
+                        </label>
+
+                        <label class="edit-profile-form__label label-for-input">
+                            <span class="decor edit-profile-form__caption edit-profile-form__caption__phone">
+                                Mobile number
+                            </span>
+                            <input class="input-text edit-profile-form__input" id="PhoneNumber"
+                                   name="PhoneNumber" type="text" value="@Model.PhoneNumber" maxlength="64">
+                        </label>
+
+                 
+                        <label class="edit-profile-form__label label-for-input">
+                            <span class="decor edit-profile-form__caption">
+                                Date of byrd
+                            </span>
+
+                            <input class="input-text edit-profile-form__input edit-profile-form__input__byrd" id="dateOfByrd"
+                                   name="DateOfBirth" type="text" value="@Model.DateOfBirth" maxlength="64" placeholder="dd/mm/yyyy">
+                        </label>
+
+
+                        <label class="edit-profile-form__label edit-profile-form__check">
+                            <!--<span class="decor edit-profile-form__caption"></span>-->
+                            <input class="edit-profile-form__left" type="checkbox" name="subscribed" value="1">
+                            <span class="edit-profile-form__title">Receive emails about updates and special offers</span>
+                        </label>
+                        <label class="edit-profile-form__label edit-profile-form__check">
+                            <!--<span class="decor edit-profile-form__caption"></span>-->
+                            <input class="edit-profile-form__left" type="checkbox" name="enable_sms" value="1">
+
+                            <span class="edit-profile-form__title">Receive SMS about updates and special offers</span>
+                        </label>
+                        <label class="edit-profile-form__label edit-profile-form__check">
+                            <!--<span class="decor edit-profile-form__caption"></span>-->
+                            <input class="edit-profile-form__left" type="checkbox" name="enable_email" value="1">
+                            <span class="edit-profile-form__title">Receive official letters via email about updates and special offers</span>
+                        </label>
+
+                        <label class="edit-profile-form__label edit-profile-form__submit ">
+                            <!--<span class="decor edit-profile-form__caption"></span>-->
+                            <input value="1" name="save" type="hidden">
+                            <button class="input-submit" href="/Members/EditProfile">Save<span></span></button>
+                        </label>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</main>
+
+<script src="/js/account.js"></script>

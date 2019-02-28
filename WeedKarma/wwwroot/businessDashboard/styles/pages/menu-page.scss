@@ -1,0 +1,61 @@
+@import "../main-styles";
+@import "../form-styles";
+
+
+.add-menu-button{
+  @include green-button;
+  max-width: 200px;
+  margin-bottom: 30px;
+  @include border-radius(0 10px 10px 0);
+
+  .icon-plus{
+    border-radius: 50%;
+    border: 1px solid white;
+
+    margin-right: 5px;
+    display: inline-block;
+    width: 15px;
+    line-height: 15px;
+  }
+}
+
+#addMenuForm{
+  display: none;
+  margin-bottom: 20px;
+}
+.add-menu-block{
+  padding: 0 50px;
+  ul{
+    padding: 0;
+  }
+
+}
+.add-menu-item{
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.add-menu-item-name {
+  @include border-radius(7px 0 0 7px);
+  color: $color-green;
+  background-color: #bdbdbd;
+  text-align: left;
+
+}
+.add-menu-item-col{
+  //border: 1px solid $color-green;
+  padding: 10px;
+}
+.add-menu-item-icon{
+  min-width: 45px;
+  cursor: pointer;
+  text-align: center;
+
+}
+.add-menu-item-delete{
+  @include border-radius(0 7px 7px 0);
+  background-color: red;
+  color: white;
+  cursor: pointer;
+
+}

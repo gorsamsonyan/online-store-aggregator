@@ -1,0 +1,14 @@
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.Models\bin\Debug\netcoreapp2.2\Weed.Karma.Models.deps.json
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.Models\bin\Debug\netcoreapp2.2\Weed.Karma.Models.dll
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.Models\bin\Debug\netcoreapp2.2\Weed.Karma.Models.pdb
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.Models\bin\Debug\netcoreapp2.2\Weed.Karma.Entities.dll
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.Models\bin\Debug\netcoreapp2.2\Weed.Karma.Enums.dll
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.Models\bin\Debug\netcoreapp2.2\Weed.Karma.Entities.pdb
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.Models\bin\Debug\netcoreapp2.2\Weed.Karma.Enums.pdb
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.Models\obj\Debug\netcoreapp2.2\Weed.Karma.Models.csprojAssemblyReference.cache
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.Models\obj\Debug\netcoreapp2.2\Weed.Karma.Models.csproj.CoreCompileInputs.cache
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.Models\obj\Debug\netcoreapp2.2\Weed.Karma.Models.AssemblyInfoInputs.cache
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.Models\obj\Debug\netcoreapp2.2\Weed.Karma.Models.AssemblyInfo.cs
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.Models\obj\Debug\netcoreapp2.2\Weed.Karma.Models.csproj.CopyComplete
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.Models\obj\Debug\netcoreapp2.2\Weed.Karma.Models.dll
+C:\Users\Hayk\Source\Workspaces\WeedKarma\DEV\Weed.Karma.Models\obj\Debug\netcoreapp2.2\Weed.Karma.Models.pdb

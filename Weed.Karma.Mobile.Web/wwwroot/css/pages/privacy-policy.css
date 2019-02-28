@@ -1,0 +1,126 @@
+/* font family */
+.privacy-policy-logo-block {
+  width: 220px; }
+.privacy-policy-logo {
+  height: 55px;
+  margin-right: 10px; }
+  .privacy-policy-logo-sub-text {
+    font-size: 14px;
+    text-align: center; }
+.privacy-policy-left-block {
+  margin-bottom: 10px; }
+.privacy-policy-right-block {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end; }
+  @media only screen and (max-width: 768px) {
+    .privacy-policy-right-block {
+      flex-direction: column; } }
+
+.privacy-policy-logo-main-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px; }
+  .privacy-policy-logo-main-block h1 {
+    text-transform: uppercase;
+    line-height: 0.7;
+    color: #47484b; }
+  .privacy-policy-logo-main-block span {
+    color: black;
+    font-size: 20px; }
+
+.privacy-policy-header-block {
+  align-items: center;
+  margin-bottom: 80px;
+  margin-top: 40px; }
+
+.privacy-policy-button {
+  background-color: #0f3311;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid #0f3311;
+  padding: 10px 5px;
+  outline: none;
+  transition: 0.3s;
+  border-radius: 10px;
+  padding: 10px 25px; }
+
+.terms-of-use-button {
+  background-color: #ececed;
+  font-size: 14px;
+  cursor: pointer;
+  color: #0f3311;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid #ececed;
+  padding: 10px 25px;
+  outline: none;
+  transition: 0.3s;
+  border-radius: 10px; }
+
+.privacy-policy-body {
+  background-color: #ececed; }
+
+.privacy-policy-body-menu {
+  margin-bottom: 50px;
+  padding: 10px 0; }
+  .privacy-policy-body-menu ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 12px; }
+  .privacy-policy-body-menu li {
+    padding: 3px 0;
+    border-bottom: 1px solid #0f3311;
+    margin-bottom: 5px; }
+  .privacy-policy-body-menu a {
+    margin: 10px;
+    color: #0f3311; }
+  .privacy-policy-body-menu .active {
+    border-bottom: 8px solid #0f3311; }
+
+li {
+  transition: all 1s;
+  -moz-transition: all 1s;
+  /* Firefox 4 */
+  -webkit-transition: all 1s;
+  /* Safari and Chrome */
+  -o-transition: all 1s;
+  /* Opera */ }
+
+.privacy-policy-body-description-items {
+  overflow: auto;
+  height: 300px;
+  padding: 10px 50px;
+  margin-bottom: 50px;
+  background-color: white;
+  text-align: center;
+  -webkit-box-shadow: -1px 0px 26px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 0px 26px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 0px 26px 0px rgba(0, 0, 0, 0.75); }
+  .privacy-policy-body-description-items > div {
+    display: none;
+    text-align: center; }
+  .privacy-policy-body-description-items .active {
+    display: block; }
+
+.privacy-policy-body-description {
+  margin-bottom: 50px; }
+
+.privacy-policy-body-description-header {
+  background-color: white;
+  border-radius: 20px 20px 0px 0px;
+  -moz-border-radius: 20px 20px 0px 0px;
+  -webkit-border-radius: 20px 20px 0px 0px;
+  height: 20px;
+  width: 100%;
+  position: relative; }
+
+.page-button {
+  margin: 0 5px 10px;
+  display: block; }
+
+/*# sourceMappingURL=privacy-policy.css.map */

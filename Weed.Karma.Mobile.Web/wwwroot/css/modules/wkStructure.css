@@ -1,0 +1,21 @@
+.wkStructure {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+}
+.wkStructure--large {
+  max-width: 1920px;
+}
+.wkStructure__aside {
+  /*height: var(--wkListHeight);*/
+  max-width: 540px;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wkStructure__section {
+  /*height: var(--wkListHeight);*/
+  flex-grow: 1;
+}

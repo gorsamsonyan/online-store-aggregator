@@ -1,0 +1,646 @@
+﻿@using Weed.Karma.Models.Brand
+@model BrandAndProductsViewModel
+
+
+@{
+    ViewData["Title"] = "Brands";
+}
+@*<script>
+    function ready() {
+        alert('DOM готов');
+        alert("Размеры картинки: " + img.offsetWidth + "x" + img.offsetHeight);
+    }
+
+    document.addEventListener("DOMContentLoaded", ready);
+</script>*@
+<link rel="stylesheet" href="/library/slick/slick/slick.css" />
+<!--<link rel="stylesheet" href="library/slick/slick/slick-theme.css"/>-->
+<link rel="stylesheet" href="/css/pages/brands.css" />
+<main class="brands-page">
+    
+    <div class="">
+        <h1 class="brand-page-title title">
+            <span>BRANDS IN</span>
+            <span class="green-text">WEED KARMA</span>
+        </h1>
+
+        <div class=" fx fx-center-h">
+            <div class="brands-navbar ">
+                <ul class="brands-menu fx  ">
+                    <li class="brands-menu-item"><a class="brands-menu-item-link active" href="#">Discover</a></li>
+                    <li class="brands-menu-item"><a class="brands-menu-item-link" href="#">Flower</a></li>
+                    <li class="brands-menu-item"><a class="brands-menu-item-link" href="#">MEDICAL</a></li>
+                    <li class="brands-menu-item"><a class="brands-menu-item-link" href="#">CONCENTRATES</a></li>
+                    <li class="brands-menu-item"><a class="brands-menu-item-link" href="#">VAPE PENS</a></li>
+                    <li class="brands-menu-item"><a class="brands-menu-item-link" href="#">EDIBLES</a></li>
+                    <li class="brands-menu-item"><a class="brands-menu-item-link" href="#">MEDICAL</a></li>
+                    <li class="brands-menu-item"><a class="brands-menu-item-link" href="#">ALL BRANDS</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <section class="category-section">
+
+        <div class="category-header fx fx-between">
+            <div class="category-header-title">Featured</div>
+            <div class="category-header-right-block">
+                <div class="category-count-blocks">
+                    <span class="category-count">@Model.Brands.Count()</span>
+                    <span class="category-name">Brands</span>
+                </div>
+                @*<a class="view-all-button"> view all</a>*@
+                <div class="category-slider-button-block fx">
+                    <div class="featured-brands-slider-prev-arrow category-slider-arrow">
+                        <i class="fas fa-angle-left"></i>
+                    </div>
+                    <div class="featured-brands-slider-next-arrow  category-slider-arrow">
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-content">
+
+            <div class="featured-brands-slider">
+
+                @foreach (var item in Model.Brands)
+                {
+                    <div class="brands-slider-item-block">
+                        <a href="/Brands/Products/@item.Id" class="brands-slider-item">
+                            <div class="brands-slider-item-name">
+                                @item.Name
+
+                            </div>
+                            <div class="brands-slider-item-img" style="background-image: url('@item.LogoPath')">
+
+                            </div>
+
+                            <div class="brands-slider-item-rating fx fx-center-v">
+
+                                <img src="/img/store/ratingLeaf-green.png" alt=" brandImage" class="brand-ratingImg">
+                                <span class="brand-ratingIndex">+5</span>
+
+                            </div>
+                        </a>
+                    </div>
+                }
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class=" category-section">
+        <div class="category-header fx fx-between">
+            <div class="category-header-title">Flowers</div>
+            <div class="category-header-right-block">
+                <div class="category-count-blocks">
+                    <span class="category-count">@Model.BrandProducts.Where(w=>w.BrandCategoryId>=1 && w.BrandCategoryId<=7).Count()</span>
+                    <span class="category-name">products</span>
+                </div>
+                <a class="view-all-button"> view all</a>
+                <div class="category-slider-button-block fx">
+                    <div class="flowers-slider-prev-arrow category-slider-arrow"><i class="fas fa-angle-left"></i></div>
+                    <div class="flowers-slider-next-arrow  category-slider-arrow">
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-content">
+
+            <div class="flowers-slider">
+
+                @foreach (var item in Model.BrandProducts)
+                {
+                    @if (item.BrandCategoryId >= 1 && item.BrandCategoryId <= 7)
+                    {
+                        <div class="brands-slider-item-block">
+                            <a href="/Brands/Info/@item.BrandId/@item.Id" class="brands-slider-item brand-slider-product-item">
+                                <div class="brands-slider-item-name">
+                                    @item.Name
+                                </div>
+                                <div class="brands-slider-item-img"
+                                     style="background-image: url('@item.ProductImage')"></div>
+
+
+                            </a>
+                            <div class="brand-slider-product-item-bottom-block fx fx-center-v fx-between">
+                                <a href="/Brands/Products/@item.BrandId" class="product-brand-block fx fx-center-v">
+                                    @if (Model.Brands.Count != 0)
+                                    {
+                                        <img src="@Model.Brands.Where(w => w.Id == item.BrandId).FirstOrDefault().LogoPath" class="brand-logo"/>
+ 
+                                    }
+                                    <span class="brand-name">@item.Name</span>
+                                </a>
+                                <div class="brands-slider-item-rating fx fx-center-v">
+
+                                    <img src="/img/store/ratingLeaf-green.png" alt=" brandImage" class="brand-ratingImg">
+                                    <span class="brand-ratingIndex">+5</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    }
+                }
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+  
+    <section class=" category-section">
+        <div class="category-header fx fx-between">
+            <div class="category-header-title">Concentrates</div>
+            <div class="category-header-right-block">
+                <div class="category-count-blocks">
+                    <span class="category-count">@Model.BrandProducts.Where(w => w.BrandCategoryId >= 8 && w.BrandCategoryId <= 18).Count()</span>
+                    <span class="category-name">products</span>
+                </div>
+                <a class="view-all-button"> view all</a>
+                <div class="category-slider-button-block fx">
+                    <div class="concentrates-slider-slider-prev-arrow category-slider-arrow">
+                        <i class="fas fa-angle-left"></i>
+                    </div>
+                    <div class="concentrates-slider-slider-next-arrow  category-slider-arrow">
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-content">
+
+            <div class="concentrates-slider">
+                @foreach (var item in Model.BrandProducts)
+                {
+                    @if (item.BrandCategoryId >= 8 && item.BrandCategoryId <= 18)
+                    {
+                        <div class="brands-slider-item-block">
+                            <a href="/Brands/Info/@item.BrandId/@item.Id" class="brands-slider-item brand-slider-product-item">
+                                <div class="brands-slider-item-name">
+                                    @item.Name
+                                </div>
+                                <div class="brands-slider-item-img"
+                                     style="background-image: url('@item.ProductImage')"></div>
+
+
+                            </a>
+                            <div class="brand-slider-product-item-bottom-block fx fx-center-v fx-between">
+                                <a href="/Brands/Products/@item.BrandId" class="product-brand-block fx fx-center-v">
+                                    @if (Model.Brands.Count != 0)
+                                    {
+                                        <img src="@Model.Brands.Where(w => w.Id == item.BrandId).FirstOrDefault().LogoPath" class="brand-logo" />
+
+                                    }                                    <span class="brand-name">@item.Name</span>
+                                </a>
+                                <div class="brands-slider-item-rating fx fx-center-v">
+
+                                    <img src="/img/store/ratingLeaf-green.png" alt=" brandImage" class="brand-ratingImg">
+                                    <span class="brand-ratingIndex">+5</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    }
+                }
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class=" category-section">
+        <div class="category-header fx fx-between">
+            <div class="category-header-title">Vape Pens</div>
+            <div class="category-header-right-block">
+                <div class="category-count-blocks">
+                    <span class="category-count">@Model.BrandProducts.Where(w => w.BrandCategoryId >= 19 && w.BrandCategoryId <= 24).Count()</span>
+                    <span class="category-name">products</span>
+                </div>
+                <a class="view-all-button"> view all</a>
+                <div class="category-slider-button-block fx">
+                    <div class="vapePens-slider-slider-prev-arrow category-slider-arrow">
+                        <i class="fas fa-angle-left"></i>
+                    </div>
+                    <div class="vapePens-slider-slider-next-arrow  category-slider-arrow">
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-content">
+
+            <div class="vapePens-slider">
+                @foreach (var item in Model.BrandProducts)
+                {
+                    @if (item.BrandCategoryId >= 19 && item.BrandCategoryId <= 24)
+                    {
+                        <div class="brands-slider-item-block">
+                            <a href="/Brands/Info/@item.BrandId/@item.Id" class="brands-slider-item brand-slider-product-item">
+                                <div class="brands-slider-item-name">
+                                    @item.Name
+                                </div>
+                                <div class="brands-slider-item-img"
+                                     style="background-image: url('@item.ProductImage')"></div>
+
+
+                            </a>
+                            <div class="brand-slider-product-item-bottom-block fx fx-center-v fx-between">
+                                <a href="/Brands/Products/@item.BrandId" class="product-brand-block fx fx-center-v">
+                                    @if (Model.Brands.Count != 0)
+                                    {
+                                        <img src="@Model.Brands.Where(w => w.Id == item.BrandId).FirstOrDefault().LogoPath" class="brand-logo" />
+
+                                    }                                    <span class="brand-name">@item.Name</span>
+                                </a>
+                                <div class="brands-slider-item-rating fx fx-center-v">
+
+                                    <img src="/img/store/ratingLeaf-green.png" alt=" brandImage" class="brand-ratingImg">
+                                    <span class="brand-ratingIndex">+5</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    }
+                }
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class=" category-section">
+        <div class="category-header fx fx-between">
+            <div class="category-header-title">Edibles</div>
+            <div class="category-header-right-block">
+                <div class="category-count-blocks">
+                    <span class="category-count">@Model.BrandProducts.Where(w => w.BrandCategoryId >= 25 && w.BrandCategoryId <= 31).Count()</span>
+                    <span class="category-name">products</span>
+                </div>
+                <a class="view-all-button"> view all</a>
+                <div class="category-slider-button-block fx">
+                    <div class="edibles-slider-slider-prev-arrow category-slider-arrow">
+                        <i class="fas fa-angle-left"></i>
+                    </div>
+                    <div class="edibles-slider-slider-next-arrow  category-slider-arrow">
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-content">
+
+            <div class="edibles-slider">
+                @foreach (var item in Model.BrandProducts)
+                {
+                    @if (item.BrandCategoryId >= 25 && item.BrandCategoryId <= 31)
+                    {
+                        <div class="brands-slider-item-block">
+                            <a href="/Brands/Info/@item.BrandId/@item.Id" class="brands-slider-item brand-slider-product-item">
+                                <div class="brands-slider-item-name">
+                                    @item.Name
+                                </div>
+                                <div class="brands-slider-item-img"
+                                     style="background-image: url('@item.ProductImage')"></div>
+
+
+                            </a>
+                            <div class="brand-slider-product-item-bottom-block fx fx-center-v fx-between">
+                                <a href="/Brands/Products/@item.BrandId" class="product-brand-block fx fx-center-v">
+                                    @if (Model.Brands.Count != 0)
+                                    {
+                                        <img src="@Model.Brands.Where(w => w.Id == item.BrandId).FirstOrDefault().LogoPath" class="brand-logo" />
+
+                                    }                                    <span class="brand-name">@item.Name</span>
+                                </a>
+                                <div class="brands-slider-item-rating fx fx-center-v">
+
+                                    <img src="/img/store/ratingLeaf-green.png" alt=" brandImage" class="brand-ratingImg">
+                                    <span class="brand-ratingIndex">+5</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    }
+                }
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class=" category-section">
+        <div class="category-header fx fx-between">
+            <div class="category-header-title">Medical</div>
+            <div class="category-header-right-block">
+                <div class="category-count-blocks">
+                    <span class="category-count">@Model.BrandProducts.Where(w => w.BrandCategoryId >= 32 && w.BrandCategoryId <= 34).Count()</span>
+                    <span class="category-name">products</span>
+                </div>
+                <a class="view-all-button"> view all</a>
+                <div class="category-slider-button-block fx">
+                    <div class="medical-slider-slider-prev-arrow category-slider-arrow">
+                        <i class="fas fa-angle-left"></i>
+                    </div>
+                    <div class="medical-slider-slider-next-arrow  category-slider-arrow">
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-content">
+
+            <div class="medical-slider">
+                @foreach (var item in Model.BrandProducts)
+                {
+                    @if (item.BrandCategoryId >= 32 && item.BrandCategoryId <= 34)
+                    {
+                        <div class="brands-slider-item-block">
+                            <a href="/Brands/Info/@item.BrandId/@item.Id" class="brands-slider-item brand-slider-product-item">
+                                <div class="brands-slider-item-name">
+                                    @item.Name
+                                </div>
+                                <div class="brands-slider-item-img"
+                                     style="background-image: url('@item.ProductImage')"></div>
+
+
+                            </a>
+                            <div class="brand-slider-product-item-bottom-block fx fx-center-v fx-between">
+                                <a href="/Brands/Products/@item.BrandId" class="product-brand-block fx fx-center-v">
+                                    @if (Model.Brands.Count != 0)
+                                    {
+                                        <img src="@Model.Brands.Where(w => w.Id == item.BrandId).FirstOrDefault().LogoPath" class="brand-logo" />
+
+                                    }                                    <span class="brand-name">@item.Name</span>
+                                </a>
+                                <div class="brands-slider-item-rating fx fx-center-v">
+
+                                    <img src="/img/store/ratingLeaf-green.png" alt=" brandImage" class="brand-ratingImg">
+                                    <span class="brand-ratingIndex">+5</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    }
+                }
+
+            </div>
+
+        </div>
+    </section>
+
+
+</main>
+
+<script src="~/library/slick/slick/slick.js"></script>
+<script>
+
+    $('.featured-brands-slider').slick({
+        prevArrow: $(".featured-brands-slider-prev-arrow"),
+        nextArrow: $(".featured-brands-slider-next-arrow"),
+        dots: false,
+        infinite: false,
+        // variableWidth: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1201,
+                settings: {
+                    // arrows: false,
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    // arrows: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            
+            {
+                breakpoint: 680,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+    $('.flowers-slider').slick({
+        prevArrow: $(".flowers-slider-prev-arrow"),
+        nextArrow: $(".flowers-slider-next-arrow"),
+        dots: false,
+        infinite: false,
+        // variableWidth: true,
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        responsive: [
+            {
+                breakpoint: 1201,
+                settings: {
+                    // arrows: false,
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    // arrows: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 680,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+    $('.concentrates-slider').slick({
+        prevArrow: $(".concentrates-slider-slider-prev-arrow"),
+        nextArrow: $(".concentrates-slider-slider-next-arrow"),
+        dots: false,
+        infinite: false,
+        // variableWidth: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1201,
+                settings: {
+                    // arrows: false,
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    // arrows: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 680,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+    $('.vapePens-slider').slick({
+        prevArrow: $(".vapePens-slider-slider-prev-arrow"),
+        nextArrow: $(".vapePens-slider-slider-next-arrow"),
+        dots: false,
+        infinite: false,
+        // variableWidth: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1201,
+                settings: {
+                    // arrows: false,
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    // arrows: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 680,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+    $('.edibles-slider').slick({
+        prevArrow: $(".edibles-slider-slider-prev-arrow"),
+        nextArrow: $(".edibles-slider-slider-next-arrow"),
+        dots: false,
+        infinite: false,
+        // variableWidth: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1201,
+                settings: {
+                    // arrows: false,
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    // arrows: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 680,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+    $('.medical-slider').slick({
+        prevArrow: $(".medical-slider-slider-prev-arrow"),
+        nextArrow: $(".medical-slider-slider-next-arrow"),
+        dots: false,
+        infinite: false,
+        // variableWidth: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1201,
+                settings: {
+                    // arrows: false,
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    // arrows: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 680,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+    // console.log($('.flowers-slider').parent().parent());
+</script>
+
+
+<script src="~/js/brands.js"></script>
+@*<script>
+    function getBrands() {
+       
+    }
+
+    document.addEventListener("DOMContentLoaded", getBrands);
+</script>*@

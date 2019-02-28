@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <UserSecretsId>aspnet-Weed.Karma.Web-AA19EDA3-2637-431E-92EB-681A454AA525</UserSecretsId>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\**" />
+    <Content Remove="Data\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <None Remove="Data\**" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="BundlerMinifier.Core" Version="2.8.391" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.1" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\Weed.Karma.BLL.Interfaces\Weed.Karma.BLL.Interfaces.csproj" />
+    <ProjectReference Include="..\Weed.karma.BLL.Mapper\Weed.karma.BLL.Mapper.csproj" />
+    <ProjectReference Include="..\Weed.Karma.BLL\Weed.Karma.BLL.csproj" />
+    <ProjectReference Include="..\Weed.Karma.DAL\Weed.Karma.DAL.csproj" />
+    <ProjectReference Include="..\Weed.Karma.Entities\Weed.Karma.Entities.csproj" />
+    <ProjectReference Include="..\Weed.Karma.Models\Weed.Karma.Models.csproj" />
+  </ItemGroup>
+
+</Project>
